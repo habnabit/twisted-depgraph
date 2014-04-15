@@ -219,14 +219,15 @@ d3.json('twisted-deps.json', function(error, depData) {
     .linkStrength(0.5)
     .charge(-75)
     .gravity(0.05)
+    .theta(0.99)
     .start();
 
   for (var i = 0; i < 200; i++) {
     force.tick();
   }
 
-  var links = svg.append('g').selectAll('.link')
-  var nodes = svg.append('g').selectAll('.node')
+  var links = svg.append('g').selectAll('.link');
+  var nodes = svg.append('g').selectAll('.node');
 
 
   var hover = d3.select('body').append('div').classed('hover', true);
@@ -342,7 +343,7 @@ d3.json('twisted-deps.json', function(error, depData) {
         return d.source.name + '|' + d.target.name;
       });
     links.enter()
-      .append('line')
+      .append('path')
       .classed('link', true);
     links
       .style('stroke-width', 0.5)
@@ -357,8 +358,8 @@ d3.json('twisted-deps.json', function(error, depData) {
       .call(force.drag);
     nodes
       .attr('r', f.compose(f.get('deps.length'), nodeSizeScale))
-      .attr('cx', f.get('x'))
-      .attr('cy', f.get('y'))
+      .attr('cx', f.compose(f.get('x'), Math.round))
+      .attr('cy', f.compose(f.get('y'), Math.round))
       .attr('status', f.get('status'));
     nodes.exit()
       .remove();
@@ -450,20 +451,24 @@ d3.json('twisted-deps.json', function(error, depData) {
     nodes
       .attr('cx', f.get('x'))
       .attr('cy', f.get('y'));
+
     links.each(function(d) {
       var link = d3.select(this);
-      var length = Math.sqrt(Math.pow(d.source.x - d.target.x, 2) + Math.pow(d.source.y - d.target.y, 2));
+
+      var x1 = Math.round(d.source.x);
+      var y1 = Math.round(d.source.y);
+      var x2 = Math.round(d.target.x);
+      var y2 = Math.round(d.target.y);
+
+      var length = Math.sqrt(Math.pow(x1 - x2, 2) + Math.pow(y1 - y2, 2));
       var radius = nodeSizeScale(d.target.deps.length);
       radius += 5; // the size of the marker;
       var fraction = radius / length;
-      var dx = (d.source.x - d.target.x) * fraction;
-      var dy = (d.source.y - d.target.y) * fraction;
+      var dx = Math.round((x1 - x2) * fraction);
+      var dy = Math.round((y1 - y2) * fraction);
 
-      link
-        .attr('x1', d.source.x)
-        .attr('y1', d.source.y)
-        .attr('x2', d.target.x + dx)
-        .attr('y2', d.target.y + dy);
+      var fmtString = 'M ' + x1 + ',' + y1 + ' L ' + (x2 + dx) + ',' + (y2 + dy);
+      link.attr('d', fmtString);
     });
   });
 
