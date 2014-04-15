@@ -14,6 +14,8 @@ body {
 
 circle {
   fill: #888;
+  stroke: #444;
+  stroke-width: 1px;
 }
 
 circle[status="ported"] {
@@ -26,6 +28,10 @@ circle[status="almost-ported"] {
 
 circle[status="unported"] {
   fill: #f00;
+}
+
+circle[status="ready"] {
+  fill: #00f;
 }
 
 circle, line {
@@ -153,8 +159,30 @@ function buildDepGraph(depData) {
 d3.json('twisted-deps.json', function(error, depData) {
   var graph = buildDepGraph(depData);
 
-  var width = window.innerWidth - 250;
-  var height = window.innerHeight;
+  var width;
+  var height;
+
+  var resizeTimeout = null;
+  function onResize() {
+    width = window.innerWidth - 250;
+    height = window.innerHeight;
+
+    if (resizeTimeout) {
+      clearTimeout(resizeTimeout);
+    }
+    if (force) {
+      resizeTimeout = setTimeout(function() {
+        force.size([width, height]);
+        d3.select('body > svg')
+          .attr('width', width)
+          .attr('height', height);
+        force.start();
+      }, 100);
+    }
+  }
+
+  window.addEventListener('resize', onResize);
+  onResize();
 
   var svg = d3.select('body').append('svg')
     .attr('width', width)
@@ -177,7 +205,6 @@ d3.json('twisted-deps.json', function(error, depData) {
     .distance(100)
     .linkStrength(0.5)
     .charge(-75)
-    // .friction(0.8)
     .gravity(0.05)
     .start();
 
@@ -255,11 +282,6 @@ d3.json('twisted-deps.json', function(error, depData) {
       .domain(d3.extent(filteredNodes, f.get('deps.length')))
       .range([4, 20]);
 
-    var nodeStrokeScale = d3.scale.pow()
-      .exponent(2)
-      .domain(d3.extent(filteredNodes, f.get('deps.length')))
-      .range([0.25, 1]);
-
     links = links.data(filteredLinks, function(d) {
         return d.source.name + '|' + d.target.name;
       });
@@ -283,8 +305,6 @@ d3.json('twisted-deps.json', function(error, depData) {
       .call(force.drag);
     nodes
       .attr('r', f.compose(f.get('deps.length'), nodeSizeScale))
-      .style('stroke-width', f.compose(f.get('deps.length'), nodeStrokeScale))
-      .style('stroke', '#444')
       .attr('cx', f.get('x'))
       .attr('cy', f.get('y'))
       .attr('status', f.get('status'));
@@ -319,6 +339,7 @@ d3.json('twisted-deps.json', function(error, depData) {
     }
 
     function clickNode(node) {
+      if (d3.event.defaultPrevented) return; // ignore drag
       graph.nodes.forEach(function(n) {
         n.show = false;
       });
@@ -344,6 +365,8 @@ d3.json('twisted-deps.json', function(error, depData) {
     listBrowser.on('mouseover', hoverNode);
     listBrowser.on('mouseout', unhoverNode);
     listBrowser.on('click', clickNode);
+
+    force.start();
   }
 
   var breadcrumbs = [];
@@ -377,7 +400,6 @@ d3.json('twisted-deps.json', function(error, depData) {
         });
       }
       enterUpdateExit();
-      console.log('now breadcrumbs is', breadcrumbs);
     });
   }
 
@@ -406,8 +428,10 @@ d3.json('twisted-deps.json', function(error, depData) {
 
   force.on('tick', function() {
     force.nodes().forEach(function(node) {
-      node.x = clamp(node.x, 15, width - 15);
-      node.y = clamp(node.y, 15, height - 15);
+      if (node.x < 30) node.x += 2;
+      if (node.x > width - 30) node.x -= 2;
+      if (node.y < 30) node.y += 2;
+      if (node.y > height - 30) node.y -= 2;
     });
 
     nodes
@@ -428,9 +452,23 @@ d3.json('twisted-deps.json', function(error, depData) {
         pkg.status = status;
       }
     }
-    nodes.attr('status', f.get('status'));
+
+    function getReady(node) {
+      if (node.status === 'ported') {
+        return;
+      }
+      if (node.deps.length === 0) {
+        node.status = 'ready';
+      }
+    }
+
+    graph.nodes.forEach(getReady);
+    nodes
+      .attr('status', f.get('status'))
+      .attr('ready', f.get('ready'));
+
+    enterUpdateExit();
   });
-  enterUpdateExit();
 });
 
 
