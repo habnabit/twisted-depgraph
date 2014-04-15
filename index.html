@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<meta charset='utf-8'>
+<style>
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+circle {
+  fill: #888;
+}
+
+circle[status="ported"] {
+  fill: #0f0;
+}
+
+circle[status="almost-ported"] {
+  fill: #ff0;
+}
+
+circle[status="unported"] {
+  fill: #f00;
+}
+
+.highlight circle {
+  opacity: 0.1;
+}
+
+.highlight line {
+  opacity: 0.1;
+}
+
+.highlight .highlight {
+  opacity: 1.0;
+}
+
+.hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  padding: 1px 4px;
+}
+
+.hover.show {
+  display: block;
+}
+
+</style>
+
+<script src='d3.v3.js'></script>
+<script>
+
+function buildDepGraph(depData) {
+  var pkgs = {};
+
+  function aPkg(name) {
+    var pkg = pkgs[name];
+    if (pkg === undefined) {
+      pkg = {
+        name: name,
+        deps: [],
+        status: 'unported',
+      };
+      pkgs[name] = pkg;
+    }
+    return pkg;
+  }
+
+  var pkgName, pkg, dep;
+  for (pkgName in depData.depgraph) {
+    pkg = aPkg(pkgName);
+    for (dep in depData.depgraph[pkgName]) {
+      pkg.deps.push(dep);
+      aPkg(dep);
+    }
+    pkgs[pkgName] = pkg;
+  }
+
+  var nodes = [];
+  for (pkgName in pkgs) {
+    nodes.push(pkgs[pkgName]);
+  }
+
+  var links = [];
+  nodes.forEach(function(node) {
+    node.deps.forEach(function(depName) {
+      links.push({
+        source: node,
+        target: pkgs[depName],
+      });
+    });
+  });
+
+  return {
+    nodes: nodes,
+    links: links,
+    pkgs: pkgs,
+  };
+}
+
+
+d3.json('twisted-deps.json', function(error, depData) {
+  var graph = buildDepGraph(depData);
+
+  var width = window.innerWidth;
+  var height = window.innerHeight;
+
+  var svg = d3.select('body').append('svg')
+    .attr('width', width)
+    .attr('height', height)
+    .append('g');
+
+  svg.append('marker')
+    .attr('id', 'arrow')
+    .attr('viewBox', '0 0 10 10')
+    .attr('refX', 0)
+    .attr('refY', 5)
+    .attr('markerUnits', 'strokeWidth')
+    .append('path')
+      .attr('d', 'M 0 0 L 10 5 L 0 10 z');
+
+  var force = d3.layout.force()
+    .nodes(graph.nodes)
+    .links(graph.links)
+    .size([width, height])
+    .distance(100)
+    .linkStrength(0.5)
+    .charge(-75)
+    .friction(0.8)
+    .start();
+
+  for (var i = 0; i < 100; i++) {
+    force.tick();
+  }
+
+  // force.stop();
+
+  var link = svg.append('g').selectAll('.link')
+    .data(graph.links)
+    .enter().append('line')
+      .classed('link', true)
+      .style('stroke-width', 0.25)
+      .style('stroke', '#000')
+      .style('stroke-width', 0.5)
+      .attr('marker-end', 'url(#arrow)');
+
+  var nodeSizeScale = d3.scale.linear()
+    .domain(d3.extent(graph.nodes, f.get('deps.length')))
+    .range([3, 15]);
+
+  var nodeStrokeScale = d3.scale.linear()
+    .domain(d3.extent(graph.nodes, f.get('deps.length')))
+    .range([0.5, 1])
+    .clamp(true);
+
+
+  var node = svg.append('g').selectAll('.node')
+    .data(graph.nodes)
+    .enter().append('circle')
+      .classed('node', true)
+      .attr('r', f.compose(f.get('deps.length'), nodeSizeScale))
+      .style('stroke-width', f.compose(f.get('deps.length'), nodeStrokeScale))
+      .style('stroke', '#444')
+      .call(force.drag);
+
+
+  var hover = d3.select('body').append('div').classed('hover', true);
+
+  var hoverTranslate = f.format('translate({0}px,{1}px)',
+                                f.compose(f.get('px'), Math.round, f.plus(8)),
+                                f.compose(f.get('py'), Math.round, f.plus(-24)));
+
+  node.on('mouseover', function(d) {
+    hover
+      .datum(d)
+      .text(f.get('name'))
+      .style('-webkit-transform', hoverTranslate)
+      .style('transform', hoverTranslate)
+      .classed('show', true);
+
+    highlightAllConnected(d);
+    svg.classed('highlight', true);
+    node.classed('highlight', f.get('highlight'));
+    link.classed('highlight', function(d) {
+      return d.source.highlight && d.target.highlight;
+    });
+  });
+
+  node.on('mouseout', function() {
+    hover.classed('show', false);
+    resetHighlight();
+    svg.classed('highlight', false);
+  });
+
+  node.on('click', function(d) {
+    console.log('clicked on', d.name);
+  });
+
+  function highlightAllConnected(node) {
+    resetHighlight();
+    var seen = {};
+    var queue = [node];
+
+    while (queue.length > 0) {
+      node = queue.pop();
+      if (node === undefined || node.name in seen) {
+        continue;
+      }
+      seen[node.name] = true;
+      node.highlight = true;
+      queue = queue.concat(node.deps.map(function(pkgName) { return graph.pkgs[pkgName]; }));
+    }
+  }
+
+  function resetHighlight() {
+    graph.nodes.forEach(function(node) {
+      node.highlight = false;
+    });
+  }
+
+
+  force.on('tick', function() {
+    link.attr('x1', function(d) { return d.source.x; })
+        .attr('y1', function(d) { return d.source.y; })
+        .attr('x2', function(d) { return d.target.x; })
+        .attr('y2', function(d) { return d.target.y; });
+
+    node.attr('cx', f.get('x'))
+        .attr('cy', f.get('y'));
+  });
+
+  d3.json('twisted-ported.json', function(error, portedData) {
+    for (var key in  portedData) {
+      var status = portedData[key];
+      var pkg = graph.pkgs[key];
+      if (pkg) {
+        pkg.status = status;
+      }
+    }
+    node.attr('status', f.get('status'));
+  });
+});
+
+
+var f = {
+  get: function(selector) {
+    var selectors = selector.split('.');
+    var theUndefined = {};
+    return function(d) {
+      var obj = d;
+      for (var i = 0; i < selectors.length; i++) {
+        try {
+          obj = obj[selectors[i]];
+        } catch(e) {
+          console.error('Could not get', selector, 'from', d);
+          return undefined;
+        }
+      }
+      return obj;
+    };
+  },
+
+  compose: function(/* functions... */) {
+    var funcs = Array.prototype.slice.call(arguments);
+    return function(d) {
+      var ret = d;
+      funcs.forEach(function(fn) {
+        ret = fn(ret);
+      });
+      return ret;
+    };
+  },
+
+  times: function(/* functors... */) {
+    var functors;
+    return function(d) {
+      var product = d;
+      for (var i = 0; i < functors.length; i++) {
+        product *= d3.functor(functors[i])(d);
+      }
+      return product;
+    };
+  },
+
+  plus: function(/* functors... */) {
+    var functors = arguments;
+    return function(d) {
+      var sum = d;
+      for (var i = 0; i < functors.length; i++) {
+        sum += d3.functor(functors[i])(d);
+      }
+      return sum;
+    };
+  },
+
+  /* Makes a formatting function.
+   *
+   * The first argument is a format string, like "hello {0}". The rest
+   * of the arguments are functors to fill the slots in the format
+   * string.
+   *
+   * Example:
+   *   function ident(n) { return n; }
+   *   function double(n) { return n * 2; }
+   *   var formatter = module.exports.format('{0} * 2 = {1}', ident, double);
+   *   formatter(5);  // returns '5 * 2 = 10'
+   */
+  format: function(fmt /*, args */) {
+    var args = Array.prototype.slice.call(arguments, 1).map(d3.functor);
+
+    return function(d) {
+      return fmt.replace(/\{[\d\w\.]+\}/g, function(key) {
+        // Strip off {}
+        key = key.slice(1, -1);
+        return args[key](d);
+      });
+    };
+  },
+};
+
+
+</script>
