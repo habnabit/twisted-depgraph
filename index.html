@@ -38,6 +38,10 @@ circle, line {
   transition: opacity 0.15s;
 }
 
+.link {
+  marker-end: url(#arrow);
+}
+
 .highlight circle,
 .highlight line {
   opacity: 0.1;
@@ -101,6 +105,11 @@ circle, line {
   list-style: none;
 }
 
+#hover {
+  fill: #000;
+  stroke: none;
+}
+
 </style>
 
 <script src='d3.v3.js'></script>
@@ -141,10 +150,12 @@ function buildDepGraph(depData) {
   var links = [];
   nodes.forEach(function(node) {
     node.deps.forEach(function(depName) {
-      links.push({
-        source: node,
-        target: pkgs[depName],
-      });
+      if (depName !== node.name) {
+        links.push({
+          source: node,
+          target: pkgs[depName],
+        });
+      }
     });
   });
 
@@ -194,7 +205,9 @@ d3.json('twisted-deps.json', function(error, depData) {
     .attr('viewBox', '0 0 10 10')
     .attr('refX', 0)
     .attr('refY', 5)
-    .attr('markerUnits', 'strokeWidth')
+    .attr('markerWidth', 10)
+    .attr('markerHeight', 10)
+    .attr('orient', 'auto')
     .append('path')
       .attr('d', 'M 0 0 L 10 5 L 0 10 z');
 
@@ -213,8 +226,8 @@ d3.json('twisted-deps.json', function(error, depData) {
   }
 
   var links = svg.append('g').selectAll('.link')
-
   var nodes = svg.append('g').selectAll('.node')
+
 
   var hover = d3.select('body').append('div').classed('hover', true);
   var hoverTranslate = f.format('translate({0}px,{1}px)',
@@ -232,6 +245,11 @@ d3.json('twisted-deps.json', function(error, depData) {
     }
     searchBarInputTimeout = setTimeout(enterUpdateExit, 100);
   });
+
+  var nodeSizeScale = d3.scale.linear()
+    .domain(d3.extent(graph.nodes, f.get('deps.length')))
+    .range([4, 20]);
+
 
   function getSubgraphFrom(node) {
     var subgraph = [];
@@ -263,6 +281,44 @@ d3.json('twisted-deps.json', function(error, depData) {
     });
   }
 
+  function hoverNode(node) {
+    hover
+      .datum(node)
+      .text(f.get('name'))
+      .style('-webkit-transform', hoverTranslate)
+      .style('transform', hoverTranslate)
+      .classed('show', true);
+
+    svg.classed('highlight', true);
+    sidebar.classed('highlight', true);
+
+    highlightAllConnected(node);
+    nodes.classed('highlight', f.get('highlight'));
+    links.classed('highlight', function(d) {
+      return d.source.highlight && d.target.highlight;
+    });
+    listBrowser.classed('highlight', f.get('highlight'));
+  }
+
+  function unhoverNode(node) {
+    hover.classed('show', false);
+    resetHighlight();
+    svg.classed('highlight', false);
+    sidebar.classed('highlight', false);
+  }
+
+  function clickNode(node) {
+    if (d3.event.defaultPrevented) return; // ignore drag
+    graph.nodes.forEach(function(n) {
+      n.show = false;
+    });
+    getSubgraphFrom(node).forEach(function(n) {
+      n.show = true;
+    });
+    enterUpdateExit();
+    pushBreadcrumb(node.name);
+  }
+
   function enterUpdateExit() {
     var search = searchBar.node().value;
     var filteredNodes = graph.nodes.filter(function(d) {
@@ -278,7 +334,7 @@ d3.json('twisted-deps.json', function(error, depData) {
       .nodes(filteredNodes)
       .links(filteredLinks);
 
-    var nodeSizeScale = d3.scale.linear()
+    nodeSizeScale = d3.scale.linear()
       .domain(d3.extent(filteredNodes, f.get('deps.length')))
       .range([4, 20]);
 
@@ -290,11 +346,7 @@ d3.json('twisted-deps.json', function(error, depData) {
       .classed('link', true);
     links
       .style('stroke-width', 0.5)
-      .style('stroke', '#000')
-      .attr('x1', function(d) { return d.source.x; })
-      .attr('y1', function(d) { return d.source.y; })
-      .attr('x2', function(d) { return d.target.x; })
-      .attr('y2', function(d) { return d.target.y; })
+      .style('stroke', '#000');
     links.exit()
       .remove();
 
@@ -310,45 +362,6 @@ d3.json('twisted-deps.json', function(error, depData) {
       .attr('status', f.get('status'));
     nodes.exit()
       .remove();
-
-
-    function hoverNode(node) {
-      hover
-        .datum(node)
-        .text(f.get('name'))
-        .style('-webkit-transform', hoverTranslate)
-        .style('transform', hoverTranslate)
-        .classed('show', true);
-
-      svg.classed('highlight', true);
-      sidebar.classed('highlight', true);
-
-      highlightAllConnected(node);
-      nodes.classed('highlight', f.get('highlight'));
-      links.classed('highlight', function(d) {
-        return d.source.highlight && d.target.highlight;
-      });
-      listBrowser.classed('highlight', f.get('highlight'));
-    }
-
-    function unhoverNode(node) {
-      hover.classed('show', false);
-      resetHighlight();
-      svg.classed('highlight', false);
-      sidebar.classed('highlight', false);
-    }
-
-    function clickNode(node) {
-      if (d3.event.defaultPrevented) return; // ignore drag
-      graph.nodes.forEach(function(n) {
-        n.show = false;
-      });
-      getSubgraphFrom(node).forEach(function(n) {
-        n.show = true;
-      });
-      enterUpdateExit();
-      pushBreadcrumb(node.name);
-    }
 
     nodes.on('mouseover', hoverNode);
     nodes.on('mouseout', unhoverNode);
@@ -437,11 +450,21 @@ d3.json('twisted-deps.json', function(error, depData) {
     nodes
       .attr('cx', f.get('x'))
       .attr('cy', f.get('y'));
-    links
-      .attr('x1', function(d) { return d.source.x; })
-      .attr('y1', function(d) { return d.source.y; })
-      .attr('x2', function(d) { return d.target.x; })
-      .attr('y2', function(d) { return d.target.y; });
+    links.each(function(d) {
+      var link = d3.select(this);
+      var length = Math.sqrt(Math.pow(d.source.x - d.target.x, 2) + Math.pow(d.source.y - d.target.y, 2));
+      var radius = nodeSizeScale(d.target.deps.length);
+      radius += 5; // the size of the marker;
+      var fraction = radius / length;
+      var dx = (d.source.x - d.target.x) * fraction;
+      var dy = (d.source.y - d.target.y) * fraction;
+
+      link
+        .attr('x1', d.source.x)
+        .attr('y1', d.source.y)
+        .attr('x2', d.target.x + dx)
+        .attr('y2', d.target.y + dy);
+    });
   });
 
   d3.json('twisted-ported.json', function(error, portedData) {
@@ -454,10 +477,14 @@ d3.json('twisted-deps.json', function(error, depData) {
     }
 
     function getReady(node) {
-      if (node.status === 'ported') {
+      if (node.status !== 'unported') {
         return;
       }
-      if (node.deps.length === 0) {
+      var ready = true;
+      node.deps.forEach(function(subNode) {
+        ready = ready && graph.pkgs[subNode].status === 'ported';
+      });
+      if (ready) {
         node.status = 'ready';
       }
     }
