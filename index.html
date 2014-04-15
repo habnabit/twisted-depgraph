@@ -42,8 +42,8 @@ circle, line {
   marker-end: url(#arrow);
 }
 
-.highlight circle,
-.highlight line {
+.highlight .node,
+.highlight .link {
   opacity: 0.1;
 }
 
@@ -228,7 +228,6 @@ d3.json('twisted-deps.json', function(error, depData) {
 
   var links = svg.append('g').selectAll('.link');
   var nodes = svg.append('g').selectAll('.node');
-
 
   var hover = d3.select('body').append('div').classed('hover', true);
   var hoverTranslate = f.format('translate({0}px,{1}px)',
