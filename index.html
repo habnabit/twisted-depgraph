@@ -85,6 +85,37 @@ circle, line {
   font-size: 0.9em;
 }
 
+.status-filter {
+  position: absolute;
+  left: 10px;
+  bottom: 0;
+  padding: 0;
+}
+
+.status-filter .status {
+  display: inline;
+  margin-right: 10px;
+}
+
+.status-filter .status:before {
+  box-sizing: border-box;
+  content: "";
+  border: 2px solid #888;
+  width: 12px;
+  height: 12px;
+  display: inline-block;
+  margin-right: 4px;
+}
+
+.status-filter .status.selected:before {
+  border-width: 6px;
+}
+
+.status-filter .status.ported:before { border-color: #0f0; }
+.status-filter .status.almost-ported:before { border-color: #ff0; }
+.status-filter .status.unported:before { border-color: #f00; }
+.status-filter .status.ready:before { border-color: #00f; }
+
 .list-browser {
   margin: 0;
   padding: 0 0 0 10px;
@@ -164,6 +195,7 @@ function buildDepGraph(depData) {
         });
       }
     });
+    node.weight = node.deps.length;
   });
 
   return {
@@ -222,12 +254,18 @@ d3.json('twisted-deps.json', function(error, depData) {
     .nodes(graph.nodes)
     .links(graph.links)
     .size([width, height])
-    .distance(100)
-    .linkStrength(0.5)
+    .distance(75)
+    .linkStrength(0.3)
     .charge(-75)
     .gravity(0.05)
-    .theta(0.99)
     .start();
+
+  var showStatuses = {
+    'ported': false,
+    'unported': true,
+    'almost-ported': true,
+    'ready': true,
+  };
 
   for (var i = 0; i < 200; i++) {
     force.tick();
@@ -242,11 +280,32 @@ d3.json('twisted-deps.json', function(error, depData) {
                                 f.compose(f.get('py'), Math.round, f.plus(-24)));
 
   var sidebar = d3.select('body').append('div').classed('sidebar', true);
-  var searchBar = sidebar.append('input').attr('type', 'text');
+  var searchBox = sidebar.append('input').attr('type', 'text');
   var listBrowser = sidebar.append('ul').classed('list-browser', true).selectAll('li');
 
+
+  var statusFilter = d3.select('body').append('ul').classed('status-filter', true)
+    .selectAll('.statusButton')
+    .data(['ported', 'unported', 'almost-ported', 'ready'])
+    .enter()
+      .append('li')
+      .attr('class', f.ident)
+      .classed('status', true)
+      .classed('selected', function(status) {
+        return showStatuses[status];
+      })
+      .text(f.ident)
+      .on('click', function(status) {
+        showStatuses[status] ^= 1;
+        statusFilter.classed('selected', function(status) {
+          return showStatuses[status];
+        });
+        enterUpdateExit();
+      });
+
+
   var searchBarInputTimeout = null;
-  searchBar.on('keyup', function() {
+  searchBox.on('keyup', function() {
     if (searchBarInputTimeout !== null) {
       clearTimeout(searchBarInputTimeout);
     }
@@ -327,7 +386,7 @@ d3.json('twisted-deps.json', function(error, depData) {
   }
 
   function enterUpdateExit() {
-    var search = searchBar.node().value;
+    var search = searchBox.node().value;
     var filteredNodes = graph.nodes.filter(function(d) {
       return d.show && (d.name.indexOf(search) > -1);
     });  
@@ -352,7 +411,13 @@ d3.json('twisted-deps.json', function(error, depData) {
       .append('path')
       .classed('link', true);
     links
-      .style('stroke-width', 0.5)
+      .style('stroke-width', function(d) {
+        if (showStatuses[d.source.status] && showStatuses[d.target.status]) {
+          return 0.5;
+        } else {
+          return 0;
+        }
+      })
       .style('stroke', '#000');
     links.exit()
       .remove();
@@ -363,7 +428,13 @@ d3.json('twisted-deps.json', function(error, depData) {
       .classed('node', true)
       .call(force.drag);
     nodes
-      .attr('r', f.compose(f.get('deps.length'), nodeSizeScale))
+      .attr('r', function(d) {
+        if (showStatuses[d.status]) {
+          return nodeSizeScale(d.deps.length);
+        } else {
+          return 0;
+        }
+      })
       .attr('cx', f.compose(f.get('x'), Math.round))
       .attr('cy', f.compose(f.get('y'), Math.round))
       .attr('status', f.get('status'));
@@ -379,7 +450,14 @@ d3.json('twisted-deps.json', function(error, depData) {
       .append('li');
     listBrowser
       .text(f.get('name'))
-      .attr('status', f.get('status'));
+      .attr('status', f.get('status'))
+      .style('display', function(d) {
+        if (showStatuses[d.status]) {
+          return 'block';
+        } else {
+          return 'none';
+        }
+      });
     listBrowser.exit()
       .remove();
 
