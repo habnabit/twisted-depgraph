@@ -2,6 +2,10 @@
 <meta charset='utf-8'>
 <style>
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -24,12 +28,17 @@ circle[status="unported"] {
   fill: #f00;
 }
 
-.highlight circle {
+circle, line {
+  transition: opacity 0.15s;
+}
+
+.highlight circle,
+.highlight line {
   opacity: 0.1;
 }
 
-.highlight line {
-  opacity: 0.1;
+.highlight li {
+  opacity: 0.3;
 }
 
 .highlight .highlight {
@@ -63,6 +72,27 @@ circle[status="unported"] {
   list-style: none;
   margin-right: 5px;
   border: 1px solid #000;
+}
+
+.sidebar {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 250px;
+  background-color: #aaa;
+  border-left: 1px solid #000;
+  overflow: auto;
+  font-size: 0.9em;
+}
+
+.list-browser {
+  margin: 0;
+  padding: 0 0 0 10px;
+}
+
+.list-browser li {
+  list-style: none;
 }
 
 </style>
@@ -123,7 +153,7 @@ function buildDepGraph(depData) {
 d3.json('twisted-deps.json', function(error, depData) {
   var graph = buildDepGraph(depData);
 
-  var width = window.innerWidth;
+  var width = window.innerWidth - 250;
   var height = window.innerHeight;
 
   var svg = d3.select('body').append('svg')
@@ -147,24 +177,34 @@ d3.json('twisted-deps.json', function(error, depData) {
     .distance(100)
     .linkStrength(0.5)
     .charge(-75)
-    .friction(0.8)
+    // .friction(0.8)
+    .gravity(0.05)
     .start();
 
-  for (var i = 0; i < 100; i++) {
+  for (var i = 0; i < 200; i++) {
     force.tick();
   }
 
-  // force.stop();
+  var links = svg.append('g').selectAll('.link')
 
-  var link = svg.append('g').selectAll('.link')
-
-  var node = svg.append('g').selectAll('.node')
+  var nodes = svg.append('g').selectAll('.node')
 
   var hover = d3.select('body').append('div').classed('hover', true);
-
   var hoverTranslate = f.format('translate({0}px,{1}px)',
                                 f.compose(f.get('px'), Math.round, f.plus(8)),
                                 f.compose(f.get('py'), Math.round, f.plus(-24)));
+
+  var sidebar = d3.select('body').append('div').classed('sidebar', true);
+  var searchBar = sidebar.append('input').attr('type', 'text');
+  var listBrowser = sidebar.append('ul').classed('list-browser', true).selectAll('li');
+
+  var searchBarInputTimeout = null;
+  searchBar.on('keyup', function() {
+    if (searchBarInputTimeout !== null) {
+      clearTimeout(searchBarInputTimeout);
+    }
+    searchBarInputTimeout = setTimeout(enterUpdateExit, 100);
+  });
 
   function getSubgraphFrom(node) {
     var subgraph = [];
@@ -197,9 +237,14 @@ d3.json('twisted-deps.json', function(error, depData) {
   }
 
   function enterUpdateExit() {
-    var filteredNodes = graph.nodes.filter(f.get('show'));  
+    var search = searchBar.node().value;
+    var filteredNodes = graph.nodes.filter(function(d) {
+      return d.show && (d.name.indexOf(search) > -1);
+    });  
     var filteredLinks = graph.links.filter(function(d) {
-      return d.source.show && d.target.show;
+      return d.source.show && d.target.show &&
+             (d.source.name.indexOf(search) > -1) &&
+             (d.target.name.indexOf(search) > -1);
     });
 
     force
@@ -215,69 +260,90 @@ d3.json('twisted-deps.json', function(error, depData) {
       .domain(d3.extent(filteredNodes, f.get('deps.length')))
       .range([0.25, 1]);
 
-    link = link.data(filteredLinks, function(d) {
+    links = links.data(filteredLinks, function(d) {
         return d.source.name + '|' + d.target.name;
       });
-    link.enter()
+    links.enter()
       .append('line')
       .classed('link', true);
-    link
+    links
       .style('stroke-width', 0.5)
       .style('stroke', '#000')
       .attr('x1', function(d) { return d.source.x; })
       .attr('y1', function(d) { return d.source.y; })
       .attr('x2', function(d) { return d.target.x; })
       .attr('y2', function(d) { return d.target.y; })
-    link.exit()
+    links.exit()
       .remove();
 
-    node = node.data(filteredNodes, f.get('name'));
-    node.enter()
+    nodes = nodes.data(filteredNodes, f.get('name'));
+    nodes.enter()
       .append('circle')
-      .classed('node', true);
-      // .call(force.drag);
-    node
+      .classed('node', true)
+      .call(force.drag);
+    nodes
       .attr('r', f.compose(f.get('deps.length'), nodeSizeScale))
       .style('stroke-width', f.compose(f.get('deps.length'), nodeStrokeScale))
       .style('stroke', '#444')
       .attr('cx', f.get('x'))
       .attr('cy', f.get('y'))
       .attr('status', f.get('status'));
-    node.exit()
+    nodes.exit()
       .remove();
 
-    node.on('mouseover', function(d) {
+
+    function hoverNode(node) {
       hover
-        .datum(d)
+        .datum(node)
         .text(f.get('name'))
         .style('-webkit-transform', hoverTranslate)
         .style('transform', hoverTranslate)
         .classed('show', true);
 
-      highlightAllConnected(d);
       svg.classed('highlight', true);
-      node.classed('highlight', f.get('highlight'));
-      link.classed('highlight', function(d) {
+      sidebar.classed('highlight', true);
+
+      highlightAllConnected(node);
+      nodes.classed('highlight', f.get('highlight'));
+      links.classed('highlight', function(d) {
         return d.source.highlight && d.target.highlight;
       });
-    });
+      listBrowser.classed('highlight', f.get('highlight'));
+    }
 
-    node.on('mouseout', function() {
+    function unhoverNode(node) {
       hover.classed('show', false);
       resetHighlight();
       svg.classed('highlight', false);
-    });
+      sidebar.classed('highlight', false);
+    }
 
-    node.on('click', function(d) {
-      graph.nodes.forEach(function(node) {
-        node.show = false;
+    function clickNode(node) {
+      graph.nodes.forEach(function(n) {
+        n.show = false;
       });
-      getSubgraphFrom(d).forEach(function(node) {
-        node.show = true;
+      getSubgraphFrom(node).forEach(function(n) {
+        n.show = true;
       });
       enterUpdateExit();
-      pushBreadcrumb(d.name);
-    });
+      pushBreadcrumb(node.name);
+    }
+
+    nodes.on('mouseover', hoverNode);
+    nodes.on('mouseout', unhoverNode);
+    nodes.on('click', clickNode);
+
+    listBrowser = listBrowser.data(filteredNodes);
+    listBrowser.enter()
+      .append('li');
+    listBrowser
+      .text(f.get('name'));
+    listBrowser.exit()
+      .remove();
+
+    listBrowser.on('mouseover', hoverNode);
+    listBrowser.on('mouseout', unhoverNode);
+    listBrowser.on('click', clickNode);
   }
 
   var breadcrumbs = [];
@@ -339,10 +405,15 @@ d3.json('twisted-deps.json', function(error, depData) {
   updateBreadcrumbs();
 
   force.on('tick', function() {
-    node
+    force.nodes().forEach(function(node) {
+      node.x = clamp(node.x, 15, width - 15);
+      node.y = clamp(node.y, 15, height - 15);
+    });
+
+    nodes
       .attr('cx', f.get('x'))
       .attr('cy', f.get('y'));
-    link
+    links
       .attr('x1', function(d) { return d.source.x; })
       .attr('y1', function(d) { return d.source.y; })
       .attr('x2', function(d) { return d.target.x; })
@@ -357,7 +428,7 @@ d3.json('twisted-deps.json', function(error, depData) {
         pkg.status = status;
       }
     }
-    node.attr('status', f.get('status'));
+    nodes.attr('status', f.get('status'));
   });
   enterUpdateExit();
 });
@@ -442,6 +513,10 @@ var f = {
     return d;
   },
 };
+
+function clamp(num, min, max) {
+  return Math.max(min, Math.min(num, max));
+}
 
 
 </script>
