@@ -18,21 +18,10 @@ circle {
   stroke-width: 1px;
 }
 
-circle[status="ported"] {
-  fill: #0f0;
-}
-
-circle[status="almost-ported"] {
-  fill: #ff0;
-}
-
-circle[status="unported"] {
-  fill: #f00;
-}
-
-circle[status="ready"] {
-  fill: #00f;
-}
+circle[status="ported"] { fill: #0f0; }
+circle[status="almost-ported"] { fill: #ff0; }
+circle[status="unported"] { fill: #f00; }
+circle[status="ready"] { fill: #00f; }
 
 circle, line {
   transition: opacity 0.15s;
@@ -103,7 +92,25 @@ circle, line {
 
 .list-browser li {
   list-style: none;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
+
+.list-browser li:before {
+  content: "";
+  background-color: #888;
+  border-radius: 8px;
+  width: 8px;
+  height: 8px;
+  display: inline-block;
+  margin-right: 4px;
+}
+
+.list-browser li[status="ported"]:before { background-color: #0f0; }
+.list-browser li[status="almost-ported"]:before { background-color: #ff0; }
+.list-browser li[status="unported"]:before { background-color: #f00; }
+.list-browser li[status="ready"]:before { background-color: #00f; }
 
 #hover {
   fill: #000;
@@ -315,8 +322,8 @@ d3.json('twisted-deps.json', function(error, depData) {
     getSubgraphFrom(node).forEach(function(n) {
       n.show = true;
     });
-    enterUpdateExit();
     pushBreadcrumb(node.name);
+    enterUpdateExit();
   }
 
   function enterUpdateExit() {
@@ -371,7 +378,8 @@ d3.json('twisted-deps.json', function(error, depData) {
     listBrowser.enter()
       .append('li');
     listBrowser
-      .text(f.get('name'));
+      .text(f.get('name'))
+      .attr('status', f.get('status'));
     listBrowser.exit()
       .remove();
 
