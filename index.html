@@ -50,6 +50,21 @@ circle[status="unported"] {
   display: block;
 }
 
+.breadcrumbs {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  margin: 0;
+  padding: 0;
+}
+
+.breadcrumbs .crumb {
+  display: inline;
+  list-style: none;
+  margin-right: 5px;
+  border: 1px solid #000;
+}
+
 </style>
 
 <script src='d3.v3.js'></script>
@@ -182,7 +197,6 @@ d3.json('twisted-deps.json', function(error, depData) {
   }
 
   function enterUpdateExit() {
-    console.log('enterUpdateExit', graph.nodes);
     var filteredNodes = graph.nodes.filter(f.get('show'));  
     var filteredLinks = graph.links.filter(function(d) {
       return d.source.show && d.target.show;
@@ -228,6 +242,7 @@ d3.json('twisted-deps.json', function(error, depData) {
       .style('stroke', '#444')
       .attr('cx', f.get('x'))
       .attr('cy', f.get('y'))
+      .attr('status', f.get('status'));
     node.exit()
       .remove();
 
@@ -261,9 +276,67 @@ d3.json('twisted-deps.json', function(error, depData) {
         node.show = true;
       });
       enterUpdateExit();
+      pushBreadcrumb(d.name);
     });
   }
 
+  var breadcrumbs = [];
+  var breadcrumbsSelection = d3.select('body')
+    .append('ul').classed('breadcrumbs', true)
+      .selectAll('li');
+
+  function updateBreadcrumbs() {
+    var crumbs = ['root'].concat(breadcrumbs);
+    breadcrumbsSelection = breadcrumbsSelection.data(crumbs);
+    breadcrumbsSelection.enter()
+      .append('li')
+        .classed('crumb', true)
+    breadcrumbsSelection
+      .text(f.ident);
+    breadcrumbsSelection.exit()
+      .remove();
+
+    breadcrumbsSelection.on('click', function(name) {
+      popBreadcrumbsTo(name);
+      if (name === 'root') {
+        graph.nodes.forEach(function(node) {
+          node.show = true;
+        });
+      } else {
+        graph.nodes.forEach(function(node) {
+          node.show = false;
+        });
+        getSubgraphFrom(graph.pkgs[name]).forEach(function(node) {
+          node.show = true;
+        });
+      }
+      enterUpdateExit();
+      console.log('now breadcrumbs is', breadcrumbs);
+    });
+  }
+
+  function pushBreadcrumb(name) {
+    breadcrumbs.push(name);
+    updateBreadcrumbs();
+  }
+  window.pushBreadcrumb = pushBreadcrumb;
+
+  function popBreadcrumbsTo(name) {
+    if (name === 'root') {
+      breadcrumbs = [];
+      updateBreadcrumbs();
+    }
+    if (breadcrumbs.indexOf(name) === -1) {
+      return;
+    }
+    while (breadcrumbs[breadcrumbs.length - 1] !== name) {
+      breadcrumbs.pop();
+    }
+    updateBreadcrumbs();
+  }
+  window.popBreadcrumbsTo = popBreadcrumbsTo;
+
+  updateBreadcrumbs();
 
   force.on('tick', function() {
     node
@@ -363,6 +436,10 @@ var f = {
         return args[key](d);
       });
     };
+  },
+
+  ident: function(d) {
+    return d;
   },
 };
 
