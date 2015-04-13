@@ -13,6 +13,10 @@ cd twisted-depgraph
 git config user.name "${GIT_NAME}"
 git config user.email "${GIT_EMAIL}"
 git add *.json
+if git diff-index --quiet --cached HEAD; then
+    echo 'nothing to commit'
+    exit 0
+fi
 git commit -m "[travis-ci] Built from twisted ${twisted_rev}.
 
 twisted-depgraph was ${depgraph_rev}."
