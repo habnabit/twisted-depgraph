@@ -11,4 +11,4 @@ fi
 [ -d sandbox ] || virtualenv --python=python2 sandbox
 sandbox/bin/pip install -e twisted
 
-sandbox/bin/python twisted-depgraph.py twisted > twisted-deps.json
+sandbox/bin/python twisted-depgraph.py twisted
