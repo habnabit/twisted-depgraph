@@ -81,7 +81,12 @@ def main(target):
         if 'test' in dirnames:
             dirnames.remove('test')
         for filename in filenames:
-            if not filename.endswith('.py') or filename == '__init__.py':
+            if not filename.endswith('.py'):
+                continue
+            if filename == '__init__.py':
+                continue
+            if '-' in filename:
+                # a script like update-documentation.py
                 continue
             moduleNames.append(
                 reflect.filenameToModuleName(os.path.join(path, filename)))

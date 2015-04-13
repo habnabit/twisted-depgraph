@@ -2,6 +2,17 @@
 twisted-depgraph
 ================
 
+-----
+Usage
+-----
+
+Run ``./rebuild.sh`` to rebuild the data.
+Once that has run successfully, simply view index.html in your browser.
+
+----------
+The Script
+----------
+
 A little thing based on `Toby Dickenson's py2depgraph
 <http://www.tarind.com/py2depgraph.py>`_ for determining the dependency tree of
 twisted.
@@ -12,7 +23,7 @@ determining which things have their dependencies ported or not.
 
 The trivial invocation is::
 
-  $ python py2depgraph.py /path/to/a/twisted/checkout > depgraph.json
+  $ python twisted-depgraph.py /path/to/a/twisted/checkout > depgraph.json
 
 The path passed will not be added to ``sys.path``; if it's not already, you
 must add it to ``PYTHONPATH`` yourself. All modules in twisted will be
