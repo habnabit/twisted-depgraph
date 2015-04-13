@@ -4,9 +4,4 @@ python: "2.7"
 env:
   - secure: "PJQOJ/R9oyMw9yN5akhQhKgApMS+yVp9EHN1xyNSG0aH8/bPaejOp+aGe8LZOLmdJoTgE0061B2NahLSKkOtMXkmbmKgED1AO2t3XNXKPW0yrzfPF+I1W2K/GyflxO7tYq3aQonwzIat5mmNtUd0Oe28+CTFbl/2WZD/htbCRVg="
 
-install:
-  - "git clone https://github.com/twisted/twisted"
-  - "pip install -e twisted"
-
-script:
-  - "sh .build.sh"
+script: "sh .build.sh"
