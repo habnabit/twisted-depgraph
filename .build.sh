@@ -10,4 +10,4 @@ git config user.name "${GIT_NAME}"
 git config user.email "${GIT_EMAIL}"
 git add *.json
 git commit -m "[travis-ci] Built from ${rev}."
-git push origin master
+git push origin gh-pages
