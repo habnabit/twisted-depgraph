@@ -98,7 +98,7 @@ def main(target):
         mf.run_script(tmpfile.name)
 
     with open('twisted-deps.json', 'wb') as outfile:
-        json.dump(mf.as_json(), outfile)
+        json.dump(mf.as_json(), outfile, indent=2, sort_keys=True)
 
     port_status = {}
     for module in dist3.modules:
@@ -107,7 +107,7 @@ def main(target):
         port_status[module] = 'almost-ported'
 
     with open('twisted-ported.json', 'wb') as outfile:
-        json.dump(port_status, outfile)
+        json.dump(port_status, outfile, indent=2, sort_keys=True)
 
 
 if __name__ == '__main__':
