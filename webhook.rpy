@@ -37,22 +37,26 @@ class BadHTTPResponse(Exception):
     pass
 
 
+def _trapBadStatuses(response):
+    if response.code // 100 != 2:
+        raise BadHTTPResponse(response.code)
+
+
 @defer.inlineCallbacks
 def _triggerTravisBuild():
     resp = yield treq.get(
         'https://api.travis-ci.org/repos/habnabit/twisted-depgraph/builds')
     data = yield treq.json_content(resp)
-    if resp.code != 200:
-        raise BadHTTPResponse(resp.code)
-    build_id = data[-1]['id']
+    _trapBadStatuses(resp)
+    build_id = data[0]['id']
     resp = yield treq.post(
         'https://api.travis-ci.org/builds/%s/restart' % (build_id,),
         headers={
             'Authorization': 'token %s' % (TRAVIS_AUTH_TOKEN,),
         })
     yield treq.collect(resp, lambda ign: None)
-    if resp.code != 200:
-        raise BadHTTPResponse(resp.code)
+    _trapBadStatuses(resp)
+    log.msg('rebuilt %r' % (build_id,))
 
 
 class HookResource(Resource):
