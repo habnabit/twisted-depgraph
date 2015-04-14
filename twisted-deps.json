@@ -606,6 +606,7 @@
             "twisted": 1,
             "twisted.internet": 1,
             "twisted.internet.reactor": 1,
+            "twisted.logger": 1,
             "twisted.python": 1,
             "twisted.python.compat": 1,
             "twisted.python.deprecate": 1,
@@ -917,6 +918,113 @@
         "twisted.internet.wxsupport": {
             "twisted": 1,
             "twisted.internet": 1
+        },
+        "twisted.logger": {
+            "twisted.logger._buffer": 1,
+            "twisted.logger._file": 1,
+            "twisted.logger._filter": 1,
+            "twisted.logger._flatten": 1,
+            "twisted.logger._format": 1,
+            "twisted.logger._global": 1,
+            "twisted.logger._io": 1,
+            "twisted.logger._json": 1,
+            "twisted.logger._legacy": 1,
+            "twisted.logger._levels": 1,
+            "twisted.logger._logger": 1,
+            "twisted.logger._observer": 1,
+            "twisted.logger._stdlib": 1
+        },
+        "twisted.logger._buffer": {
+            "twisted.logger._observer": 1
+        },
+        "twisted.logger._file": {
+            "twisted": 1,
+            "twisted.logger._format": 1,
+            "twisted.logger._observer": 1,
+            "twisted.python": 1,
+            "twisted.python.compat": 1
+        },
+        "twisted.logger._filter": {
+            "twisted": 1,
+            "twisted.logger._levels": 1,
+            "twisted.logger._observer": 1,
+            "twisted.python": 1,
+            "twisted.python.constants": 1
+        },
+        "twisted.logger._flatten": {
+            "twisted": 1,
+            "twisted.python": 1,
+            "twisted.python.compat": 1
+        },
+        "twisted.logger._format": {
+            "twisted": 1,
+            "twisted.logger._flatten": 1,
+            "twisted.python": 1,
+            "twisted.python._tzhelper": 1,
+            "twisted.python.compat": 1,
+            "twisted.python.failure": 1,
+            "twisted.python.reflect": 1
+        },
+        "twisted.logger._global": {
+            "twisted": 1,
+            "twisted.logger._buffer": 1,
+            "twisted.logger._file": 1,
+            "twisted.logger._filter": 1,
+            "twisted.logger._format": 1,
+            "twisted.logger._io": 1,
+            "twisted.logger._levels": 1,
+            "twisted.logger._logger": 1,
+            "twisted.logger._observer": 1,
+            "twisted.python": 1,
+            "twisted.python.compat": 1,
+            "twisted.python.reflect": 1
+        },
+        "twisted.logger._io": {
+            "twisted.logger._levels": 1
+        },
+        "twisted.logger._json": {
+            "twisted": 1,
+            "twisted.logger._file": 1,
+            "twisted.logger._flatten": 1,
+            "twisted.logger._levels": 1,
+            "twisted.logger._logger": 1,
+            "twisted.python": 1,
+            "twisted.python.compat": 1,
+            "twisted.python.constants": 1,
+            "twisted.python.failure": 1
+        },
+        "twisted.logger._legacy": {
+            "twisted.logger._format": 1,
+            "twisted.logger._levels": 1,
+            "twisted.logger._observer": 1,
+            "twisted.logger._stdlib": 1
+        },
+        "twisted.logger._levels": {
+            "twisted": 1,
+            "twisted.python": 1,
+            "twisted.python.constants": 1
+        },
+        "twisted.logger._logger": {
+            "twisted": 1,
+            "twisted.logger._global": 1,
+            "twisted.logger._levels": 1,
+            "twisted.python": 1,
+            "twisted.python.compat": 1,
+            "twisted.python.failure": 1
+        },
+        "twisted.logger._observer": {
+            "twisted": 1,
+            "twisted.logger._logger": 1,
+            "twisted.python": 1,
+            "twisted.python.failure": 1
+        },
+        "twisted.logger._stdlib": {
+            "twisted": 1,
+            "twisted.logger._format": 1,
+            "twisted.logger._levels": 1,
+            "twisted.logger._observer": 1,
+            "twisted.python": 1,
+            "twisted.python.compat": 1
         },
         "twisted.lore": {
             "twisted": 1,
@@ -1581,6 +1689,7 @@
             "twisted.protocols": 1,
             "twisted.protocols.basic": 1,
             "twisted.python": 1,
+            "twisted.python._tzhelper": 1,
             "twisted.python.failure": 1,
             "twisted.python.reflect": 1
         },
@@ -1782,6 +1891,9 @@
         },
         "twisted.python.log": {
             "twisted": 1,
+            "twisted.logger": 1,
+            "twisted.logger._global": 1,
+            "twisted.logger._legacy": 1,
             "twisted.python": 1,
             "twisted.python.compat": 1,
             "twisted.python.context": 1,
@@ -2804,6 +2916,7 @@
         "_heapq": 3,
         "_hotshot": 3,
         "_io": 3,
+        "_json": 3,
         "_locale": 3,
         "_lsprof": 3,
         "_markerlib": 5,
@@ -2937,6 +3050,10 @@
         "inspect": 1,
         "io": 1,
         "itertools": 3,
+        "json": 5,
+        "json.decoder": 1,
+        "json.encoder": 1,
+        "json.scanner": 1,
         "keyword": 1,
         "linecache": 1,
         "locale": 1,
@@ -3209,6 +3326,21 @@
         "twisted.internet.win32eventreactor": 1,
         "twisted.internet.wxreactor": 1,
         "twisted.internet.wxsupport": 1,
+        "twisted.logger": 5,
+        "twisted.logger._buffer": 1,
+        "twisted.logger._file": 1,
+        "twisted.logger._filter": 1,
+        "twisted.logger._flatten": 1,
+        "twisted.logger._format": 1,
+        "twisted.logger._global": 1,
+        "twisted.logger._io": 1,
+        "twisted.logger._json": 1,
+        "twisted.logger._legacy": 1,
+        "twisted.logger._levels": 1,
+        "twisted.logger._logger": 1,
+        "twisted.logger._observer": 1,
+        "twisted.logger._stdlib": 1,
+        "twisted.logger._util": 1,
         "twisted.lore": 5,
         "twisted.lore._version": 1,
         "twisted.lore.default": 1,
@@ -3348,6 +3480,7 @@
         "twisted.python._release": 1,
         "twisted.python._shellcomp": 1,
         "twisted.python._textattributes": 1,
+        "twisted.python._tzhelper": 1,
         "twisted.python.compat": 1,
         "twisted.python.components": 1,
         "twisted.python.constants": 1,
@@ -3532,6 +3665,7 @@
         "urllib2": 1,
         "urlparse": 1,
         "uu": 1,
+        "uuid": 1,
         "warnings": 1,
         "weakref": 1,
         "wstools": 5,
