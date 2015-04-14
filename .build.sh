@@ -10,8 +10,8 @@ twisted_rev=$(git -C twisted rev-parse HEAD)
 python twisted-depgraph.py twisted
 mv *.json twisted-depgraph
 cd twisted-depgraph
-git config user.name "${GIT_NAME}"
-git config user.email "${GIT_EMAIL}"
+git config user.name "Aaron Gallagher via travis-ci"
+git config user.email "_@habnab.it"
 git add *.json
 if git diff-index --quiet --cached HEAD; then
     echo 'nothing to commit'
