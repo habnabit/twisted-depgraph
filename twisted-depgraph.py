@@ -82,13 +82,13 @@ def main(target):
     mf = mymf(sys.path[:], 0, [])
 
     moduleNames = []
-    for path, dirnames, filenames in os.walk(target):
+    for path, dirnames, filenames in os.walk(os.path.join(target, 'twisted')):
         if 'test' in dirnames:
             dirnames.remove('test')
         for filename in filenames:
             if not filename.endswith('.py'):
                 continue
-            if filename == '__init__.py':
+            if filename in {'__init__.py', 'setup.py'}:
                 continue
             if '-' in filename:
                 # a script like update-documentation.py
