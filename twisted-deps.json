@@ -17,16 +17,19 @@
             "twisted": 1,
             "twisted.application": 1,
             "twisted.application.reactors": 1,
+            "twisted.application.service": 1,
             "twisted.internet": 1,
             "twisted.persisted": 1,
+            "twisted.persisted.sob": 1,
             "twisted.python": 1,
             "twisted.python.log": 1,
-            "twisted.python.reflect": 1
+            "twisted.python.logfile": 1,
+            "twisted.python.reflect": 1,
+            "twisted.python.usage": 1
         },
         "twisted.application.internet": {
             "twisted": 1,
             "twisted.application": 1,
-            "twisted.application.service": 1,
             "twisted.internet": 1,
             "twisted.internet.defer": 1,
             "twisted.python": 1
@@ -42,7 +45,6 @@
             "twisted": 1,
             "twisted.internet": 1,
             "twisted.persisted": 1,
-            "twisted.persisted.sob": 1,
             "twisted.plugin": 1,
             "twisted.python": 1,
             "twisted.python.reflect": 1
@@ -78,13 +80,13 @@
         "twisted.conch.checkers": {
             "twisted": 1,
             "twisted.conch": 1,
-            "twisted.conch.error": 1,
             "twisted.conch.ssh": 1,
             "twisted.conch.ssh.keys": 1,
             "twisted.cred": 1,
             "twisted.cred.checkers": 1,
             "twisted.cred.credentials": 1,
             "twisted.cred.error": 1,
+            "twisted.cred.pamauth": 1,
             "twisted.internet": 1,
             "twisted.python": 1,
             "twisted.python.deprecate": 1,
@@ -183,6 +185,7 @@
             "twisted.conch.insults": 1,
             "twisted.internet": 1,
             "twisted.python": 1,
+            "twisted.python._textattributes": 1,
             "twisted.python.deprecate": 1,
             "twisted.python.versions": 1
         },
@@ -202,11 +205,13 @@
             "twisted": 1,
             "twisted.conch": 1,
             "twisted.conch.insults": 1,
-            "twisted.python": 1
+            "twisted.python": 1,
+            "twisted.python.text": 1
         },
         "twisted.conch.manhole": {
             "twisted": 1,
             "twisted.conch": 1,
+            "twisted.conch.recvline": 1,
             "twisted.internet": 1,
             "twisted.python": 1,
             "twisted.python.htmlizer": 1
@@ -214,9 +219,7 @@
         "twisted.conch.manhole_ssh": {
             "twisted": 1,
             "twisted.conch": 1,
-            "twisted.conch.avatar": 1,
             "twisted.conch.insults": 1,
-            "twisted.conch.insults.insults": 1,
             "twisted.conch.ssh": 1,
             "twisted.conch.ssh.factory": 1,
             "twisted.conch.ssh.session": 1,
@@ -227,7 +230,9 @@
             "twisted.application": 1,
             "twisted.conch": 1,
             "twisted.conch.insults": 1,
+            "twisted.conch.telnet": 1,
             "twisted.cred": 1,
+            "twisted.cred.portal": 1,
             "twisted.internet": 1,
             "twisted.python": 1
         },
@@ -249,6 +254,7 @@
             "twisted.conch": 1,
             "twisted.conch.insults": 1,
             "twisted.conch.insults.helper": 1,
+            "twisted.conch.insults.insults": 1,
             "twisted.python": 1
         },
         "twisted.conch.scripts.cftp": {
@@ -257,6 +263,7 @@
             "twisted.conch.client": 1,
             "twisted.conch.ssh": 1,
             "twisted.internet": 1,
+            "twisted.internet.utils": 1,
             "twisted.protocols": 1,
             "twisted.python": 1
         },
@@ -270,8 +277,6 @@
             "twisted": 1,
             "twisted.conch": 1,
             "twisted.conch.client": 1,
-            "twisted.conch.client.connect": 1,
-            "twisted.conch.client.options": 1,
             "twisted.conch.error": 1,
             "twisted.conch.ssh": 1,
             "twisted.internet": 1,
@@ -286,6 +291,7 @@
             "twisted.conch.ui": 1,
             "twisted.conch.ui.tkvt100": 1,
             "twisted.internet": 1,
+            "twisted.internet.tksupport": 1,
             "twisted.python": 1
         },
         "twisted.conch.ssh.address": {
@@ -311,6 +317,7 @@
             "twisted": 1,
             "twisted.conch": 1,
             "twisted.conch.ssh": 1,
+            "twisted.conch.ssh.common": 1,
             "twisted.conch.ssh.service": 1,
             "twisted.internet": 1,
             "twisted.python": 1
@@ -345,9 +352,9 @@
             "twisted": 1,
             "twisted.conch": 1,
             "twisted.conch.ssh": 1,
-            "twisted.conch.ssh.common": 1,
             "twisted.conch.ssh.sexpy": 1,
-            "twisted.python": 1
+            "twisted.python": 1,
+            "twisted.python.randbytes": 1
         },
         "twisted.conch.ssh.service": {
             "twisted": 1,
@@ -358,7 +365,6 @@
             "twisted.conch": 1,
             "twisted.conch.interfaces": 1,
             "twisted.conch.ssh": 1,
-            "twisted.conch.ssh.channel": 1,
             "twisted.conch.ssh.connection": 1,
             "twisted.internet": 1,
             "twisted.python": 1
@@ -399,6 +405,7 @@
             "twisted.conch.openssh_compat.factory": 1,
             "twisted.conch.unix": 1,
             "twisted.cred": 1,
+            "twisted.cred.strcred": 1,
             "twisted.python": 1
         },
         "twisted.conch.telnet": {
@@ -406,6 +413,7 @@
             "twisted.cred": 1,
             "twisted.internet": 1,
             "twisted.protocols": 1,
+            "twisted.protocols.basic": 1,
             "twisted.python": 1
         },
         "twisted.conch.ui.ansi": {
@@ -437,7 +445,7 @@
         "twisted.cred.checkers": {
             "twisted": 1,
             "twisted.cred": 1,
-            "twisted.cred.pamauth": 1,
+            "twisted.cred.credentials": 1,
             "twisted.internet": 1,
             "twisted.python": 1
         },
@@ -445,7 +453,6 @@
             "twisted": 1,
             "twisted.cred": 1,
             "twisted.cred._digest": 1,
-            "twisted.cred.error": 1,
             "twisted.python": 1,
             "twisted.python.randbytes": 1
         },
@@ -654,19 +661,18 @@
         "twisted.internet.glib2reactor": {
             "twisted": 1,
             "twisted.internet": 1,
+            "twisted.internet.gtk2reactor": 1,
             "twisted.internet.main": 1
         },
         "twisted.internet.gtk2reactor": {
             "twisted": 1,
             "twisted.internet": 1,
-            "twisted.internet._glibbase": 1,
             "twisted.internet.main": 1,
             "twisted.python": 1
         },
         "twisted.internet.gtk3reactor": {
             "twisted": 1,
             "twisted.internet": 1,
-            "twisted.internet.gireactor": 1,
             "twisted.internet.main": 1,
             "twisted.python": 1
         },
@@ -761,6 +767,7 @@
             "twisted.internet._dumbwin32proc": 1,
             "twisted.internet._signals": 1,
             "twisted.internet.base": 1,
+            "twisted.internet.error": 1,
             "twisted.internet.interfaces": 1,
             "twisted.internet.main": 1,
             "twisted.internet.process": 1,
@@ -786,8 +793,7 @@
             "twisted": 1,
             "twisted.internet": 1,
             "twisted.internet.defer": 1,
-            "twisted.internet.error": 1,
-            "twisted.internet.interfaces": 1,
+            "twisted.internet.reactor": 1,
             "twisted.python": 1
         },
         "twisted.internet.pyuisupport": {
@@ -884,7 +890,6 @@
             "twisted": 1,
             "twisted.internet": 1,
             "twisted.internet.error": 1,
-            "twisted.internet.protocol": 1,
             "twisted.python": 1,
             "twisted.python.sendmsg": 1,
             "twisted.python.util": 1
@@ -906,7 +911,6 @@
         "twisted.internet.wxreactor": {
             "twisted": 1,
             "twisted.internet": 1,
-            "twisted.internet._threadedselect": 1,
             "twisted.internet.main": 1,
             "twisted.python": 1
         },
@@ -943,6 +947,7 @@
             "twisted": 1,
             "twisted.lore.tree": 1,
             "twisted.python": 1,
+            "twisted.python.procutils": 1,
             "twisted.web": 1
         },
         "twisted.lore.lint": {
@@ -974,7 +979,6 @@
         "twisted.lore.slides": {
             "twisted": 1,
             "twisted.lore": 1,
-            "twisted.lore.default": 1,
             "twisted.lore.latex": 1,
             "twisted.lore.tree": 1,
             "twisted.web": 1
@@ -1010,6 +1014,7 @@
             "twisted": 1,
             "twisted.internet": 1,
             "twisted.mail": 1,
+            "twisted.mail.smtp": 1,
             "twisted.python": 1
         },
         "twisted.mail.bounce": {
@@ -1019,13 +1024,11 @@
         "twisted.mail.imap4": {
             "twisted": 1,
             "twisted.cred": 1,
-            "twisted.cred.credentials": 1,
             "twisted.cred.error": 1,
             "twisted.internet": 1,
             "twisted.internet.defer": 1,
             "twisted.protocols": 1,
-            "twisted.python": 1,
-            "twisted.python.text": 1
+            "twisted.python": 1
         },
         "twisted.mail.mail": {
             "twisted": 1,
@@ -1044,12 +1047,14 @@
             "twisted.internet": 1,
             "twisted.mail": 1,
             "twisted.persisted": 1,
+            "twisted.persisted.dirdbm": 1,
             "twisted.protocols": 1,
             "twisted.python": 1
         },
         "twisted.mail.pb": {
             "twisted": 1,
-            "twisted.spread": 1
+            "twisted.spread": 1,
+            "twisted.spread.pb": 1
         },
         "twisted.mail.pop3": {
             "twisted": 1,
@@ -1093,7 +1098,6 @@
             "twisted.internet.defer": 1,
             "twisted.internet.error": 1,
             "twisted.mail": 1,
-            "twisted.mail.bounce": 1,
             "twisted.mail.mail": 1,
             "twisted.names": 1,
             "twisted.names.client": 1,
@@ -1109,7 +1113,6 @@
         "twisted.mail.smtp": {
             "twisted": 1,
             "twisted.copyright": 1,
-            "twisted.cred": 1,
             "twisted.internet": 1,
             "twisted.internet.interfaces": 1,
             "twisted.mail": 1,
@@ -1125,16 +1128,13 @@
             "twisted.internet": 1,
             "twisted.internet.ssl": 1,
             "twisted.mail": 1,
-            "twisted.mail.alias": 1,
-            "twisted.mail.mail": 1,
-            "twisted.mail.maildir": 1,
-            "twisted.mail.relaymanager": 1,
             "twisted.python": 1
         },
         "twisted.manhole._inspectro": {
             "twisted": 1,
             "twisted.manhole": 1,
             "twisted.manhole.ui": 1,
+            "twisted.manhole.ui.gtk2manhole": 1,
             "twisted.protocols": 1,
             "twisted.python": 1,
             "twisted.python.components": 1,
@@ -1167,6 +1167,7 @@
             "twisted": 1,
             "twisted.internet": 1,
             "twisted.protocols": 1,
+            "twisted.protocols.telnet": 1,
             "twisted.python": 1
         },
         "twisted.manhole.ui.gtk2manhole": {
@@ -1178,7 +1179,6 @@
             "twisted.python.rebuild": 1,
             "twisted.python.reflect": 1,
             "twisted.spread": 1,
-            "twisted.spread.pb": 1,
             "twisted.spread.ui": 1,
             "twisted.spread.ui.gtk2util": 1
         },
@@ -1209,7 +1209,6 @@
             "twisted": 1,
             "twisted.internet": 1,
             "twisted.names": 1,
-            "twisted.names.common": 1,
             "twisted.python": 1
         },
         "twisted.names.client": {
@@ -1219,6 +1218,7 @@
             "twisted.names": 1,
             "twisted.names.cache": 1,
             "twisted.names.common": 1,
+            "twisted.names.dns": 1,
             "twisted.names.hosts": 1,
             "twisted.names.resolve": 1,
             "twisted.names.root": 1,
@@ -1254,7 +1254,6 @@
             "twisted.internet": 1,
             "twisted.internet.abstract": 1,
             "twisted.names": 1,
-            "twisted.names.common": 1,
             "twisted.python": 1,
             "twisted.python.compat": 1,
             "twisted.python.filepath": 1
@@ -1262,15 +1261,13 @@
         "twisted.names.resolve": {
             "twisted": 1,
             "twisted.internet": 1,
-            "twisted.names": 1,
-            "twisted.names.common": 1
+            "twisted.names": 1
         },
         "twisted.names.root": {
             "twisted": 1,
             "twisted.internet": 1,
             "twisted.names": 1,
             "twisted.names.client": 1,
-            "twisted.names.common": 1,
             "twisted.python": 1,
             "twisted.python.failure": 1
         },
@@ -1286,8 +1283,6 @@
             "twisted": 1,
             "twisted.internet": 1,
             "twisted.names": 1,
-            "twisted.names.dns": 1,
-            "twisted.names.resolve": 1,
             "twisted.python": 1
         },
         "twisted.names.srvconnect": {
@@ -1316,35 +1311,27 @@
         "twisted.news.database": {
             "twisted": 1,
             "twisted.enterprise": 1,
-            "twisted.enterprise.adbapi": 1,
             "twisted.internet": 1,
             "twisted.mail": 1,
-            "twisted.mail.smtp": 1,
             "twisted.news": 1,
             "twisted.news.nntp": 1,
-            "twisted.persisted": 1,
-            "twisted.persisted.dirdbm": 1
+            "twisted.persisted": 1
         },
         "twisted.news.news": {
             "twisted": 1,
             "twisted.internet": 1,
-            "twisted.news": 1,
-            "twisted.news.nntp": 1
+            "twisted.news": 1
         },
         "twisted.news.nntp": {
             "twisted": 1,
             "twisted.protocols": 1,
-            "twisted.protocols.basic": 1,
             "twisted.python": 1
         },
         "twisted.news.tap": {
             "twisted": 1,
             "twisted.application": 1,
-            "twisted.application.strports": 1,
             "twisted.news": 1,
-            "twisted.news.database": 1,
-            "twisted.python": 1,
-            "twisted.python.usage": 1
+            "twisted.python": 1
         },
         "twisted.pair": {
             "twisted": 1,
@@ -1408,6 +1395,7 @@
             "twisted": 1,
             "twisted.persisted": 1,
             "twisted.persisted.aot": 1,
+            "twisted.persisted.styles": 1,
             "twisted.python": 1
         },
         "twisted.persisted.styles": {
@@ -1575,7 +1563,6 @@
         "twisted.positioning.nmea": {
             "twisted": 1,
             "twisted.positioning": 1,
-            "twisted.positioning._sentence": 1,
             "twisted.positioning.base": 1,
             "twisted.protocols": 1,
             "twisted.protocols.basic": 1,
@@ -1600,7 +1587,6 @@
         "twisted.protocols.basic": {
             "twisted": 1,
             "twisted.internet": 1,
-            "twisted.internet.protocol": 1,
             "twisted.python": 1,
             "twisted.python.compat": 1
         },
@@ -1617,7 +1603,6 @@
         "twisted.protocols.ftp": {
             "twisted": 1,
             "twisted.cred": 1,
-            "twisted.cred.checkers": 1,
             "twisted.internet": 1,
             "twisted.protocols": 1,
             "twisted.python": 1
@@ -1898,8 +1883,6 @@
             "twisted.internet.protocol": 1,
             "twisted.python": 1,
             "twisted.runner": 1,
-            "twisted.runner.inetd": 1,
-            "twisted.runner.inetdconf": 1,
             "twisted.runner.portmap": 1
         },
         "twisted.runner.procmon": {
@@ -1924,12 +1907,9 @@
         "twisted.scripts._twistd_unix": {
             "twisted": 1,
             "twisted.application": 1,
-            "twisted.application.app": 1,
             "twisted.internet": 1,
             "twisted.internet.interfaces": 1,
             "twisted.python": 1,
-            "twisted.python.logfile": 1,
-            "twisted.python.syslog": 1,
             "twisted.python.util": 1
         },
         "twisted.scripts._twistw": {
@@ -1939,16 +1919,13 @@
         },
         "twisted.scripts.htmlizer": {
             "twisted": 1,
-            "twisted.python": 1,
-            "twisted.python.htmlizer": 1
+            "twisted.python": 1
         },
         "twisted.scripts.manhole": {
             "twisted": 1,
             "twisted.internet": 1,
-            "twisted.internet.gtk2reactor": 1,
             "twisted.manhole": 1,
             "twisted.manhole.ui": 1,
-            "twisted.manhole.ui.gtk2manhole": 1,
             "twisted.python": 1
         },
         "twisted.scripts.tap2deb": {
@@ -1969,7 +1946,6 @@
         "twisted.scripts.tkunzip": {
             "twisted": 1,
             "twisted.internet": 1,
-            "twisted.internet.tksupport": 1,
             "twisted.python": 1,
             "twisted.python.procutils": 1,
             "twisted.scripts": 1,
@@ -2066,7 +2042,6 @@
             "twisted": 1,
             "twisted.application": 1,
             "twisted.cred": 1,
-            "twisted.cred.strcred": 1,
             "twisted.protocols": 1,
             "twisted.python": 1
         },
@@ -2196,11 +2171,9 @@
             "twisted": 1,
             "twisted.python": 1,
             "twisted.python.deprecate": 1,
-            "twisted.python.monkey": 1,
             "twisted.python.reflect": 1,
             "twisted.python.util": 1,
             "twisted.trial": 1,
-            "twisted.trial.itrial": 1,
             "twisted.trial.unittest": 1
         },
         "twisted.trial.reporter": {
@@ -2238,7 +2211,6 @@
         "twisted.trial.util": {
             "twisted": 1,
             "twisted.internet": 1,
-            "twisted.internet.utils": 1,
             "twisted.python": 1,
             "twisted.python.failure": 1,
             "twisted.python.filepath": 1,
@@ -2329,7 +2301,8 @@
         },
         "twisted.web.demo": {
             "twisted": 1,
-            "twisted.web": 1
+            "twisted.web": 1,
+            "twisted.web.static": 1
         },
         "twisted.web.distrib": {
             "twisted": 1,
@@ -2443,14 +2416,12 @@
             "twisted.web.error": 1,
             "twisted.web.html": 1,
             "twisted.web.http": 1,
-            "twisted.web.resource": 1,
             "twisted.web.util": 1
         },
         "twisted.web.soap": {
             "twisted": 1,
             "twisted.internet": 1,
-            "twisted.web": 1,
-            "twisted.web.client": 1
+            "twisted.web": 1
         },
         "twisted.web.static": {
             "twisted": 1,
@@ -2477,10 +2448,6 @@
             "twisted.python": 1,
             "twisted.spread": 1,
             "twisted.web": 1,
-            "twisted.web.demo": 1,
-            "twisted.web.distrib": 1,
-            "twisted.web.script": 1,
-            "twisted.web.static": 1,
             "twisted.web.twcgi": 1,
             "twisted.web.wsgi": 1
         },
@@ -2507,7 +2474,6 @@
             "twisted.python": 1,
             "twisted.python.modules": 1,
             "twisted.python.reflect": 1,
-            "twisted.python.urlpath": 1,
             "twisted.web": 1,
             "twisted.web.resource": 1,
             "twisted.web.server": 1,
@@ -2516,7 +2482,6 @@
         "twisted.web.vhost": {
             "twisted": 1,
             "twisted.python": 1,
-            "twisted.python.roots": 1,
             "twisted.web": 1
         },
         "twisted.web.wsgi": {
@@ -2578,7 +2543,6 @@
             "twisted.spread": 1,
             "twisted.words": 1,
             "twisted.words.im": 1,
-            "twisted.words.im.interfaces": 1,
             "twisted.words.im.locals": 1
         },
         "twisted.words.protocols": {
@@ -2590,8 +2554,7 @@
             "twisted.internet": 1,
             "twisted.persisted": 1,
             "twisted.protocols": 1,
-            "twisted.python": 1,
-            "twisted.python._textattributes": 1
+            "twisted.python": 1
         },
         "twisted.words.protocols.jabber.client": {
             "twisted": 1,
@@ -2599,6 +2562,7 @@
             "twisted.words.protocols": 1,
             "twisted.words.protocols.jabber": 1,
             "twisted.words.protocols.jabber.jid": 1,
+            "twisted.words.protocols.jabber.sasl": 1,
             "twisted.words.xish": 1
         },
         "twisted.words.protocols.jabber.component": {
@@ -2642,6 +2606,7 @@
             "twisted.words": 1,
             "twisted.words.protocols": 1,
             "twisted.words.protocols.jabber": 1,
+            "twisted.words.protocols.jabber.sasl_mechanisms": 1,
             "twisted.words.xish": 1
         },
         "twisted.words.protocols.jabber.xmlstream": {
