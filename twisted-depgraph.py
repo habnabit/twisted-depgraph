@@ -104,6 +104,7 @@ def main(target):
 
     with open('twisted-deps.json', 'wb') as outfile:
         json_dump(mf.as_json(), outfile)
+        outfile.write('\n')
 
     port_status = {}
     for module in dist3.modules:
@@ -113,6 +114,7 @@ def main(target):
 
     with open('twisted-ported.json', 'wb') as outfile:
         json_dump(port_status, outfile)
+        outfile.write('\n')
 
 
 if __name__ == '__main__':
