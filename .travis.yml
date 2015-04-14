@@ -4,4 +4,7 @@ python: "2.7"
 env:
   - secure: "PJQOJ/R9oyMw9yN5akhQhKgApMS+yVp9EHN1xyNSG0aH8/bPaejOp+aGe8LZOLmdJoTgE0061B2NahLSKkOtMXkmbmKgED1AO2t3XNXKPW0yrzfPF+I1W2K/GyflxO7tYq3aQonwzIat5mmNtUd0Oe28+CTFbl/2WZD/htbCRVg="
 
+sudo: required
+install:
+  - "sudo apt-get install libgmp-dev"
 script: "sh .build.sh"
