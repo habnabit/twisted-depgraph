@@ -21,6 +21,7 @@
 # SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 import collections
+import functools
 import json
 import os
 import modulefinder
@@ -73,6 +74,10 @@ class mymf(modulefinder.ModuleFinder):
         }
 
 
+json_dump = functools.partial(
+    json.dump, indent=4, separators=(',', ': '), sort_keys=True)
+
+
 def main(target):
     mf = mymf(sys.path[:], 0, [])
 
@@ -98,7 +103,7 @@ def main(target):
         mf.run_script(tmpfile.name)
 
     with open('twisted-deps.json', 'wb') as outfile:
-        json.dump(mf.as_json(), outfile, indent=4, sort_keys=True)
+        json_dump(mf.as_json(), outfile)
 
     port_status = {}
     for module in dist3.modules:
@@ -107,7 +112,7 @@ def main(target):
         port_status[module] = 'almost-ported'
 
     with open('twisted-ported.json', 'wb') as outfile:
-        json.dump(port_status, outfile, indent=4, sort_keys=True)
+        json_dump(port_status, outfile)
 
 
 if __name__ == '__main__':
