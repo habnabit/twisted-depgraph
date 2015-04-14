@@ -3,8 +3,8 @@ python: "2.7"
 
 env:
   - GIT_NAME: Aaron Gallagher via travis-ci
-  - GIT_EMAIL: _@habnab.it
-  - secure: "encUyxw60qlEkklDlaZh9eHX0UbymccgGbvMDnv3wzM46qAN1CcO8RGQvVLcMtpqBB5vd9zTlipldTBVdPU/22RqtDdWF+v7Cjt0ZmK/9ptAP3kixdqgsmp9gPBpYEJC12J3ZFgfjMW4Krr056CvvUKIslV+PO3m1VG6/fTAWKU="
+    GIT_EMAIL: _@habnab.it
+    secure: "encUyxw60qlEkklDlaZh9eHX0UbymccgGbvMDnv3wzM46qAN1CcO8RGQvVLcMtpqBB5vd9zTlipldTBVdPU/22RqtDdWF+v7Cjt0ZmK/9ptAP3kixdqgsmp9gPBpYEJC12J3ZFgfjMW4Krr056CvvUKIslV+PO3m1VG6/fTAWKU="
 
 sudo: required
 install:
