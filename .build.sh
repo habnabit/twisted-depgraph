@@ -20,4 +20,4 @@ fi
 git commit -m "[travis-ci] Built from twisted ${twisted_rev}.
 
 twisted-depgraph was ${depgraph_rev}."
-git push origin gh-pages
+git push -q origin gh-pages
