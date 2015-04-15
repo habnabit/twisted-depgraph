@@ -994,6 +994,7 @@
             "twisted.python.failure": 1
         },
         "twisted.logger._legacy": {
+            "twisted.logger._format": 1,
             "twisted.logger._levels": 1,
             "twisted.logger._observer": 1,
             "twisted.logger._stdlib": 1
