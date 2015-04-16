@@ -2513,6 +2513,7 @@
             "twisted": 1,
             "twisted.python": 1,
             "twisted.python.compat": 1,
+            "twisted.python.filepath": 1,
             "twisted.web": 1
         },
         "twisted.web.server": {
@@ -2538,11 +2539,12 @@
         "twisted.web.static": {
             "twisted": 1,
             "twisted.internet": 1,
-            "twisted.persisted": 1,
             "twisted.python": 1,
+            "twisted.python.compat": 1,
             "twisted.python.runtime": 1,
             "twisted.python.util": 1,
             "twisted.web": 1,
+            "twisted.web.html": 1,
             "twisted.web.util": 1
         },
         "twisted.web.sux": {
@@ -2584,6 +2586,7 @@
         "twisted.web.util": {
             "twisted": 1,
             "twisted.python": 1,
+            "twisted.python.compat": 1,
             "twisted.python.modules": 1,
             "twisted.python.reflect": 1,
             "twisted.web": 1,

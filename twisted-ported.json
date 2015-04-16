@@ -129,7 +129,10 @@
     "twisted.web.http_headers": "ported",
     "twisted.web.iweb": "almost-ported",
     "twisted.web.resource": "ported",
+    "twisted.web.script": "ported",
     "twisted.web.server": "almost-ported",
+    "twisted.web.static": "ported",
     "twisted.web.test": "ported",
-    "twisted.web.test.requesthelper": "ported"
+    "twisted.web.test.requesthelper": "ported",
+    "twisted.web.util": "almost-ported"
 }
