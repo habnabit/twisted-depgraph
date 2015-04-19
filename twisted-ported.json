@@ -106,6 +106,7 @@
     "twisted.test.reflect_helper_ZDE": "almost-ported",
     "twisted.test.ssl_helpers": "ported",
     "twisted.trial": "ported",
+    "twisted.trial._asyncrunner": "ported",
     "twisted.trial._asynctest": "ported",
     "twisted.trial._synctest": "ported",
     "twisted.trial.itrial": "ported",
