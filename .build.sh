@@ -21,7 +21,7 @@ if git diff-index --quiet --cached HEAD; then
     echo 'nothing to commit'
     exit 0
 fi
-git commit -m "[travis-ci] Built from twisted ${twisted_rev}.
+git commit -m "[travis-ci] Built from twisted/twisted@${twisted_rev}.
 
 twisted-depgraph was ${depgraph_rev}."
 git push -q origin gh-pages
