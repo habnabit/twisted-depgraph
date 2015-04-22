@@ -1678,6 +1678,12 @@
             "twisted.python.compat": 1,
             "twisted.python.constants": 1
         },
+        "twisted.protocols": {
+            "twisted": 1,
+            "twisted.python": 1,
+            "twisted.python.deprecate": 1,
+            "twisted.python.versions": 1
+        },
         "twisted.protocols.amp": {
             "twisted": 1,
             "twisted.internet": 1,
