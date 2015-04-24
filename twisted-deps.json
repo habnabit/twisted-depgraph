@@ -1953,6 +1953,11 @@
             "twisted": 1,
             "twisted.python": 1
         },
+        "twisted.python.urlpath": {
+            "twisted": 1,
+            "twisted.python": 1,
+            "twisted.python.compat": 1
+        },
         "twisted.python.usage": {
             "twisted": 1,
             "twisted.python": 1,

@@ -94,6 +94,7 @@
     "twisted.python.test.modules_helpers": "ported",
     "twisted.python.threadable": "ported",
     "twisted.python.threadpool": "ported",
+    "twisted.python.urlpath": "ported",
     "twisted.python.usage": "ported",
     "twisted.python.util": "ported",
     "twisted.python.versions": "ported",
