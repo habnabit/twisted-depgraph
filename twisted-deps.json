@@ -2021,12 +2021,6 @@
             "twisted.runner": 1,
             "twisted.runner.procmon": 1
         },
-        "twisted.scripts": {
-            "twisted": 1,
-            "twisted.python": 1,
-            "twisted.python.deprecate": 1,
-            "twisted.python.versions": 1
-        },
         "twisted.scripts._twistd_unix": {
             "twisted": 1,
             "twisted.application": 1,
@@ -2059,20 +2053,6 @@
         "twisted.scripts.tap2rpm": {
             "twisted": 1,
             "twisted.python": 1
-        },
-        "twisted.scripts.tapconvert": {
-            "twisted": 1,
-            "twisted.application": 1,
-            "twisted.persisted": 1,
-            "twisted.python": 1
-        },
-        "twisted.scripts.tkunzip": {
-            "twisted": 1,
-            "twisted.internet": 1,
-            "twisted.python": 1,
-            "twisted.python.procutils": 1,
-            "twisted.scripts": 1,
-            "twisted.scripts.tkunzip": 1
         },
         "twisted.scripts.trial": {
             "twisted": 1,
@@ -2978,7 +2958,6 @@
         "codecs": 1,
         "codeop": 1,
         "collections": 1,
-        "compileall": 1,
         "contextlib": 1,
         "cookielib": 1,
         "copy": 1,
@@ -3555,8 +3534,6 @@
         "twisted.scripts.manhole": 1,
         "twisted.scripts.tap2deb": 1,
         "twisted.scripts.tap2rpm": 1,
-        "twisted.scripts.tapconvert": 1,
-        "twisted.scripts.tkunzip": 1,
         "twisted.scripts.trial": 1,
         "twisted.scripts.twistd": 1,
         "twisted.spread": 5,
