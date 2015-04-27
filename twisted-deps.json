@@ -479,8 +479,6 @@
         },
         "twisted.internet._baseprocess": {
             "twisted": 1,
-            "twisted.persisted": 1,
-            "twisted.persisted.styles": 1,
             "twisted.python": 1,
             "twisted.python.deprecate": 1,
             "twisted.python.failure": 1,
@@ -582,6 +580,7 @@
             "twisted.internet.interfaces": 1,
             "twisted.internet.threads": 1,
             "twisted.python": 1,
+            "twisted.python.compat": 1,
             "twisted.python.runtime": 1,
             "twisted.python.threadpool": 1
         },
@@ -778,7 +777,6 @@
             "twisted.internet.unix": 1,
             "twisted.protocols": 1,
             "twisted.python": 1,
-            "twisted.python.compat": 1,
             "twisted.python.runtime": 1
         },
         "twisted.internet.process": {
@@ -788,6 +786,7 @@
             "twisted.internet.interfaces": 1,
             "twisted.internet.main": 1,
             "twisted.python": 1,
+            "twisted.python.compat": 1,
             "twisted.python.util": 1
         },
         "twisted.internet.protocol": {
