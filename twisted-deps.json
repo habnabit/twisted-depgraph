@@ -4,14 +4,38 @@
             "twisted": 1,
             "twisted._version": 1,
             "twisted.python": 1,
-            "twisted.python.compat": 1,
-            "twisted.python.deprecate": 1,
-            "twisted.python.versions": 1
+            "twisted.python.compat": 1
+        },
+        "twisted._threads": {
+            "twisted._threads._ithreads": 1,
+            "twisted._threads._memory": 1,
+            "twisted._threads._pool": 1,
+            "twisted._threads._team": 1,
+            "twisted._threads._threadworker": 1
+        },
+        "twisted._threads._convenience": {
+            "twisted._threads._ithreads": 1
+        },
+        "twisted._threads._memory": {
+            "twisted._threads._convenience": 1
+        },
+        "twisted._threads._pool": {
+            "twisted": 1,
+            "twisted._threads._team": 1,
+            "twisted._threads._threadworker": 1,
+            "twisted.python": 1,
+            "twisted.python.log": 1
+        },
+        "twisted._threads._team": {
+            "twisted._threads._convenience": 1
+        },
+        "twisted._threads._threadworker": {
+            "twisted._threads._convenience": 1,
+            "twisted._threads._ithreads": 1
         },
         "twisted._version": {
             "twisted": 1,
-            "twisted.python": 1,
-            "twisted.python.versions": 1
+            "twisted.python": 1
         },
         "twisted.application.app": {
             "twisted": 1,
@@ -20,7 +44,6 @@
             "twisted.application.service": 1,
             "twisted.internet": 1,
             "twisted.persisted": 1,
-            "twisted.persisted.sob": 1,
             "twisted.python": 1,
             "twisted.python.log": 1,
             "twisted.python.logfile": 1,
@@ -45,6 +68,7 @@
             "twisted": 1,
             "twisted.internet": 1,
             "twisted.persisted": 1,
+            "twisted.persisted.sob": 1,
             "twisted.plugin": 1,
             "twisted.python": 1,
             "twisted.python.reflect": 1
@@ -86,7 +110,6 @@
             "twisted.cred.checkers": 1,
             "twisted.cred.credentials": 1,
             "twisted.cred.error": 1,
-            "twisted.cred.pamauth": 1,
             "twisted.internet": 1,
             "twisted.python": 1,
             "twisted.python.deprecate": 1,
@@ -454,11 +477,8 @@
             "twisted.cred": 1,
             "twisted.cred._digest": 1,
             "twisted.python": 1,
+            "twisted.python.compat": 1,
             "twisted.python.randbytes": 1
-        },
-        "twisted.cred.pamauth": {
-            "twisted": 1,
-            "twisted.internet": 1
         },
         "twisted.cred.portal": {
             "twisted": 1,
@@ -569,6 +589,9 @@
             "twisted.internet": 1,
             "twisted.internet.interfaces": 1,
             "twisted.python": 1,
+            "twisted.python.compat": 1,
+            "twisted.python.filepath": 1,
+            "twisted.python.runtime": 1,
             "twisted.python.util": 1
         },
         "twisted.internet.base": {
@@ -794,6 +817,7 @@
             "twisted.internet": 1,
             "twisted.internet.defer": 1,
             "twisted.internet.reactor": 1,
+            "twisted.logger": 1,
             "twisted.python": 1
         },
         "twisted.internet.pyuisupport": {
@@ -889,8 +913,9 @@
         "twisted.internet.unix": {
             "twisted": 1,
             "twisted.internet": 1,
-            "twisted.internet.error": 1,
             "twisted.python": 1,
+            "twisted.python.compat": 1,
+            "twisted.python.filepath": 1,
             "twisted.python.sendmsg": 1,
             "twisted.python.util": 1
         },
@@ -1024,89 +1049,6 @@
             "twisted.logger._observer": 1,
             "twisted.python": 1,
             "twisted.python.compat": 1
-        },
-        "twisted.lore": {
-            "twisted": 1,
-            "twisted.lore": 1,
-            "twisted.lore._version": 1
-        },
-        "twisted.lore._version": {
-            "twisted": 1,
-            "twisted.python": 1
-        },
-        "twisted.lore.default": {
-            "twisted": 1,
-            "twisted.lore": 1,
-            "twisted.lore.lint": 1,
-            "twisted.lore.tree": 1,
-            "twisted.web": 1
-        },
-        "twisted.lore.docbook": {
-            "twisted": 1,
-            "twisted.lore": 1
-        },
-        "twisted.lore.htmlbook": {
-            "twisted": 1,
-            "twisted.python": 1,
-            "twisted.python.compat": 1
-        },
-        "twisted.lore.latex": {
-            "twisted": 1,
-            "twisted.lore.tree": 1,
-            "twisted.python": 1,
-            "twisted.python.procutils": 1,
-            "twisted.web": 1
-        },
-        "twisted.lore.lint": {
-            "twisted": 1,
-            "twisted.lore": 1,
-            "twisted.python": 1,
-            "twisted.python.deprecate": 1,
-            "twisted.python.versions": 1,
-            "twisted.web": 1
-        },
-        "twisted.lore.lmath": {
-            "twisted": 1,
-            "twisted.lore.default": 1,
-            "twisted.lore.latex": 1,
-            "twisted.lore.lint": 1,
-            "twisted.lore.tree": 1,
-            "twisted.web": 1
-        },
-        "twisted.lore.process": {
-            "twisted.lore.default": 1,
-            "twisted.lore.indexer": 1,
-            "twisted.lore.tree": 1
-        },
-        "twisted.lore.scripts.lore": {
-            "twisted": 1,
-            "twisted.lore": 1,
-            "twisted.python": 1
-        },
-        "twisted.lore.slides": {
-            "twisted": 1,
-            "twisted.lore": 1,
-            "twisted.lore.latex": 1,
-            "twisted.lore.tree": 1,
-            "twisted.web": 1
-        },
-        "twisted.lore.texi": {
-            "twisted": 1,
-            "twisted.lore.latex": 1,
-            "twisted.lore.tree": 1,
-            "twisted.web": 1
-        },
-        "twisted.lore.tree": {
-            "twisted": 1,
-            "twisted.lore.htmlbook": 1,
-            "twisted.lore.indexer": 1,
-            "twisted.lore.latex": 1,
-            "twisted.lore.numberer": 1,
-            "twisted.lore.process": 1,
-            "twisted.python": 1,
-            "twisted.python.filepath": 1,
-            "twisted.web": 1,
-            "twisted.web.domhelpers": 1
         },
         "twisted.mail": {
             "twisted": 1,
@@ -1490,13 +1432,15 @@
             "twisted": 1,
             "twisted.persisted": 1,
             "twisted.persisted.crefutil": 1,
-            "twisted.python": 1
+            "twisted.python": 1,
+            "twisted.python.compat": 1
         },
         "twisted.persisted.crefutil": {
             "twisted": 1,
             "twisted.internet": 1,
             "twisted.internet.defer": 1,
-            "twisted.python": 1
+            "twisted.python": 1,
+            "twisted.python.compat": 1
         },
         "twisted.persisted.sob": {
             "twisted": 1,
@@ -1507,12 +1451,15 @@
         },
         "twisted.persisted.styles": {
             "twisted": 1,
-            "twisted.python": 1
+            "twisted.python": 1,
+            "twisted.python.compat": 1,
+            "twisted.python.reflect": 1
         },
         "twisted.plugin": {
             "twisted": 1,
             "twisted.plugins": 1,
             "twisted.python": 1,
+            "twisted.python.compat": 1,
             "twisted.python.components": 1,
             "twisted.python.log": 1,
             "twisted.python.modules": 1,
@@ -1580,13 +1527,6 @@
             "twisted": 1,
             "twisted.application": 1,
             "twisted.application.service": 1
-        },
-        "twisted.plugins.twisted_lore": {
-            "twisted": 1,
-            "twisted.lore": 1,
-            "twisted.lore.scripts": 1,
-            "twisted.lore.scripts.lore": 1,
-            "twisted.plugin": 1
         },
         "twisted.plugins.twisted_mail": {
             "twisted": 1,
@@ -1829,13 +1769,14 @@
         },
         "twisted.protocols.wire": {
             "twisted": 1,
-            "twisted.internet": 1
+            "twisted.internet": 1,
+            "twisted.python": 1,
+            "twisted.python.compat": 1
         },
         "twisted.python._release": {
             "twisted": 1,
             "twisted.python": 1,
             "twisted.python.compat": 1,
-            "twisted.python.dist": 1,
             "twisted.python.filepath": 1,
             "twisted.python.usage": 1,
             "twisted.python.versions": 1
@@ -1850,11 +1791,15 @@
             "twisted.python": 1,
             "twisted.python.util": 1
         },
+        "twisted.python.compat": {
+            "twisted": 1,
+            "twisted.python": 1,
+            "twisted.python.util": 1
+        },
         "twisted.python.components": {
             "twisted": 1,
             "twisted.python": 1,
-            "twisted.python.compat": 1,
-            "twisted.python.reflect": 1
+            "twisted.python.compat": 1
         },
         "twisted.python.deprecate": {
             "twisted": 1,
@@ -1877,14 +1822,10 @@
             "twisted.python": 1,
             "twisted.python.compat": 1,
             "twisted.python.deprecate": 1,
-            "twisted.python.hashlib": 1,
             "twisted.python.runtime": 1,
             "twisted.python.util": 1,
             "twisted.python.versions": 1,
             "twisted.python.win32": 1
-        },
-        "twisted.python.hashlib": {
-            "twisted.python.hashlib": 1
         },
         "twisted.python.htmlizer": {
             "twisted.python.reflect": 1
@@ -1903,8 +1844,7 @@
             "twisted.python.compat": 1,
             "twisted.python.context": 1,
             "twisted.python.failure": 1,
-            "twisted.python.threadable": 1,
-            "twisted.python.util": 1
+            "twisted.python.threadable": 1
         },
         "twisted.python.logfile": {
             "twisted": 1,
@@ -1942,7 +1882,14 @@
         "twisted.python.runtime": {
             "twisted": 1,
             "twisted.python": 1,
-            "twisted.python._inotify": 1
+            "twisted.python._inotify": 1,
+            "twisted.python.filepath": 1
+        },
+        "twisted.python.sendmsg": {
+            "twisted": 1,
+            "twisted.python": 1,
+            "twisted.python._sendmsg": 1,
+            "twisted.python.compat": 1
         },
         "twisted.python.syslog": {
             "twisted": 1,
@@ -1950,7 +1897,9 @@
         },
         "twisted.python.threadpool": {
             "twisted": 1,
-            "twisted.python": 1
+            "twisted._threads": 1,
+            "twisted.python": 1,
+            "twisted.python.failure": 1
         },
         "twisted.python.urlpath": {
             "twisted": 1,
@@ -1965,7 +1914,8 @@
         "twisted.python.util": {
             "twisted": 1,
             "twisted.python": 1,
-            "twisted.python.compat": 1
+            "twisted.python.compat": 1,
+            "twisted.python.reflect": 1
         },
         "twisted.python.versions": {
             "twisted": 1,
@@ -1975,7 +1925,9 @@
         "twisted.python.win32": {
             "twisted": 1,
             "twisted.python": 1,
-            "twisted.python.runtime": 1
+            "twisted.python.deprecate": 1,
+            "twisted.python.runtime": 1,
+            "twisted.python.versions": 1
         },
         "twisted.python.zippath": {
             "twisted": 1,
@@ -2026,6 +1978,8 @@
             "twisted.internet": 1,
             "twisted.internet.interfaces": 1,
             "twisted.python": 1,
+            "twisted.python.compat": 1,
+            "twisted.python.runtime": 1,
             "twisted.python.util": 1
         },
         "twisted.scripts._twistw": {
@@ -2058,6 +2012,7 @@
             "twisted.application": 1,
             "twisted.internet": 1,
             "twisted.python": 1,
+            "twisted.python.compat": 1,
             "twisted.python.filepath": 1,
             "twisted.python.reflect": 1,
             "twisted.python.util": 1,
@@ -2281,6 +2236,7 @@
         "twisted.trial.reporter": {
             "twisted": 1,
             "twisted.python": 1,
+            "twisted.python.compat": 1,
             "twisted.python.components": 1,
             "twisted.python.failure": 1,
             "twisted.python.util": 1,
@@ -2291,8 +2247,7 @@
             "twisted": 1,
             "twisted.internet": 1,
             "twisted.python": 1,
-            "twisted.python.deprecate": 1,
-            "twisted.python.versions": 1,
+            "twisted.python.compat": 1,
             "twisted.trial": 1,
             "twisted.trial._asyncrunner": 1,
             "twisted.trial._synctest": 1,
@@ -2303,8 +2258,6 @@
         },
         "twisted.trial.unittest": {
             "twisted": 1,
-            "twisted.python": 1,
-            "twisted.python.compat": 1,
             "twisted.trial": 1,
             "twisted.trial._asyncrunner": 1,
             "twisted.trial._asynctest": 1,
@@ -2340,6 +2293,7 @@
             "twisted.cred": 1,
             "twisted.cred.credentials": 1,
             "twisted.python": 1,
+            "twisted.python.compat": 1,
             "twisted.python.components": 1,
             "twisted.web": 1,
             "twisted.web.resource": 1
@@ -2354,6 +2308,8 @@
             "twisted": 1,
             "twisted.internet": 1,
             "twisted.internet.defer": 1,
+            "twisted.python": 1,
+            "twisted.python.compat": 1,
             "twisted.web": 1,
             "twisted.web._stan": 1,
             "twisted.web.error": 1,
@@ -2377,6 +2333,11 @@
             "twisted.web.http": 1,
             "twisted.web.http_headers": 1,
             "twisted.web.iweb": 1
+        },
+        "twisted.web._stan": {
+            "twisted": 1,
+            "twisted.python": 1,
+            "twisted.python.compat": 1
         },
         "twisted.web._version": {
             "twisted": 1,
@@ -2423,6 +2384,8 @@
         },
         "twisted.web.error": {
             "twisted": 1,
+            "twisted.python": 1,
+            "twisted.python.compat": 1,
             "twisted.web": 1,
             "twisted.web._responses": 1,
             "twisted.web.template": 1
@@ -2438,7 +2401,9 @@
         "twisted.web.html": {
             "twisted": 1,
             "twisted.python": 1,
-            "twisted.python.compat": 1
+            "twisted.python.compat": 1,
+            "twisted.python.deprecate": 1,
+            "twisted.python.versions": 1
         },
         "twisted.web.http": {
             "twisted": 1,
@@ -2465,9 +2430,7 @@
             "twisted.cred": 1,
             "twisted.cred.credentials": 1,
             "twisted.internet": 1,
-            "twisted.internet.interfaces": 1,
-            "twisted.python": 1,
-            "twisted.python.compat": 1
+            "twisted.internet.interfaces": 1
         },
         "twisted.web.microdom": {
             "twisted": 1,
@@ -2480,6 +2443,8 @@
             "twisted": 1,
             "twisted.internet": 1,
             "twisted.internet.protocol": 1,
+            "twisted.python": 1,
+            "twisted.python.compat": 1,
             "twisted.web": 1,
             "twisted.web.http": 1,
             "twisted.web.resource": 1,
@@ -2517,7 +2482,6 @@
             "twisted.spread.pb": 1,
             "twisted.web": 1,
             "twisted.web.error": 1,
-            "twisted.web.html": 1,
             "twisted.web.http": 1,
             "twisted.web.util": 1
         },
@@ -2534,7 +2498,6 @@
             "twisted.python.runtime": 1,
             "twisted.python.util": 1,
             "twisted.web": 1,
-            "twisted.web.html": 1,
             "twisted.web.util": 1
         },
         "twisted.web.sux": {
@@ -2558,6 +2521,7 @@
         "twisted.web.template": {
             "twisted": 1,
             "twisted.python": 1,
+            "twisted.python.compat": 1,
             "twisted.python.filepath": 1,
             "twisted.web": 1,
             "twisted.web._element": 1,
@@ -2603,6 +2567,7 @@
             "twisted": 1,
             "twisted.internet": 1,
             "twisted.python": 1,
+            "twisted.python.compat": 1,
             "twisted.web": 1
         },
         "twisted.words": {
@@ -2884,6 +2849,7 @@
         "SOAPpy.Utilities": 1,
         "SOAPpy.WSDL": 1,
         "SOAPpy.version": 1,
+        "SimpleHTTPServer": 1,
         "SocketServer": 1,
         "StringIO": 1,
         "Tkconstants": 1,
@@ -2907,7 +2873,6 @@
         "_functools": 3,
         "_hashlib": 3,
         "_heapq": 3,
-        "_hotshot": 3,
         "_io": 3,
         "_json": 3,
         "_locale": 3,
@@ -2941,12 +2906,14 @@
         "calendar": 1,
         "cffi": 5,
         "cffi.api": 1,
+        "cffi.cffi_opcode": 1,
         "cffi.commontypes": 1,
         "cffi.cparser": 1,
         "cffi.ffiplatform": 1,
         "cffi.gc_weakref": 1,
         "cffi.lock": 1,
         "cffi.model": 1,
+        "cffi.recompiler": 1,
         "cffi.vengine_cpy": 1,
         "cffi.vengine_gen": 1,
         "cffi.verifier": 1,
@@ -3020,8 +2987,10 @@
         "exceptions": 6,
         "fcntl": 3,
         "fnmatch": 1,
+        "formatter": 1,
         "ftplib": 1,
         "functools": 1,
+        "future_builtins": 3,
         "gc": 6,
         "genericpath": 1,
         "getopt": 1,
@@ -3034,13 +3003,12 @@
         "hashlib": 1,
         "heapq": 1,
         "hmac": 1,
-        "hotshot": 5,
-        "hotshot.log": 1,
-        "hotshot.stats": 1,
+        "htmlentitydefs": 1,
         "httplib": 1,
         "idna": 5,
         "idna.core": 1,
         "idna.idnadata": 1,
+        "idna.uts46data": 1,
         "imp": 6,
         "importlib": 5,
         "inspect": 1,
@@ -3125,6 +3093,9 @@
         "pycparser.ply.lex": 1,
         "pycparser.ply.yacc": 1,
         "pycparser.plyparser": 1,
+        "pydoc": 1,
+        "pydoc_data": 5,
+        "pydoc_data.topics": 1,
         "pyexpat": 3,
         "quopri": 1,
         "random": 1,
@@ -3147,10 +3118,35 @@
         "service_identity.exceptions": 1,
         "service_identity.pyopenssl": 1,
         "sets": 1,
+        "setuptools": 5,
+        "setuptools.archive_util": 1,
+        "setuptools.command": 5,
+        "setuptools.command.bdist_egg": 1,
+        "setuptools.command.easy_install": 1,
+        "setuptools.command.egg_info": 1,
+        "setuptools.command.install_scripts": 1,
+        "setuptools.command.sdist": 1,
+        "setuptools.command.setopt": 1,
+        "setuptools.compat": 1,
+        "setuptools.depends": 1,
+        "setuptools.dist": 1,
+        "setuptools.extension": 1,
+        "setuptools.msvc9_support": 1,
+        "setuptools.package_index": 1,
+        "setuptools.py26compat": 1,
+        "setuptools.py27compat": 1,
+        "setuptools.py31compat": 1,
+        "setuptools.sandbox": 1,
+        "setuptools.ssl_support": 1,
+        "setuptools.unicode_utils": 1,
+        "setuptools.utils": 1,
+        "setuptools.version": 1,
+        "setuptools.windows_support": 1,
         "sha": 1,
         "shlex": 1,
         "shutil": 1,
         "signal": 6,
+        "site": 1,
         "six": 1,
         "socket": 1,
         "spwd": 3,
@@ -3185,6 +3181,13 @@
         "traceback": 1,
         "tty": 1,
         "twisted": 5,
+        "twisted._threads": 5,
+        "twisted._threads._convenience": 1,
+        "twisted._threads._ithreads": 1,
+        "twisted._threads._memory": 1,
+        "twisted._threads._pool": 1,
+        "twisted._threads._team": 1,
+        "twisted._threads._threadworker": 1,
         "twisted._version": 1,
         "twisted.application": 5,
         "twisted.application.app": 1,
@@ -3256,7 +3259,6 @@
         "twisted.cred.checkers": 1,
         "twisted.cred.credentials": 1,
         "twisted.cred.error": 1,
-        "twisted.cred.pamauth": 1,
         "twisted.cred.portal": 1,
         "twisted.cred.strcred": 1,
         "twisted.enterprise": 5,
@@ -3337,23 +3339,6 @@
         "twisted.logger._observer": 1,
         "twisted.logger._stdlib": 1,
         "twisted.logger._util": 1,
-        "twisted.lore": 5,
-        "twisted.lore._version": 1,
-        "twisted.lore.default": 1,
-        "twisted.lore.docbook": 1,
-        "twisted.lore.htmlbook": 1,
-        "twisted.lore.indexer": 1,
-        "twisted.lore.latex": 1,
-        "twisted.lore.lint": 1,
-        "twisted.lore.lmath": 1,
-        "twisted.lore.man2lore": 1,
-        "twisted.lore.numberer": 1,
-        "twisted.lore.process": 1,
-        "twisted.lore.scripts": 5,
-        "twisted.lore.scripts.lore": 1,
-        "twisted.lore.slides": 1,
-        "twisted.lore.texi": 1,
-        "twisted.lore.tree": 1,
         "twisted.mail": 5,
         "twisted.mail._version": 1,
         "twisted.mail.alias": 1,
@@ -3426,7 +3411,6 @@
         "twisted.plugins.twisted_core": 1,
         "twisted.plugins.twisted_ftp": 1,
         "twisted.plugins.twisted_inet": 1,
-        "twisted.plugins.twisted_lore": 1,
         "twisted.plugins.twisted_mail": 1,
         "twisted.plugins.twisted_manhole": 1,
         "twisted.plugins.twisted_names": 1,
@@ -3474,6 +3458,7 @@
         "twisted.python": 5,
         "twisted.python._inotify": 1,
         "twisted.python._release": 1,
+        "twisted.python._sendmsg": 3,
         "twisted.python._shellcomp": 1,
         "twisted.python._textattributes": 1,
         "twisted.python._tzhelper": 1,
@@ -3489,7 +3474,6 @@
         "twisted.python.filepath": 1,
         "twisted.python.finalize": 1,
         "twisted.python.formmethod": 1,
-        "twisted.python.hashlib": 1,
         "twisted.python.hook": 1,
         "twisted.python.htmlizer": 1,
         "twisted.python.lockfile": 1,
@@ -3504,7 +3488,7 @@
         "twisted.python.release": 1,
         "twisted.python.roots": 1,
         "twisted.python.runtime": 1,
-        "twisted.python.sendmsg": 3,
+        "twisted.python.sendmsg": 1,
         "twisted.python.shortcut": 1,
         "twisted.python.syslog": 1,
         "twisted.python.systemd": 1,
@@ -3662,6 +3646,7 @@
         "uuid": 1,
         "warnings": 1,
         "weakref": 1,
+        "webbrowser": 1,
         "wstools": 5,
         "wstools.Namespaces": 1,
         "wstools.TimeoutSocket": 1,
