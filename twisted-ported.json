@@ -4,6 +4,7 @@
     "twisted._threads._convenience": "ported",
     "twisted._threads._ithreads": "ported",
     "twisted._threads._memory": "ported",
+    "twisted._threads._pool": "ported",
     "twisted._threads._team": "ported",
     "twisted._threads._threadworker": "ported",
     "twisted._version": "ported",
