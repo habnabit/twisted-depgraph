@@ -13,6 +13,7 @@
     "twisted.application.internet": "ported",
     "twisted.application.reactors": "ported",
     "twisted.application.service": "ported",
+    "twisted.application.strports": "ported",
     "twisted.application.test": "ported",
     "twisted.copyright": "ported",
     "twisted.cred": "ported",

@@ -80,6 +80,7 @@
             "twisted.internet": 1,
             "twisted.internet.endpoints": 1,
             "twisted.python": 1,
+            "twisted.python.compat": 1,
             "twisted.python.deprecate": 1,
             "twisted.python.versions": 1
         },
