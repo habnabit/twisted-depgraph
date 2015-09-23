@@ -1834,6 +1834,7 @@
         "twisted.python.lockfile": {
             "twisted": 1,
             "twisted.python": 1,
+            "twisted.python.compat": 1,
             "twisted.python.runtime": 1
         },
         "twisted.python.log": {
