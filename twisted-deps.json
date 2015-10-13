@@ -2545,7 +2545,6 @@
             "twisted": 1,
             "twisted.python": 1,
             "twisted.python.compat": 1,
-            "twisted.python.modules": 1,
             "twisted.python.reflect": 1,
             "twisted.web": 1,
             "twisted.web.resource": 1,
