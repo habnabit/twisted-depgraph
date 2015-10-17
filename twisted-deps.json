@@ -318,6 +318,10 @@
             "twisted.internet.tksupport": 1,
             "twisted.python": 1
         },
+        "twisted.conch.ssh._kex": {
+            "twisted": 1,
+            "twisted.conch": 1
+        },
         "twisted.conch.ssh.address": {
             "twisted": 1,
             "twisted.internet": 1,
@@ -397,6 +401,7 @@
             "twisted": 1,
             "twisted.conch": 1,
             "twisted.conch.ssh": 1,
+            "twisted.conch.ssh._kex": 1,
             "twisted.conch.ssh.address": 1,
             "twisted.conch.ssh.common": 1,
             "twisted.internet": 1,
@@ -3186,6 +3191,7 @@
         "twisted.conch.scripts.conch": 1,
         "twisted.conch.scripts.tkconch": 1,
         "twisted.conch.ssh": 5,
+        "twisted.conch.ssh._kex": 1,
         "twisted.conch.ssh.address": 1,
         "twisted.conch.ssh.agent": 1,
         "twisted.conch.ssh.channel": 1,
