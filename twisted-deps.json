@@ -476,6 +476,7 @@
             "twisted.cred": 1,
             "twisted.cred.credentials": 1,
             "twisted.internet": 1,
+            "twisted.logger": 1,
             "twisted.python": 1
         },
         "twisted.cred.credentials": {
