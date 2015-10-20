@@ -1802,12 +1802,14 @@
         "twisted.python.compat": {
             "twisted": 1,
             "twisted.python": 1,
-            "twisted.python.util": 1
+            "twisted.python.deprecate": 1,
+            "twisted.python.versions": 1
         },
         "twisted.python.components": {
             "twisted": 1,
             "twisted.python": 1,
-            "twisted.python.compat": 1
+            "twisted.python.compat": 1,
+            "twisted.python.reflect": 1
         },
         "twisted.python.deprecate": {
             "twisted": 1,
@@ -1853,7 +1855,8 @@
             "twisted.python.compat": 1,
             "twisted.python.context": 1,
             "twisted.python.failure": 1,
-            "twisted.python.threadable": 1
+            "twisted.python.threadable": 1,
+            "twisted.python.util": 1
         },
         "twisted.python.logfile": {
             "twisted": 1,
@@ -1924,7 +1927,8 @@
             "twisted": 1,
             "twisted.python": 1,
             "twisted.python.compat": 1,
-            "twisted.python.reflect": 1
+            "twisted.python.deprecate": 1,
+            "twisted.python.versions": 1
         },
         "twisted.python.versions": {
             "twisted": 1,
