@@ -1735,8 +1735,7 @@
         },
         "twisted.protocols.shoutcast": {
             "twisted": 1,
-            "twisted.web": 1,
-            "twisted.web.http": 1
+            "twisted.web": 1
         },
         "twisted.protocols.sip": {
             "twisted": 1,
