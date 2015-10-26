@@ -1912,10 +1912,14 @@
             "twisted.python": 1,
             "twisted.python.failure": 1
         },
+        "twisted.python.url": {
+            "twisted.python._url": 1
+        },
         "twisted.python.urlpath": {
             "twisted": 1,
             "twisted.python": 1,
-            "twisted.python.compat": 1
+            "twisted.python.compat": 1,
+            "twisted.python.url": 1
         },
         "twisted.python.usage": {
             "twisted": 1,
@@ -3427,6 +3431,7 @@
         "twisted.python._shellcomp": 1,
         "twisted.python._textattributes": 1,
         "twisted.python._tzhelper": 1,
+        "twisted.python._url": 1,
         "twisted.python.compat": 1,
         "twisted.python.components": 1,
         "twisted.python.constants": 1,
@@ -3460,6 +3465,7 @@
         "twisted.python.text": 1,
         "twisted.python.threadable": 1,
         "twisted.python.threadpool": 1,
+        "twisted.python.url": 1,
         "twisted.python.urlpath": 1,
         "twisted.python.usage": 1,
         "twisted.python.util": 1,
