@@ -382,7 +382,9 @@
             "twisted.conch.ssh": 1,
             "twisted.conch.ssh.sexpy": 1,
             "twisted.python": 1,
-            "twisted.python.randbytes": 1
+            "twisted.python.deprecate": 1,
+            "twisted.python.randbytes": 1,
+            "twisted.python.versions": 1
         },
         "twisted.conch.ssh.service": {
             "twisted": 1,
