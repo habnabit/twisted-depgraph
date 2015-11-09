@@ -353,6 +353,7 @@
         "twisted.conch.ssh.factory": {
             "twisted": 1,
             "twisted.conch": 1,
+            "twisted.conch.ssh": 1,
             "twisted.conch.ssh.connection": 1,
             "twisted.conch.ssh.transport": 1,
             "twisted.conch.ssh.userauth": 1,
