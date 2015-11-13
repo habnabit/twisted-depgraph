@@ -723,11 +723,6 @@
             "twisted.internet.abstract": 1,
             "twisted.python": 1
         },
-        "twisted.internet.interfaces": {
-            "twisted": 1,
-            "twisted.python": 1,
-            "twisted.python.versions": 1
-        },
         "twisted.internet.iocpreactor": {
             "twisted": 1,
             "twisted.internet": 1,
