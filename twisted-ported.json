@@ -136,6 +136,7 @@
     "twisted.python.procutils": "ported",
     "twisted.python.randbytes": "ported",
     "twisted.python.reflect": "ported",
+    "twisted.python.roots": "ported",
     "twisted.python.runtime": "ported",
     "twisted.python.sendmsg": "ported",
     "twisted.python.systemd": "ported",
