@@ -341,6 +341,11 @@
             "twisted.internet": 1,
             "twisted.python": 1
         },
+        "twisted.conch.ssh.common": {
+            "twisted": 1,
+            "twisted.python": 1,
+            "twisted.python.compat": 1
+        },
         "twisted.conch.ssh.connection": {
             "twisted": 1,
             "twisted.conch": 1,
@@ -383,6 +388,7 @@
             "twisted.conch.ssh": 1,
             "twisted.conch.ssh.sexpy": 1,
             "twisted.python": 1,
+            "twisted.python.compat": 1,
             "twisted.python.deprecate": 1,
             "twisted.python.randbytes": 1,
             "twisted.python.versions": 1
@@ -399,6 +405,11 @@
             "twisted.conch.ssh.connection": 1,
             "twisted.internet": 1,
             "twisted.python": 1
+        },
+        "twisted.conch.ssh.sexpy": {
+            "twisted": 1,
+            "twisted.python": 1,
+            "twisted.python.compat": 1
         },
         "twisted.conch.ssh.transport": {
             "twisted": 1,
