@@ -116,6 +116,7 @@
     "twisted.positioning.ipositioning": "ported",
     "twisted.positioning.nmea": "ported",
     "twisted.protocols": "ported",
+    "twisted.protocols.amp": "ported",
     "twisted.protocols.basic": "ported",
     "twisted.protocols.loopback": "almost-ported",
     "twisted.protocols.policies": "ported",

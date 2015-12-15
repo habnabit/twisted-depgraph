@@ -1653,6 +1653,7 @@
             "twisted.protocols.basic": 1,
             "twisted.python": 1,
             "twisted.python._tzhelper": 1,
+            "twisted.python.compat": 1,
             "twisted.python.failure": 1,
             "twisted.python.reflect": 1
         },
