@@ -721,13 +721,6 @@
             "twisted.internet.main": 1,
             "twisted.python": 1
         },
-        "twisted.internet.gtkreactor": {
-            "twisted": 1,
-            "twisted.internet": 1,
-            "twisted.internet.interfaces": 1,
-            "twisted.internet.main": 1,
-            "twisted.python": 1
-        },
         "twisted.internet.inotify": {
             "twisted": 1,
             "twisted.internet": 1,
@@ -3271,7 +3264,6 @@
         "twisted.internet.glib2reactor": 1,
         "twisted.internet.gtk2reactor": 1,
         "twisted.internet.gtk3reactor": 1,
-        "twisted.internet.gtkreactor": 1,
         "twisted.internet.inotify": 1,
         "twisted.internet.interfaces": 1,
         "twisted.internet.iocpreactor": 5,
