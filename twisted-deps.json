@@ -883,7 +883,9 @@
             "twisted.internet.interfaces": 1,
             "twisted.internet.reactor": 1,
             "twisted.python": 1,
-            "twisted.python.failure": 1
+            "twisted.python.deprecate": 1,
+            "twisted.python.failure": 1,
+            "twisted.python.versions": 1
         },
         "twisted.internet.tcp": {
             "twisted": 1,
