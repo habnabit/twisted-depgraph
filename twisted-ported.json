@@ -215,5 +215,6 @@
     "twisted.web.test": "ported",
     "twisted.web.test.requesthelper": "ported",
     "twisted.web.util": "ported",
+    "twisted.web.vhost": "ported",
     "twisted.web.xmlrpc": "ported"
 }
