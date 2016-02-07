@@ -343,6 +343,9 @@
         },
         "twisted.conch.ssh.common": {
             "twisted": 1,
+            "twisted.conch": 1,
+            "twisted.conch.ssh": 1,
+            "twisted.conch.ssh._cryptography_backports": 1,
             "twisted.python": 1,
             "twisted.python.compat": 1
         },
@@ -3168,6 +3171,7 @@
         "twisted.conch.scripts.conch": 1,
         "twisted.conch.scripts.tkconch": 1,
         "twisted.conch.ssh": 5,
+        "twisted.conch.ssh._cryptography_backports": 1,
         "twisted.conch.ssh._kex": 1,
         "twisted.conch.ssh.address": 1,
         "twisted.conch.ssh.agent": 1,
