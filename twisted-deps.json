@@ -2525,8 +2525,11 @@
             "twisted.internet": 1,
             "twisted.python": 1,
             "twisted.python.compat": 1,
+            "twisted.python.deprecate": 1,
             "twisted.python.runtime": 1,
+            "twisted.python.url": 1,
             "twisted.python.util": 1,
+            "twisted.python.versions": 1,
             "twisted.web": 1,
             "twisted.web.util": 1
         },
