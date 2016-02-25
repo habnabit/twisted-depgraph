@@ -86,12 +86,10 @@
         },
         "twisted.conch": {
             "twisted": 1,
-            "twisted.conch": 1,
-            "twisted.conch._version": 1
-        },
-        "twisted.conch._version": {
-            "twisted": 1,
-            "twisted.python": 1
+            "twisted._version": 1,
+            "twisted.python": 1,
+            "twisted.python.deprecate": 1,
+            "twisted.python.versions": 1
         },
         "twisted.conch.avatar": {
             "twisted": 1,
@@ -1073,12 +1071,10 @@
         },
         "twisted.mail": {
             "twisted": 1,
-            "twisted.mail": 1,
-            "twisted.mail._version": 1
-        },
-        "twisted.mail._version": {
-            "twisted": 1,
-            "twisted.python": 1
+            "twisted._version": 1,
+            "twisted.python": 1,
+            "twisted.python.deprecate": 1,
+            "twisted.python.versions": 1
         },
         "twisted.mail.alias": {
             "twisted": 1,
@@ -1254,18 +1250,16 @@
         },
         "twisted.names": {
             "twisted": 1,
-            "twisted.names": 1,
-            "twisted.names._version": 1
+            "twisted._version": 1,
+            "twisted.python": 1,
+            "twisted.python.deprecate": 1,
+            "twisted.python.versions": 1
         },
         "twisted.names._rfc1982": {
             "twisted": 1,
             "twisted.python": 1,
             "twisted.python.compat": 1,
             "twisted.python.util": 1
-        },
-        "twisted.names._version": {
-            "twisted": 1,
-            "twisted.python": 1
         },
         "twisted.names.authority": {
             "twisted": 1,
@@ -1371,12 +1365,10 @@
         },
         "twisted.news": {
             "twisted": 1,
-            "twisted.news": 1,
-            "twisted.news._version": 1
-        },
-        "twisted.news._version": {
-            "twisted": 1,
-            "twisted.python": 1
+            "twisted._version": 1,
+            "twisted.python": 1,
+            "twisted.python.deprecate": 1,
+            "twisted.python.versions": 1
         },
         "twisted.news.database": {
             "twisted": 1,
@@ -1405,12 +1397,10 @@
         },
         "twisted.pair": {
             "twisted": 1,
-            "twisted.pair": 1,
-            "twisted.pair._version": 1
-        },
-        "twisted.pair._version": {
-            "twisted": 1,
-            "twisted.python": 1
+            "twisted._version": 1,
+            "twisted.python": 1,
+            "twisted.python.deprecate": 1,
+            "twisted.python.versions": 1
         },
         "twisted.pair.ethernet": {
             "twisted": 1,
@@ -1967,12 +1957,10 @@
         },
         "twisted.runner": {
             "twisted": 1,
-            "twisted.runner": 1,
-            "twisted.runner._version": 1
-        },
-        "twisted.runner._version": {
-            "twisted": 1,
-            "twisted.python": 1
+            "twisted._version": 1,
+            "twisted.python": 1,
+            "twisted.python.deprecate": 1,
+            "twisted.python.versions": 1
         },
         "twisted.runner.inetd": {
             "twisted": 1,
@@ -2303,8 +2291,10 @@
         },
         "twisted.web": {
             "twisted": 1,
-            "twisted.web": 1,
-            "twisted.web._version": 1
+            "twisted._version": 1,
+            "twisted.python": 1,
+            "twisted.python.deprecate": 1,
+            "twisted.python.versions": 1
         },
         "twisted.web._auth.basic": {
             "twisted": 1,
@@ -2368,10 +2358,6 @@
             "twisted": 1,
             "twisted.python": 1,
             "twisted.python.compat": 1
-        },
-        "twisted.web._version": {
-            "twisted": 1,
-            "twisted.python": 1
         },
         "twisted.web.client": {
             "twisted": 1,
@@ -2608,12 +2594,10 @@
         },
         "twisted.words": {
             "twisted": 1,
-            "twisted.words": 1,
-            "twisted.words._version": 1
-        },
-        "twisted.words._version": {
-            "twisted": 1,
-            "twisted.python": 1
+            "twisted._version": 1,
+            "twisted.python": 1,
+            "twisted.python.deprecate": 1,
+            "twisted.python.versions": 1
         },
         "twisted.words.im.basechat": {
             "twisted": 1,
@@ -3149,7 +3133,6 @@
         "twisted.application.service": 1,
         "twisted.application.strports": 1,
         "twisted.conch": 5,
-        "twisted.conch._version": 1,
         "twisted.conch.avatar": 1,
         "twisted.conch.checkers": 1,
         "twisted.conch.client": 5,
@@ -3294,7 +3277,6 @@
         "twisted.logger._stdlib": 1,
         "twisted.logger._util": 1,
         "twisted.mail": 5,
-        "twisted.mail._version": 1,
         "twisted.mail.alias": 1,
         "twisted.mail.bounce": 1,
         "twisted.mail.imap4": 1,
@@ -3320,7 +3302,6 @@
         "twisted.manhole.ui.gtk2manhole": 1,
         "twisted.names": 5,
         "twisted.names._rfc1982": 1,
-        "twisted.names._version": 1,
         "twisted.names.authority": 1,
         "twisted.names.cache": 1,
         "twisted.names.client": 1,
@@ -3335,13 +3316,11 @@
         "twisted.names.srvconnect": 1,
         "twisted.names.tap": 1,
         "twisted.news": 5,
-        "twisted.news._version": 1,
         "twisted.news.database": 1,
         "twisted.news.news": 1,
         "twisted.news.nntp": 1,
         "twisted.news.tap": 1,
         "twisted.pair": 5,
-        "twisted.pair._version": 1,
         "twisted.pair.ethernet": 1,
         "twisted.pair.ip": 1,
         "twisted.pair.raw": 1,
@@ -3459,7 +3438,6 @@
         "twisted.python.zippath": 1,
         "twisted.python.zipstream": 1,
         "twisted.runner": 5,
-        "twisted.runner._version": 1,
         "twisted.runner.inetd": 1,
         "twisted.runner.inetdconf": 1,
         "twisted.runner.inetdtap": 1,
@@ -3521,7 +3499,6 @@
         "twisted.web._newclient": 1,
         "twisted.web._responses": 1,
         "twisted.web._stan": 1,
-        "twisted.web._version": 1,
         "twisted.web.client": 1,
         "twisted.web.demo": 1,
         "twisted.web.distrib": 1,
@@ -3549,7 +3526,6 @@
         "twisted.web.wsgi": 1,
         "twisted.web.xmlrpc": 1,
         "twisted.words": 5,
-        "twisted.words._version": 1,
         "twisted.words.ewords": 1,
         "twisted.words.im": 5,
         "twisted.words.im.baseaccount": 1,
