@@ -17,6 +17,7 @@
     "twisted.application.test": "ported",
     "twisted.conch": "ported",
     "twisted.conch.ssh": "ported",
+    "twisted.conch.ssh._cryptography_backports": "ported",
     "twisted.conch.ssh.common": "ported",
     "twisted.conch.ssh.keys": "ported",
     "twisted.conch.ssh.sexpy": "ported",
