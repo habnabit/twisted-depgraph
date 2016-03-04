@@ -111,6 +111,7 @@
             "twisted.cred.error": 1,
             "twisted.internet": 1,
             "twisted.python": 1,
+            "twisted.python.compat": 1,
             "twisted.python.deprecate": 1,
             "twisted.python.filepath": 1,
             "twisted.python.util": 1,
