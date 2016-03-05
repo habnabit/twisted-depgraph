@@ -55,7 +55,9 @@
             "twisted.application": 1,
             "twisted.internet": 1,
             "twisted.internet.defer": 1,
-            "twisted.python": 1
+            "twisted.logger": 1,
+            "twisted.python": 1,
+            "twisted.python.failure": 1
         },
         "twisted.application.reactors": {
             "twisted": 1,
