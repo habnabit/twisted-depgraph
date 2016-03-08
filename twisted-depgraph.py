@@ -78,6 +78,14 @@ json_dump = functools.partial(
     json.dump, indent=4, separators=(',', ': '), sort_keys=True)
 
 
+def remove_dunder(name):
+    l, sep, r = name.rpartition('.__init__')
+    if sep and not r:
+        return l
+    else:
+        return name
+
+
 def main(target):
     mf = mymf(sys.path[:], 0, [])
 
@@ -108,9 +116,9 @@ def main(target):
 
     port_status = {}
     for module in dist3.modules:
-        port_status[module] = 'ported'
+        port_status[remove_dunder(module)] = 'ported'
     for module in dist3.almostModules:
-        port_status[module] = 'almost-ported'
+        port_status[remove_dunder(module)] = 'almost-ported'
 
     with open('twisted-ported.json', 'wb') as outfile:
         json_dump(port_status, outfile)
