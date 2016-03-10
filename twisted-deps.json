@@ -462,7 +462,8 @@
             "twisted.internet": 1,
             "twisted.protocols": 1,
             "twisted.protocols.basic": 1,
-            "twisted.python": 1
+            "twisted.python": 1,
+            "twisted.python.compat": 1
         },
         "twisted.conch.ui.ansi": {
             "twisted": 1,
@@ -1765,7 +1766,9 @@
         },
         "twisted.protocols.telnet": {
             "twisted": 1,
-            "twisted.internet": 1
+            "twisted.internet": 1,
+            "twisted.python": 1,
+            "twisted.python.compat": 1
         },
         "twisted.protocols.tls": {
             "twisted": 1,
