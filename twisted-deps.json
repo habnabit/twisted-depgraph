@@ -255,11 +255,13 @@
             "twisted.application": 1,
             "twisted.conch": 1,
             "twisted.conch.insults": 1,
+            "twisted.conch.ssh": 1,
             "twisted.conch.telnet": 1,
             "twisted.cred": 1,
             "twisted.cred.portal": 1,
             "twisted.internet": 1,
-            "twisted.python": 1
+            "twisted.python": 1,
+            "twisted.python._appdirs": 1
         },
         "twisted.conch.mixin": {
             "twisted": 1,
@@ -1790,6 +1792,11 @@
             "twisted.python": 1,
             "twisted.python.compat": 1
         },
+        "twisted.python._appdirs": {
+            "twisted": 1,
+            "twisted.python": 1,
+            "twisted.python.compat": 1
+        },
         "twisted.python._release": {
             "twisted": 1,
             "twisted.python": 1,
@@ -2865,6 +2872,7 @@
         "_weakref": 6,
         "_weakrefset": 1,
         "abc": 1,
+        "appdirs": 1,
         "array": 3,
         "atexit": 1,
         "attr": 5,
@@ -2909,6 +2917,7 @@
         "cryptography.hazmat.primitives": 5,
         "cryptography.hazmat.primitives.asymmetric": 5,
         "cryptography.hazmat.primitives.asymmetric.dsa": 1,
+        "cryptography.hazmat.primitives.asymmetric.ec": 1,
         "cryptography.hazmat.primitives.asymmetric.padding": 1,
         "cryptography.hazmat.primitives.asymmetric.rsa": 1,
         "cryptography.hazmat.primitives.asymmetric.utils": 1,
@@ -2917,6 +2926,7 @@
         "cryptography.hazmat.primitives.ciphers.base": 1,
         "cryptography.hazmat.primitives.ciphers.modes": 1,
         "cryptography.hazmat.primitives.hashes": 1,
+        "cryptography.hazmat.primitives.serialization": 1,
         "cryptography.utils": 1,
         "ctypes": 5,
         "ctypes._endian": 1,
@@ -3420,6 +3430,7 @@
         "twisted.protocols.tls": 1,
         "twisted.protocols.wire": 1,
         "twisted.python": 5,
+        "twisted.python._appdirs": 1,
         "twisted.python._inotify": 1,
         "twisted.python._release": 1,
         "twisted.python._sendmsg": 3,
