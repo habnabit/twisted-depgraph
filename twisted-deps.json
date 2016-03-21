@@ -3003,6 +3003,7 @@
         "idna": 5,
         "idna.core": 1,
         "idna.idnadata": 1,
+        "idna.intranges": 1,
         "idna.uts46data": 1,
         "imp": 6,
         "importlib": 5,
