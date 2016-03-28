@@ -104,6 +104,7 @@
     "twisted.names.hosts": "ported",
     "twisted.names.resolve": "ported",
     "twisted.names.root": "almost-ported",
+    "twisted.names.server": "ported",
     "twisted.names.test": "ported",
     "twisted.persisted": "ported",
     "twisted.persisted.aot": "ported",
