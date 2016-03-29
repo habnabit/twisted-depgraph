@@ -2649,10 +2649,6 @@
             "twisted.words.im": 1,
             "twisted.words.im.locals": 1
         },
-        "twisted.words.protocols": {
-            "twisted": 1,
-            "twisted.python": 1
-        },
         "twisted.words.protocols.irc": {
             "twisted": 1,
             "twisted.internet": 1,
@@ -2732,18 +2728,6 @@
             "twisted.python": 1,
             "twisted.python.deprecate": 1,
             "twisted.python.versions": 1
-        },
-        "twisted.words.protocols.msn": {
-            "twisted": 1,
-            "twisted.internet": 1,
-            "twisted.internet.defer": 1,
-            "twisted.internet.protocol": 1,
-            "twisted.internet.ssl": 1,
-            "twisted.protocols": 1,
-            "twisted.protocols.basic": 1,
-            "twisted.python": 1,
-            "twisted.web": 1,
-            "twisted.web.http": 1
         },
         "twisted.words.protocols.oscar": {
             "twisted": 1,
@@ -3593,7 +3577,6 @@
         "twisted.words.protocols.jabber.sasl_mechanisms": 1,
         "twisted.words.protocols.jabber.xmlstream": 1,
         "twisted.words.protocols.jabber.xmpp_stringprep": 1,
-        "twisted.words.protocols.msn": 1,
         "twisted.words.protocols.oscar": 1,
         "twisted.words.service": 1,
         "twisted.words.tap": 1,
