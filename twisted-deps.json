@@ -1796,6 +1796,13 @@
             "twisted.python": 1,
             "twisted.python.compat": 1
         },
+        "twisted.python._oldstyle": {
+            "twisted": 1,
+            "twisted.python": 1,
+            "twisted.python.compat": 1,
+            "twisted.python.reflect": 1,
+            "twisted.python.util": 1
+        },
         "twisted.python._release": {
             "twisted": 1,
             "twisted.python": 1,
@@ -3020,7 +3027,6 @@
         "optparse": 1,
         "os": 1,
         "os2emxpath": 1,
-        "parser": 3,
         "pdb": 1,
         "pickle": 1,
         "pkg_resources": 5,
@@ -3131,7 +3137,6 @@
         "strop": 3,
         "struct": 1,
         "subprocess": 1,
-        "symbol": 1,
         "sys": 6,
         "sysconfig": 1,
         "tarfile": 1,
@@ -3425,6 +3430,7 @@
         "twisted.python": 5,
         "twisted.python._appdirs": 1,
         "twisted.python._inotify": 1,
+        "twisted.python._oldstyle": 1,
         "twisted.python._release": 1,
         "twisted.python._sendmsg": 3,
         "twisted.python._shellcomp": 1,
