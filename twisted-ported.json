@@ -137,7 +137,6 @@
     "twisted.protocols.wire": "almost-ported",
     "twisted.python": "ported",
     "twisted.python._appdirs": "ported",
-    "twisted.python._oldstyle": "ported",
     "twisted.python._tzhelper": "ported",
     "twisted.python._url": "ported",
     "twisted.python.compat": "ported",
