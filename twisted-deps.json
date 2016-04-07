@@ -1532,7 +1532,10 @@
         "twisted.plugins.twisted_core": {
             "twisted": 1,
             "twisted.internet": 1,
-            "twisted.internet.endpoints": 1
+            "twisted.internet.endpoints": 1,
+            "twisted.protocols": 1,
+            "twisted.protocols.haproxy": 1,
+            "twisted.protocols.haproxy._parser": 1
         },
         "twisted.plugins.twisted_ftp": {
             "twisted": 1,
@@ -1686,6 +1689,45 @@
             "twisted": 1,
             "twisted.internet": 1,
             "twisted.python": 1
+        },
+        "twisted.protocols.haproxy": {
+            "twisted.protocols.haproxy._wrapper": 1
+        },
+        "twisted.protocols.haproxy._exceptions": {
+            "twisted": 1,
+            "twisted.python": 1
+        },
+        "twisted.protocols.haproxy._info": {
+            "twisted.protocols.haproxy._interfaces": 1
+        },
+        "twisted.protocols.haproxy._parser": {
+            "twisted": 1,
+            "twisted.internet": 1,
+            "twisted.internet.endpoints": 1,
+            "twisted.plugin": 1,
+            "twisted.python": 1,
+            "twisted.python.compat": 1
+        },
+        "twisted.protocols.haproxy._v1parser": {
+            "twisted": 1,
+            "twisted.internet": 1,
+            "twisted.protocols.haproxy._exceptions": 1
+        },
+        "twisted.protocols.haproxy._v2parser": {
+            "twisted": 1,
+            "twisted.internet": 1,
+            "twisted.protocols.haproxy._exceptions": 1,
+            "twisted.python": 1,
+            "twisted.python.constants": 1
+        },
+        "twisted.protocols.haproxy._wrapper": {
+            "twisted": 1,
+            "twisted.internet": 1,
+            "twisted.internet.endpoints": 1,
+            "twisted.protocols": 1,
+            "twisted.protocols.haproxy._exceptions": 1,
+            "twisted.protocols.haproxy._v1parser": 1,
+            "twisted.protocols.haproxy._v2parser": 1
         },
         "twisted.protocols.htb": {
             "twisted": 1,
@@ -3410,6 +3452,14 @@
         "twisted.protocols.gps": 5,
         "twisted.protocols.gps.nmea": 1,
         "twisted.protocols.gps.rockwell": 1,
+        "twisted.protocols.haproxy": 5,
+        "twisted.protocols.haproxy._exceptions": 1,
+        "twisted.protocols.haproxy._info": 1,
+        "twisted.protocols.haproxy._interfaces": 1,
+        "twisted.protocols.haproxy._parser": 1,
+        "twisted.protocols.haproxy._v1parser": 1,
+        "twisted.protocols.haproxy._v2parser": 1,
+        "twisted.protocols.haproxy._wrapper": 1,
         "twisted.protocols.htb": 1,
         "twisted.protocols.ident": 1,
         "twisted.protocols.loopback": 1,
