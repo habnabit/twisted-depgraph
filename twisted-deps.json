@@ -1270,7 +1270,6 @@
             "twisted": 1,
             "twisted.internet": 1,
             "twisted.names": 1,
-            "twisted.names.common": 1,
             "twisted.python": 1,
             "twisted.python.compat": 1
         },
