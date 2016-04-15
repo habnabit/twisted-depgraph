@@ -846,11 +846,6 @@
             "twisted": 1,
             "twisted.internet": 1
         },
-        "twisted.internet.qtreactor": {
-            "twisted": 1,
-            "twisted.plugins": 1,
-            "twisted.plugins.twisted_qtstub": 1
-        },
         "twisted.internet.reactor": {
             "twisted": 1,
             "twisted.internet": 1,
@@ -1570,11 +1565,6 @@
             "twisted": 1,
             "twisted.application": 1,
             "twisted.application.service": 1
-        },
-        "twisted.plugins.twisted_qtstub": {
-            "twisted": 1,
-            "twisted.application": 1,
-            "twisted.application.reactors": 1
         },
         "twisted.plugins.twisted_reactors": {
             "twisted": 1,
@@ -3325,7 +3315,6 @@
         "twisted.internet.process": 1,
         "twisted.internet.protocol": 1,
         "twisted.internet.pyuisupport": 1,
-        "twisted.internet.qtreactor": 1,
         "twisted.internet.reactor": 1,
         "twisted.internet.selectreactor": 1,
         "twisted.internet.serialport": 1,
@@ -3429,7 +3418,6 @@
         "twisted.plugins.twisted_names": 1,
         "twisted.plugins.twisted_news": 1,
         "twisted.plugins.twisted_portforward": 1,
-        "twisted.plugins.twisted_qtstub": 1,
         "twisted.plugins.twisted_reactors": 1,
         "twisted.plugins.twisted_runner": 1,
         "twisted.plugins.twisted_socks": 1,
