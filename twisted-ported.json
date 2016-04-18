@@ -121,6 +121,7 @@
     "twisted.plugins.cred_sshkeys": "ported",
     "twisted.plugins.cred_unix": "ported",
     "twisted.plugins.twisted_core": "ported",
+    "twisted.plugins.twisted_reactors": "ported",
     "twisted.plugins.twisted_trial": "ported",
     "twisted.plugins.twisted_web": "ported",
     "twisted.positioning": "ported",
