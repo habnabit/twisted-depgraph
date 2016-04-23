@@ -2483,7 +2483,6 @@
             "twisted.python": 1,
             "twisted.python.compat": 1,
             "twisted.python.components": 1,
-            "twisted.python.constants": 1,
             "twisted.python.deprecate": 1,
             "twisted.python.versions": 1,
             "twisted.web": 1,
