@@ -2021,14 +2021,21 @@
             "twisted.internet.protocol": 1,
             "twisted.protocols": 1
         },
+        "twisted.runner.inetdconf": {
+            "twisted": 1,
+            "twisted.python": 1,
+            "twisted.python.deprecate": 1,
+            "twisted.python.versions": 1
+        },
         "twisted.runner.inetdtap": {
             "twisted": 1,
             "twisted.application": 1,
             "twisted.internet": 1,
             "twisted.internet.protocol": 1,
             "twisted.python": 1,
-            "twisted.runner": 1,
-            "twisted.runner.portmap": 1
+            "twisted.python.deprecate": 1,
+            "twisted.python.versions": 1,
+            "twisted.runner": 1
         },
         "twisted.runner.procmon": {
             "twisted": 1,
@@ -3520,7 +3527,6 @@
         "twisted.runner.inetd": 1,
         "twisted.runner.inetdconf": 1,
         "twisted.runner.inetdtap": 1,
-        "twisted.runner.portmap": 3,
         "twisted.runner.procmon": 1,
         "twisted.runner.procmontap": 1,
         "twisted.scripts": 5,
