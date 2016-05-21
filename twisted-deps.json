@@ -1196,56 +1196,6 @@
             "twisted.mail": 1,
             "twisted.python": 1
         },
-        "twisted.manhole._inspectro": {
-            "twisted": 1,
-            "twisted.manhole": 1,
-            "twisted.manhole.ui": 1,
-            "twisted.manhole.ui.gtk2manhole": 1,
-            "twisted.protocols": 1,
-            "twisted.python": 1,
-            "twisted.python.components": 1,
-            "twisted.python.util": 1
-        },
-        "twisted.manhole.explorer": {
-            "twisted": 1,
-            "twisted.python": 1,
-            "twisted.spread": 1
-        },
-        "twisted.manhole.gladereactor": {
-            "twisted": 1,
-            "twisted.internet": 1,
-            "twisted.internet.gtk2reactor": 1,
-            "twisted.internet.main": 1,
-            "twisted.manhole._inspectro": 1,
-            "twisted.python": 1
-        },
-        "twisted.manhole.service": {
-            "twisted": 1,
-            "twisted.application": 1,
-            "twisted.cred": 1,
-            "twisted.internet": 1,
-            "twisted.internet.defer": 1,
-            "twisted.manhole.explorer": 1,
-            "twisted.python": 1,
-            "twisted.spread": 1
-        },
-        "twisted.manhole.telnet": {
-            "twisted": 1,
-            "twisted.internet": 1,
-            "twisted.protocols": 1,
-            "twisted.protocols.telnet": 1,
-            "twisted.python": 1
-        },
-        "twisted.manhole.ui.gtk2manhole": {
-            "twisted": 1,
-            "twisted.internet": 1,
-            "twisted.manhole": 1,
-            "twisted.manhole.service": 1,
-            "twisted.python": 1,
-            "twisted.python.rebuild": 1,
-            "twisted.python.reflect": 1,
-            "twisted.spread": 1
-        },
         "twisted.names": {
             "twisted": 1,
             "twisted._version": 1,
@@ -1544,11 +1494,6 @@
             "twisted.application": 1,
             "twisted.application.service": 1
         },
-        "twisted.plugins.twisted_manhole": {
-            "twisted": 1,
-            "twisted.application": 1,
-            "twisted.application.service": 1
-        },
         "twisted.plugins.twisted_names": {
             "twisted": 1,
             "twisted.application": 1,
@@ -1577,11 +1522,6 @@
             "twisted.application.service": 1
         },
         "twisted.plugins.twisted_socks": {
-            "twisted": 1,
-            "twisted.application": 1,
-            "twisted.application.service": 1
-        },
-        "twisted.plugins.twisted_telnet": {
             "twisted": 1,
             "twisted.application": 1,
             "twisted.application.service": 1
@@ -2066,13 +2006,6 @@
             "twisted": 1,
             "twisted.python": 1
         },
-        "twisted.scripts.manhole": {
-            "twisted": 1,
-            "twisted.internet": 1,
-            "twisted.manhole": 1,
-            "twisted.manhole.ui": 1,
-            "twisted.python": 1
-        },
         "twisted.scripts.trial": {
             "twisted": 1,
             "twisted.application": 1,
@@ -2156,14 +2089,6 @@
             "twisted.protocols": 1,
             "twisted.python": 1
         },
-        "twisted.tap.manhole": {
-            "twisted": 1,
-            "twisted.application": 1,
-            "twisted.cred": 1,
-            "twisted.manhole": 1,
-            "twisted.python": 1,
-            "twisted.spread": 1
-        },
         "twisted.tap.portforward": {
             "twisted": 1,
             "twisted.application": 1,
@@ -2174,12 +2099,6 @@
             "twisted": 1,
             "twisted.application": 1,
             "twisted.protocols": 1,
-            "twisted.python": 1
-        },
-        "twisted.tap.telnet": {
-            "twisted": 1,
-            "twisted.application": 1,
-            "twisted.manhole": 1,
             "twisted.python": 1
         },
         "twisted.trial._asyncrunner": {
@@ -3345,14 +3264,6 @@
         "twisted.mail.scripts.mailmail": 1,
         "twisted.mail.smtp": 1,
         "twisted.mail.tap": 1,
-        "twisted.manhole": 5,
-        "twisted.manhole._inspectro": 1,
-        "twisted.manhole.explorer": 1,
-        "twisted.manhole.gladereactor": 1,
-        "twisted.manhole.service": 1,
-        "twisted.manhole.telnet": 1,
-        "twisted.manhole.ui": 5,
-        "twisted.manhole.ui.gtk2manhole": 1,
         "twisted.names": 5,
         "twisted.names._rfc1982": 1,
         "twisted.names.authority": 1,
@@ -3398,14 +3309,12 @@
         "twisted.plugins.twisted_ftp": 1,
         "twisted.plugins.twisted_inet": 1,
         "twisted.plugins.twisted_mail": 1,
-        "twisted.plugins.twisted_manhole": 1,
         "twisted.plugins.twisted_names": 1,
         "twisted.plugins.twisted_news": 1,
         "twisted.plugins.twisted_portforward": 1,
         "twisted.plugins.twisted_reactors": 1,
         "twisted.plugins.twisted_runner": 1,
         "twisted.plugins.twisted_socks": 1,
-        "twisted.plugins.twisted_telnet": 1,
         "twisted.plugins.twisted_trial": 1,
         "twisted.plugins.twisted_web": 1,
         "twisted.plugins.twisted_words": 1,
@@ -3509,7 +3418,6 @@
         "twisted.scripts._twistd_unix": 1,
         "twisted.scripts._twistw": 1,
         "twisted.scripts.htmlizer": 1,
-        "twisted.scripts.manhole": 1,
         "twisted.scripts.trial": 1,
         "twisted.scripts.twistd": 1,
         "twisted.spread": 5,
@@ -3522,10 +3430,8 @@
         "twisted.spread.util": 1,
         "twisted.tap": 5,
         "twisted.tap.ftp": 1,
-        "twisted.tap.manhole": 1,
         "twisted.tap.portforward": 1,
         "twisted.tap.socks": 1,
-        "twisted.tap.telnet": 1,
         "twisted.trial": 5,
         "twisted.trial._asyncrunner": 1,
         "twisted.trial._asynctest": 1,
