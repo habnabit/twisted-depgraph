@@ -1244,9 +1244,7 @@
             "twisted.python": 1,
             "twisted.python.rebuild": 1,
             "twisted.python.reflect": 1,
-            "twisted.spread": 1,
-            "twisted.spread.ui": 1,
-            "twisted.spread.ui.gtk2util": 1
+            "twisted.spread": 1
         },
         "twisted.names": {
             "twisted": 1,
@@ -2141,18 +2139,6 @@
         "twisted.spread.publish": {
             "twisted": 1,
             "twisted.internet": 1,
-            "twisted.spread": 1
-        },
-        "twisted.spread.ui.gtk2util": {
-            "twisted": 1,
-            "twisted.cred": 1,
-            "twisted.cred.credentials": 1,
-            "twisted.internet": 1,
-            "twisted.python": 1,
-            "twisted.spread": 1
-        },
-        "twisted.spread.ui.tkutil": {
-            "twisted": 1,
             "twisted.spread": 1
         },
         "twisted.spread.util": {
@@ -3533,10 +3519,6 @@
         "twisted.spread.jelly": 1,
         "twisted.spread.pb": 1,
         "twisted.spread.publish": 1,
-        "twisted.spread.ui": 5,
-        "twisted.spread.ui.gtk2util": 1,
-        "twisted.spread.ui.tktree": 1,
-        "twisted.spread.ui.tkutil": 1,
         "twisted.spread.util": 1,
         "twisted.tap": 5,
         "twisted.tap.ftp": 1,
