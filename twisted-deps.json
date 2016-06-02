@@ -2317,6 +2317,7 @@
         "twisted.web.client": {
             "twisted": 1,
             "twisted.internet": 1,
+            "twisted.internet.abstract": 1,
             "twisted.internet.endpoints": 1,
             "twisted.internet.interfaces": 1,
             "twisted.internet.ssl": 1,
