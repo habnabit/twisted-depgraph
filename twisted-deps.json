@@ -1719,13 +1719,9 @@
         },
         "twisted.protocols.sip": {
             "twisted": 1,
-            "twisted.cred": 1,
-            "twisted.cred.credentials": 1,
             "twisted.internet": 1,
             "twisted.protocols": 1,
-            "twisted.python": 1,
-            "twisted.python.deprecate": 1,
-            "twisted.python.versions": 1
+            "twisted.python": 1
         },
         "twisted.protocols.socks": {
             "twisted": 1,
