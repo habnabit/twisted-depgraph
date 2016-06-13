@@ -223,6 +223,7 @@
     "twisted.web._auth.wrapper": "ported",
     "twisted.web._element": "ported",
     "twisted.web._flatten": "ported",
+    "twisted.web._http2": "ported",
     "twisted.web._newclient": "ported",
     "twisted.web._responses": "ported",
     "twisted.web._stan": "ported",
