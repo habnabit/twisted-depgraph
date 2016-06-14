@@ -107,6 +107,7 @@
     "twisted.names.root": "almost-ported",
     "twisted.names.secondary": "ported",
     "twisted.names.server": "ported",
+    "twisted.names.srvconnect": "ported",
     "twisted.names.test": "ported",
     "twisted.persisted": "ported",
     "twisted.persisted.aot": "ported",
