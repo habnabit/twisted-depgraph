@@ -1741,6 +1741,7 @@
         "twisted.protocols.tls": {
             "twisted": 1,
             "twisted.internet": 1,
+            "twisted.internet._sslverify": 1,
             "twisted.internet.interfaces": 1,
             "twisted.internet.main": 1,
             "twisted.internet.protocol": 1,
