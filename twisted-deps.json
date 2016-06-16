@@ -2712,11 +2712,14 @@
         },
         "twisted.words.xish.domish": {
             "twisted": 1,
+            "twisted.python": 1,
+            "twisted.python.compat": 1,
             "twisted.web": 1
         },
         "twisted.words.xish.utility": {
             "twisted": 1,
             "twisted.python": 1,
+            "twisted.python.compat": 1,
             "twisted.words": 1,
             "twisted.words.xish": 1,
             "twisted.words.xish.xpath": 1
@@ -2725,21 +2728,18 @@
             "twisted": 1,
             "twisted.internet": 1,
             "twisted.python": 1,
+            "twisted.python.compat": 1,
             "twisted.words": 1,
             "twisted.words.xish": 1,
             "twisted.words.xish.utility": 1
         },
         "twisted.words.xish.xpath": {
             "twisted": 1,
+            "twisted.python": 1,
+            "twisted.python.compat": 1,
             "twisted.words": 1,
             "twisted.words.xish": 1,
             "twisted.words.xish.xpathparser": 1
-        },
-        "twisted.words.xish.xpathparser": {
-            "twisted": 1,
-            "twisted.words": 1,
-            "twisted.words.xish": 1,
-            "twisted.words.xish.xpath": 1
         },
         "twisted.words.xmpproutertap": {
             "twisted": 1,

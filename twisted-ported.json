@@ -248,5 +248,10 @@
     "twisted.web.util": "ported",
     "twisted.web.vhost": "ported",
     "twisted.web.wsgi": "ported",
-    "twisted.web.xmlrpc": "ported"
+    "twisted.web.xmlrpc": "ported",
+    "twisted.words.xish.domish": "ported",
+    "twisted.words.xish.utility": "ported",
+    "twisted.words.xish.xmlstream": "ported",
+    "twisted.words.xish.xpath": "ported",
+    "twisted.words.xish.xpathparser": "ported"
 }
