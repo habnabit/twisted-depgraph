@@ -2616,6 +2616,8 @@
         },
         "twisted.words.protocols.jabber.client": {
             "twisted": 1,
+            "twisted.python": 1,
+            "twisted.python.compat": 1,
             "twisted.words": 1,
             "twisted.words.protocols": 1,
             "twisted.words.protocols.jabber": 1,
@@ -2628,6 +2630,7 @@
             "twisted.application": 1,
             "twisted.internet": 1,
             "twisted.python": 1,
+            "twisted.python.compat": 1,
             "twisted.words": 1,
             "twisted.words.protocols": 1,
             "twisted.words.protocols.jabber": 1,
@@ -2639,6 +2642,8 @@
         },
         "twisted.words.protocols.jabber.error": {
             "twisted": 1,
+            "twisted.python": 1,
+            "twisted.python.compat": 1,
             "twisted.words": 1,
             "twisted.words.protocols": 1,
             "twisted.words.protocols.jabber": 1,
@@ -2647,6 +2652,8 @@
         },
         "twisted.words.protocols.jabber.jid": {
             "twisted": 1,
+            "twisted.python": 1,
+            "twisted.python.compat": 1,
             "twisted.words": 1,
             "twisted.words.protocols": 1,
             "twisted.words.protocols.jabber": 1,
@@ -2661,17 +2668,25 @@
         "twisted.words.protocols.jabber.sasl": {
             "twisted": 1,
             "twisted.internet": 1,
+            "twisted.python": 1,
+            "twisted.python.compat": 1,
             "twisted.words": 1,
             "twisted.words.protocols": 1,
             "twisted.words.protocols.jabber": 1,
             "twisted.words.protocols.jabber.sasl_mechanisms": 1,
             "twisted.words.xish": 1
         },
+        "twisted.words.protocols.jabber.sasl_mechanisms": {
+            "twisted": 1,
+            "twisted.python": 1,
+            "twisted.python.compat": 1
+        },
         "twisted.words.protocols.jabber.xmlstream": {
             "twisted": 1,
             "twisted.internet": 1,
             "twisted.internet.error": 1,
             "twisted.python": 1,
+            "twisted.python.compat": 1,
             "twisted.words": 1,
             "twisted.words.protocols": 1,
             "twisted.words.protocols.jabber": 1,
@@ -2684,6 +2699,7 @@
         "twisted.words.protocols.jabber.xmpp_stringprep": {
             "twisted": 1,
             "twisted.python": 1,
+            "twisted.python.compat": 1,
             "twisted.python.deprecate": 1,
             "twisted.python.versions": 1
         },
