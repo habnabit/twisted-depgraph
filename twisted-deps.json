@@ -127,6 +127,9 @@
             "twisted.python": 1
         },
         "twisted.conch.client.connect": {
+            "twisted": 1,
+            "twisted.conch": 1,
+            "twisted.conch.client": 1,
             "twisted.conch.client.direct": 1
         },
         "twisted.conch.client.default": {
@@ -365,9 +368,6 @@
             "twisted": 1,
             "twisted.conch": 1,
             "twisted.conch.ssh": 1,
-            "twisted.conch.ssh.connection": 1,
-            "twisted.conch.ssh.transport": 1,
-            "twisted.conch.ssh.userauth": 1,
             "twisted.internet": 1,
             "twisted.python": 1
         },
@@ -382,8 +382,8 @@
         },
         "twisted.conch.ssh.forwarding": {
             "twisted": 1,
-            "twisted.conch.ssh.channel": 1,
-            "twisted.conch.ssh.common": 1,
+            "twisted.conch": 1,
+            "twisted.conch.ssh": 1,
             "twisted.internet": 1,
             "twisted.internet.endpoints": 1,
             "twisted.python": 1
@@ -409,7 +409,6 @@
             "twisted.conch": 1,
             "twisted.conch.interfaces": 1,
             "twisted.conch.ssh": 1,
-            "twisted.conch.ssh.connection": 1,
             "twisted.internet": 1,
             "twisted.python": 1
         },
