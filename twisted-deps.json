@@ -326,7 +326,9 @@
         },
         "twisted.conch.ssh._kex": {
             "twisted": 1,
-            "twisted.conch": 1
+            "twisted.conch": 1,
+            "twisted.python": 1,
+            "twisted.python.compat": 1
         },
         "twisted.conch.ssh.address": {
             "twisted": 1,
