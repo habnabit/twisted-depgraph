@@ -35,6 +35,8 @@
     "twisted.cred.portal": "ported",
     "twisted.cred.strcred": "ported",
     "twisted.cred.test": "ported",
+    "twisted.enterprise": "ported",
+    "twisted.enterprise.adbapi": "ported",
     "twisted.internet": "ported",
     "twisted.internet._baseprocess": "ported",
     "twisted.internet._glibbase": "ported",
