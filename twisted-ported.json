@@ -185,6 +185,7 @@
     "twisted.python.roots": "ported",
     "twisted.python.runtime": "ported",
     "twisted.python.sendmsg": "ported",
+    "twisted.python.syslog": "ported",
     "twisted.python.systemd": "ported",
     "twisted.python.test": "ported",
     "twisted.python.test.deprecatedattributes": "ported",
