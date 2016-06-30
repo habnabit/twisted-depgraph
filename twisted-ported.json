@@ -7,6 +7,7 @@
     "twisted._threads._pool": "ported",
     "twisted._threads._team": "ported",
     "twisted._threads._threadworker": "ported",
+    "twisted._threads.test": "ported",
     "twisted._version": "ported",
     "twisted.application": "ported",
     "twisted.application.app": "ported",
