@@ -3094,7 +3094,7 @@
         "setuptools.dist": 1,
         "setuptools.extension": 1,
         "setuptools.extern": 5,
-        "setuptools.msvc9_support": 1,
+        "setuptools.msvc": 1,
         "setuptools.package_index": 1,
         "setuptools.py26compat": 1,
         "setuptools.py27compat": 1,
