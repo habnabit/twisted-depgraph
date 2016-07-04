@@ -173,7 +173,7 @@
     "twisted.python.constants": "ported",
     "twisted.python.context": "ported",
     "twisted.python.deprecate": "ported",
-    "twisted.python.dist": "almost-ported",
+    "twisted.python.dist": "ported",
     "twisted.python.dist3": "ported",
     "twisted.python.failure": "ported",
     "twisted.python.fakepwd": "ported",
