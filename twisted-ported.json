@@ -112,6 +112,7 @@
     "twisted.names.secondary": "ported",
     "twisted.names.server": "ported",
     "twisted.names.srvconnect": "ported",
+    "twisted.names.tap": "ported",
     "twisted.names.test": "ported",
     "twisted.pair": "ported",
     "twisted.pair.raw": "ported",
