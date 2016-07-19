@@ -95,6 +95,7 @@
     "twisted.internet.udp": "ported",
     "twisted.internet.unix": "ported",
     "twisted.internet.utils": "ported",
+    "twisted.internet.win32eventreactor": "ported",
     "twisted.logger": "ported",
     "twisted.logger._buffer": "ported",
     "twisted.logger._file": "ported",

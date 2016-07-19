@@ -950,7 +950,6 @@
             "twisted": 1,
             "twisted.internet": 1,
             "twisted.internet.interfaces": 1,
-            "twisted.internet.main": 1,
             "twisted.internet.threads": 1,
             "twisted.python": 1
         },
