@@ -220,6 +220,7 @@
     "twisted.python.versions": "ported",
     "twisted.python.win32": "almost-ported",
     "twisted.python.zippath": "ported",
+    "twisted.python.zipstream": "ported",
     "twisted.scripts": "ported",
     "twisted.scripts._twistd_unix": "ported",
     "twisted.scripts._twistw": "ported",
