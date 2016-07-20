@@ -1147,9 +1147,7 @@
             "twisted.mail": 1,
             "twisted.mail.pop3": 1,
             "twisted.mail.relay": 1,
-            "twisted.python": 1,
-            "twisted.python.deprecate": 1,
-            "twisted.python.versions": 1
+            "twisted.python": 1
         },
         "twisted.mail.relay": {
             "twisted": 1,
