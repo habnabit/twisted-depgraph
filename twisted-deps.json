@@ -347,7 +347,8 @@
         "twisted.conch.ssh.channel": {
             "twisted": 1,
             "twisted.internet": 1,
-            "twisted.python": 1
+            "twisted.python": 1,
+            "twisted.python.compat": 1
         },
         "twisted.conch.ssh.common": {
             "twisted": 1,
