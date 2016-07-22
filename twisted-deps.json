@@ -3602,7 +3602,6 @@
         "wstools.XMLSchema": 1,
         "wstools.XMLname": 1,
         "wstools.c14n": 1,
-        "wstools.logging": 1,
         "xml": 5,
         "xml.dom": 5,
         "xml.dom.NodeFilter": 1,
