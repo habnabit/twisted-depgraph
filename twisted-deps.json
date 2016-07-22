@@ -439,7 +439,8 @@
             "twisted.cred": 1,
             "twisted.cred.error": 1,
             "twisted.internet": 1,
-            "twisted.python": 1
+            "twisted.python": 1,
+            "twisted.python.compat": 1
         },
         "twisted.conch.stdio": {
             "twisted": 1,
