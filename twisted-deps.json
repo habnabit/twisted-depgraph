@@ -65,6 +65,19 @@
             "twisted.python": 1,
             "twisted.python.reflect": 1
         },
+        "twisted.application.runner._exit": {
+            "twisted": 1,
+            "twisted.python": 1,
+            "twisted.python.constants": 1
+        },
+        "twisted.application.runner._runner": {
+            "twisted": 1,
+            "twisted.application.runner._exit": 1,
+            "twisted.internet": 1,
+            "twisted.logger": 1,
+            "twisted.python": 1,
+            "twisted.python.constants": 1
+        },
         "twisted.application.service": {
             "twisted": 1,
             "twisted.internet": 1,
@@ -84,6 +97,20 @@
             "twisted.python.compat": 1,
             "twisted.python.deprecate": 1,
             "twisted.python.versions": 1
+        },
+        "twisted.application.twist._options": {
+            "twisted": 1,
+            "twisted.copyright": 1,
+            "twisted.logger": 1,
+            "twisted.plugin": 1,
+            "twisted.python": 1,
+            "twisted.python.usage": 1
+        },
+        "twisted.application.twist._twist": {
+            "twisted": 1,
+            "twisted.application.twist._options": 1,
+            "twisted.python": 1,
+            "twisted.python.usage": 1
         },
         "twisted.conch": {
             "twisted": 1,
@@ -363,7 +390,6 @@
             "twisted.conch": 1,
             "twisted.conch.ssh": 1,
             "twisted.conch.ssh.common": 1,
-            "twisted.conch.ssh.service": 1,
             "twisted.internet": 1,
             "twisted.python": 1
         },
@@ -1546,8 +1572,7 @@
             "twisted.plugin": 1,
             "twisted.spread": 1,
             "twisted.words": 1,
-            "twisted.words.iwords": 1,
-            "twisted.words.service": 1
+            "twisted.words.iwords": 1
         },
         "twisted.positioning.base": {
             "twisted": 1,
@@ -2726,7 +2751,6 @@
             "twisted.python.components": 1,
             "twisted.spread": 1,
             "twisted.words": 1,
-            "twisted.words.ewords": 1,
             "twisted.words.protocols": 1,
             "twisted.words.protocols.irc": 1
         },
@@ -3178,8 +3202,14 @@
         "twisted.application.app": 1,
         "twisted.application.internet": 1,
         "twisted.application.reactors": 1,
+        "twisted.application.runner": 5,
+        "twisted.application.runner._exit": 1,
+        "twisted.application.runner._runner": 1,
         "twisted.application.service": 1,
         "twisted.application.strports": 1,
+        "twisted.application.twist": 5,
+        "twisted.application.twist._options": 1,
+        "twisted.application.twist._twist": 1,
         "twisted.conch": 5,
         "twisted.conch.avatar": 1,
         "twisted.conch.checkers": 1,
