@@ -39,7 +39,7 @@
     "twisted.conch.ssh.address": "ported",
     "twisted.conch.ssh.channel": "ported",
     "twisted.conch.ssh.common": "ported",
-    "twisted.conch.ssh.connection": "almost-ported",
+    "twisted.conch.ssh.connection": "ported",
     "twisted.conch.ssh.factory": "almost-ported",
     "twisted.conch.ssh.forwarding": "ported",
     "twisted.conch.ssh.keys": "ported",

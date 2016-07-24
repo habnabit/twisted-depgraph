@@ -391,7 +391,8 @@
             "twisted.conch.ssh": 1,
             "twisted.conch.ssh.common": 1,
             "twisted.internet": 1,
-            "twisted.python": 1
+            "twisted.python": 1,
+            "twisted.python.compat": 1
         },
         "twisted.conch.ssh.factory": {
             "twisted": 1,
