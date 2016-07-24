@@ -44,6 +44,7 @@
     "twisted.conch.ssh.forwarding": "ported",
     "twisted.conch.ssh.keys": "ported",
     "twisted.conch.ssh.service": "almost-ported",
+    "twisted.conch.ssh.session": "ported",
     "twisted.conch.ssh.sexpy": "ported",
     "twisted.conch.ssh.transport": "ported",
     "twisted.conch.ssh.userauth": "ported",
