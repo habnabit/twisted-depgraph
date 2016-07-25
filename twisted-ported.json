@@ -250,6 +250,8 @@
     "twisted.scripts._twistw": "ported",
     "twisted.scripts.trial": "ported",
     "twisted.scripts.twistd": "ported",
+    "twisted.spread": "ported",
+    "twisted.spread.banana": "ported",
     "twisted.test": "ported",
     "twisted.test.iosim": "ported",
     "twisted.test.proto_helpers": "ported",

@@ -2067,6 +2067,7 @@
             "twisted.internet": 1,
             "twisted.persisted": 1,
             "twisted.python": 1,
+            "twisted.python.compat": 1,
             "twisted.python.reflect": 1
         },
         "twisted.spread.flavors": {
