@@ -39,6 +39,7 @@
     "twisted.conch.ssh._cryptography_backports": "ported",
     "twisted.conch.ssh._kex": "ported",
     "twisted.conch.ssh.address": "ported",
+    "twisted.conch.ssh.agent": "ported",
     "twisted.conch.ssh.channel": "ported",
     "twisted.conch.ssh.common": "ported",
     "twisted.conch.ssh.connection": "ported",
