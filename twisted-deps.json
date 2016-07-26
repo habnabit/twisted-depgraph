@@ -263,6 +263,11 @@
             "twisted.python": 1,
             "twisted.python.text": 1
         },
+        "twisted.conch.ls": {
+            "twisted": 1,
+            "twisted.python": 1,
+            "twisted.python.compat": 1
+        },
         "twisted.conch.manhole": {
             "twisted": 1,
             "twisted.conch": 1,
@@ -408,7 +413,8 @@
             "twisted.conch.ssh": 1,
             "twisted.conch.ssh.common": 1,
             "twisted.internet": 1,
-            "twisted.python": 1
+            "twisted.python": 1,
+            "twisted.python.compat": 1
         },
         "twisted.conch.ssh.forwarding": {
             "twisted": 1,
