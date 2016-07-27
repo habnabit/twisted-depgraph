@@ -247,7 +247,9 @@
         },
         "twisted.conch.insults.insults": {
             "twisted": 1,
-            "twisted.internet": 1
+            "twisted.internet": 1,
+            "twisted.python": 1,
+            "twisted.python.compat": 1
         },
         "twisted.conch.insults.text": {
             "twisted": 1,
@@ -323,7 +325,8 @@
             "twisted.conch.insults": 1,
             "twisted.conch.insults.helper": 1,
             "twisted.conch.insults.insults": 1,
-            "twisted.python": 1
+            "twisted.python": 1,
+            "twisted.python.compat": 1
         },
         "twisted.conch.scripts.cftp": {
             "twisted": 1,
@@ -1877,9 +1880,6 @@
             "twisted.python.util": 1,
             "twisted.python.versions": 1,
             "twisted.python.win32": 1
-        },
-        "twisted.python.htmlizer": {
-            "twisted.python.reflect": 1
         },
         "twisted.python.lockfile": {
             "twisted": 1,
