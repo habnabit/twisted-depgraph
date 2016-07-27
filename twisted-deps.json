@@ -312,6 +312,11 @@
             "twisted.python": 1,
             "twisted.python.util": 1
         },
+        "twisted.conch.openssh_compat.primes": {
+            "twisted": 1,
+            "twisted.python": 1,
+            "twisted.python.compat": 1
+        },
         "twisted.conch.recvline": {
             "twisted": 1,
             "twisted.conch": 1,
