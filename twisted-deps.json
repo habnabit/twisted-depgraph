@@ -126,7 +126,8 @@
             "twisted.conch.interfaces": 1,
             "twisted.conch.ssh": 1,
             "twisted.conch.ssh.connection": 1,
-            "twisted.python": 1
+            "twisted.python": 1,
+            "twisted.python.compat": 1
         },
         "twisted.conch.checkers": {
             "twisted": 1,
