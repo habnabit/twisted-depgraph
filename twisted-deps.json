@@ -187,6 +187,7 @@
             "twisted.conch.ssh.keys": 1,
             "twisted.internet": 1,
             "twisted.python": 1,
+            "twisted.python.compat": 1,
             "twisted.python.randbytes": 1,
             "twisted.python.util": 1
         },
