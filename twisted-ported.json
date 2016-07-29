@@ -71,6 +71,7 @@
     "twisted.conch.ssh.sexpy": "ported",
     "twisted.conch.ssh.transport": "ported",
     "twisted.conch.ssh.userauth": "ported",
+    "twisted.conch.stdio": "ported",
     "twisted.conch.telnet": "ported",
     "twisted.conch.test": "ported",
     "twisted.conch.unix": "ported",
