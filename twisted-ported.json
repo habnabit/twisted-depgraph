@@ -221,6 +221,7 @@
     "twisted.protocols.haproxy.test.test_wrapper": "ported",
     "twisted.protocols.loopback": "almost-ported",
     "twisted.protocols.policies": "ported",
+    "twisted.protocols.postfix": "ported",
     "twisted.protocols.socks": "ported",
     "twisted.protocols.telnet": "ported",
     "twisted.protocols.test": "ported",
