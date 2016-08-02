@@ -169,6 +169,7 @@
             "twisted.conch.ssh": 1,
             "twisted.internet": 1,
             "twisted.python": 1,
+            "twisted.python.compat": 1,
             "twisted.python.filepath": 1
         },
         "twisted.conch.client.direct": {
