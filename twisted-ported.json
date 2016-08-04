@@ -288,6 +288,7 @@
     "twisted.test.proto_helpers": "ported",
     "twisted.test.ssl_helpers": "ported",
     "twisted.trial": "ported",
+    "twisted.trial.__main__": "ported",
     "twisted.trial._asyncrunner": "ported",
     "twisted.trial._asynctest": "ported",
     "twisted.trial._synctest": "ported",

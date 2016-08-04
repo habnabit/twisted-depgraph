@@ -3560,6 +3560,7 @@
         "twisted.tap.portforward": 1,
         "twisted.tap.socks": 1,
         "twisted.trial": 5,
+        "twisted.trial.__main__": 1,
         "twisted.trial._asyncrunner": 1,
         "twisted.trial._asynctest": 1,
         "twisted.trial._dist": 5,
