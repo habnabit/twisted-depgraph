@@ -1969,7 +1969,8 @@
         "twisted.python.usage": {
             "twisted": 1,
             "twisted.python": 1,
-            "twisted.python._shellcomp": 1
+            "twisted.python._shellcomp": 1,
+            "twisted.python.compat": 1
         },
         "twisted.python.util": {
             "twisted": 1,
