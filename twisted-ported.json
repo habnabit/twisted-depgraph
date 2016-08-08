@@ -221,6 +221,7 @@
     "twisted.protocols.loopback": "ported",
     "twisted.protocols.pcp": "ported",
     "twisted.protocols.policies": "ported",
+    "twisted.protocols.portforward": "ported",
     "twisted.protocols.postfix": "ported",
     "twisted.protocols.socks": "ported",
     "twisted.protocols.stateful": "ported",

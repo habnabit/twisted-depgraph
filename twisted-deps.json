@@ -1805,9 +1805,7 @@
         },
         "twisted.protocols.wire": {
             "twisted": 1,
-            "twisted.internet": 1,
-            "twisted.python": 1,
-            "twisted.python.compat": 1
+            "twisted.internet": 1
         },
         "twisted.python._appdirs": {
             "twisted": 1,
