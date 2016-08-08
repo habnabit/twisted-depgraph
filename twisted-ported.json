@@ -223,6 +223,7 @@
     "twisted.protocols.policies": "ported",
     "twisted.protocols.postfix": "ported",
     "twisted.protocols.socks": "ported",
+    "twisted.protocols.stateful": "ported",
     "twisted.protocols.telnet": "ported",
     "twisted.protocols.test": "ported",
     "twisted.protocols.tls": "ported",
