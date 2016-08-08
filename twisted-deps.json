@@ -612,7 +612,9 @@
         "twisted.internet._pollingfile": {
             "twisted": 1,
             "twisted.internet": 1,
-            "twisted.internet.interfaces": 1
+            "twisted.internet.interfaces": 1,
+            "twisted.python": 1,
+            "twisted.python.compat": 1
         },
         "twisted.internet._posixserialport": {
             "twisted": 1,
