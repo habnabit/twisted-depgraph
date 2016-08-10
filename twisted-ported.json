@@ -220,6 +220,7 @@
     "twisted.protocols.haproxy.test": "ported",
     "twisted.protocols.htb": "ported",
     "twisted.protocols.loopback": "ported",
+    "twisted.protocols.memcache": "ported",
     "twisted.protocols.pcp": "ported",
     "twisted.protocols.policies": "ported",
     "twisted.protocols.portforward": "ported",

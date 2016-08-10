@@ -1735,7 +1735,8 @@
             "twisted.protocols": 1,
             "twisted.protocols.basic": 1,
             "twisted.protocols.policies": 1,
-            "twisted.python": 1
+            "twisted.python": 1,
+            "twisted.python.compat": 1
         },
         "twisted.protocols.mice.mouseman": {
             "twisted": 1,
