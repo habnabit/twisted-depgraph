@@ -1426,7 +1426,9 @@
             "twisted.pair.ethernet": 1,
             "twisted.pair.ip": 1,
             "twisted.pair.rawudp": 1,
-            "twisted.pair.tuntap": 1
+            "twisted.pair.tuntap": 1,
+            "twisted.python": 1,
+            "twisted.python.compat": 1
         },
         "twisted.pair.tuntap": {
             "twisted": 1,
