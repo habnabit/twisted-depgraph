@@ -679,6 +679,17 @@
             "twisted.python.runtime": 1,
             "twisted.python.util": 1
         },
+        "twisted.internet.asyncioreactor": {
+            "twisted": 1,
+            "twisted.internet": 1,
+            "twisted.internet.base": 1,
+            "twisted.internet.interfaces": 1,
+            "twisted.internet.main": 1,
+            "twisted.internet.posixbase": 1,
+            "twisted.logger": 1,
+            "twisted.python": 1,
+            "twisted.python.log": 1
+        },
         "twisted.internet.base": {
             "twisted": 1,
             "twisted.internet": 1,
@@ -748,7 +759,6 @@
             "twisted.internet.interfaces": 1,
             "twisted.internet.main": 1,
             "twisted.internet.posixbase": 1,
-            "twisted.internet.task": 1,
             "twisted.python": 1
         },
         "twisted.internet.error": {
@@ -872,6 +882,7 @@
             "twisted.internet.main": 1,
             "twisted.internet.process": 1,
             "twisted.internet.ssl": 1,
+            "twisted.internet.task": 1,
             "twisted.internet.tcp": 1,
             "twisted.internet.udp": 1,
             "twisted.internet.unix": 1,
@@ -3321,6 +3332,7 @@
         "twisted.internet._win32stdio": 1,
         "twisted.internet.abstract": 1,
         "twisted.internet.address": 1,
+        "twisted.internet.asyncioreactor": 1,
         "twisted.internet.base": 1,
         "twisted.internet.cfreactor": 1,
         "twisted.internet.default": 1,

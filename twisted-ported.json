@@ -102,6 +102,7 @@
     "twisted.internet._win32stdio": "ported",
     "twisted.internet.abstract": "ported",
     "twisted.internet.address": "ported",
+    "twisted.internet.asyncioreactor": "ported",
     "twisted.internet.base": "ported",
     "twisted.internet.default": "ported",
     "twisted.internet.defer": "ported",
