@@ -816,7 +816,8 @@
             "twisted.internet.abstract": 1,
             "twisted.internet.iocpreactor": 1,
             "twisted.internet.iocpreactor.const": 1,
-            "twisted.python": 1
+            "twisted.python": 1,
+            "twisted.python.compat": 1
         },
         "twisted.internet.iocpreactor.reactor": {
             "twisted": 1,
@@ -842,7 +843,8 @@
             "twisted.internet.iocpreactor.interfaces": 1,
             "twisted.internet.protocol": 1,
             "twisted.internet.tcp": 1,
-            "twisted.python": 1
+            "twisted.python": 1,
+            "twisted.python.compat": 1
         },
         "twisted.internet.iocpreactor.udp": {
             "twisted": 1,
