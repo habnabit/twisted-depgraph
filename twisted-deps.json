@@ -3,8 +3,7 @@
         "twisted": {
             "twisted": 1,
             "twisted._version": 1,
-            "twisted.python": 1,
-            "twisted.python.compat": 1
+            "twisted.python": 1
         },
         "twisted._threads": {
             "twisted._threads._ithreads": 1,
@@ -65,18 +64,11 @@
             "twisted.python": 1,
             "twisted.python.reflect": 1
         },
-        "twisted.application.runner._exit": {
-            "twisted": 1,
-            "twisted.python": 1,
-            "twisted.python.constants": 1
-        },
         "twisted.application.runner._runner": {
             "twisted": 1,
             "twisted.application.runner._exit": 1,
             "twisted.internet": 1,
-            "twisted.logger": 1,
-            "twisted.python": 1,
-            "twisted.python.constants": 1
+            "twisted.logger": 1
         },
         "twisted.application.service": {
             "twisted": 1,
@@ -635,7 +627,6 @@
             "twisted.internet.interfaces": 1,
             "twisted.python": 1,
             "twisted.python.compat": 1,
-            "twisted.python.constants": 1,
             "twisted.python.deprecate": 1,
             "twisted.python.failure": 1,
             "twisted.python.util": 1,
@@ -748,7 +739,6 @@
             "twisted.python": 1,
             "twisted.python.compat": 1,
             "twisted.python.components": 1,
-            "twisted.python.constants": 1,
             "twisted.python.failure": 1,
             "twisted.python.filepath": 1,
             "twisted.python.systemd": 1
@@ -1056,11 +1046,8 @@
             "twisted.python.compat": 1
         },
         "twisted.logger._filter": {
-            "twisted": 1,
             "twisted.logger._levels": 1,
-            "twisted.logger._observer": 1,
-            "twisted.python": 1,
-            "twisted.python.constants": 1
+            "twisted.logger._observer": 1
         },
         "twisted.logger._flatten": {
             "twisted": 1,
@@ -1101,7 +1088,6 @@
             "twisted.logger._logger": 1,
             "twisted.python": 1,
             "twisted.python.compat": 1,
-            "twisted.python.constants": 1,
             "twisted.python.failure": 1
         },
         "twisted.logger._legacy": {
@@ -1109,11 +1095,6 @@
             "twisted.logger._levels": 1,
             "twisted.logger._observer": 1,
             "twisted.logger._stdlib": 1
-        },
-        "twisted.logger._levels": {
-            "twisted": 1,
-            "twisted.python": 1,
-            "twisted.python.constants": 1
         },
         "twisted.logger._logger": {
             "twisted": 1,
@@ -1448,7 +1429,6 @@
             "twisted.internet": 1,
             "twisted.pair": 1,
             "twisted.python": 1,
-            "twisted.python.constants": 1,
             "twisted.python.deprecate": 1,
             "twisted.python.reflect": 1,
             "twisted.python.util": 1,
@@ -1619,7 +1599,6 @@
             "twisted.positioning": 1,
             "twisted.positioning.ipositioning": 1,
             "twisted.python": 1,
-            "twisted.python.constants": 1,
             "twisted.python.util": 1
         },
         "twisted.positioning.nmea": {
@@ -1629,8 +1608,7 @@
             "twisted.protocols": 1,
             "twisted.protocols.basic": 1,
             "twisted.python": 1,
-            "twisted.python.compat": 1,
-            "twisted.python.constants": 1
+            "twisted.python.compat": 1
         },
         "twisted.protocols": {
             "twisted": 1,
@@ -1713,8 +1691,7 @@
             "twisted": 1,
             "twisted.internet": 1,
             "twisted.protocols.haproxy._exceptions": 1,
-            "twisted.python": 1,
-            "twisted.python.constants": 1
+            "twisted.python": 1
         },
         "twisted.protocols.haproxy._wrapper": {
             "twisted": 1,
@@ -1825,6 +1802,11 @@
         "twisted.protocols.wire": {
             "twisted": 1,
             "twisted.internet": 1
+        },
+        "twisted.python": {
+            "twisted.python.compat": 1,
+            "twisted.python.deprecate": 1,
+            "twisted.python.versions": 1
         },
         "twisted.python._appdirs": {
             "twisted": 1,
@@ -2941,6 +2923,9 @@
         "compiler.syntax": 1,
         "compiler.transformer": 1,
         "compiler.visitor": 1,
+        "constantly": 5,
+        "constantly._constants": 1,
+        "constantly._version": 1,
         "contextlib": 1,
         "cookielib": 1,
         "copy": 1,
