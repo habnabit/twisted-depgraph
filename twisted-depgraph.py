@@ -90,7 +90,7 @@ def main(target):
     mf = mymf(sys.path[:], 0, [])
 
     moduleNames = []
-    for path, dirnames, filenames in os.walk(os.path.join(target, 'twisted')):
+    for path, dirnames, filenames in os.walk(os.path.join(target, 'src', 'twisted')):
         if 'test' in dirnames:
             dirnames.remove('test')
         for filename in filenames:
