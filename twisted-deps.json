@@ -2899,6 +2899,7 @@
         "attr._config": 1,
         "attr._funcs": 1,
         "attr._make": 1,
+        "attr.exceptions": 1,
         "attr.filters": 1,
         "attr.validators": 1,
         "base64": 1,
