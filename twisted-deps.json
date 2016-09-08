@@ -1142,6 +1142,8 @@
             "twisted.cred.error": 1,
             "twisted.internet": 1,
             "twisted.internet.defer": 1,
+            "twisted.mail": 1,
+            "twisted.mail.interfaces": 1,
             "twisted.protocols": 1,
             "twisted.python": 1
         },
@@ -1230,6 +1232,7 @@
             "twisted.internet.interfaces": 1,
             "twisted.mail": 1,
             "twisted.mail.imap4": 1,
+            "twisted.mail.interfaces": 1,
             "twisted.protocols": 1,
             "twisted.python": 1,
             "twisted.python.runtime": 1
@@ -3443,6 +3446,7 @@
         "twisted.mail.alias": 1,
         "twisted.mail.bounce": 1,
         "twisted.mail.imap4": 1,
+        "twisted.mail.interfaces": 1,
         "twisted.mail.mail": 1,
         "twisted.mail.maildir": 1,
         "twisted.mail.pb": 1,
