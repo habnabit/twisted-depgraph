@@ -1658,15 +1658,6 @@
             "twisted.protocols": 1,
             "twisted.python": 1
         },
-        "twisted.protocols.gps.nmea": {
-            "twisted": 1,
-            "twisted.protocols": 1
-        },
-        "twisted.protocols.gps.rockwell": {
-            "twisted": 1,
-            "twisted.internet": 1,
-            "twisted.python": 1
-        },
         "twisted.protocols.haproxy": {
             "twisted.protocols.haproxy._wrapper": 1
         },
@@ -3524,9 +3515,6 @@
         "twisted.protocols.dict": 1,
         "twisted.protocols.finger": 1,
         "twisted.protocols.ftp": 1,
-        "twisted.protocols.gps": 5,
-        "twisted.protocols.gps.nmea": 1,
-        "twisted.protocols.gps.rockwell": 1,
         "twisted.protocols.haproxy": 5,
         "twisted.protocols.haproxy._exceptions": 1,
         "twisted.protocols.haproxy._info": 1,
