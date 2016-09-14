@@ -3220,6 +3220,7 @@
         "setuptools.extension": 1,
         "setuptools.extern": 5,
         "setuptools.lib2to3_ex": 1,
+        "setuptools.monkey": 1,
         "setuptools.msvc": 1,
         "setuptools.package_index": 1,
         "setuptools.py26compat": 1,
