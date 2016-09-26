@@ -1125,11 +1125,25 @@
             "twisted.python.deprecate": 1,
             "twisted.python.versions": 1
         },
+        "twisted.mail._cred": {
+            "twisted": 1,
+            "twisted.cred": 1,
+            "twisted.mail": 1,
+            "twisted.mail._except": 1,
+            "twisted.mail.interfaces": 1,
+            "twisted.python": 1,
+            "twisted.python.compat": 1
+        },
+        "twisted.mail._except": {
+            "twisted": 1,
+            "twisted.mail": 1,
+            "twisted.mail.smtp": 1
+        },
         "twisted.mail.alias": {
             "twisted": 1,
             "twisted.internet": 1,
             "twisted.mail": 1,
-            "twisted.mail.smtp": 1,
+            "twisted.mail.interfaces": 1,
             "twisted.python": 1
         },
         "twisted.mail.bounce": {
@@ -1143,9 +1157,12 @@
             "twisted.internet": 1,
             "twisted.internet.defer": 1,
             "twisted.mail": 1,
+            "twisted.mail._cred": 1,
+            "twisted.mail._except": 1,
             "twisted.mail.interfaces": 1,
             "twisted.protocols": 1,
-            "twisted.python": 1
+            "twisted.python": 1,
+            "twisted.python.compat": 1
         },
         "twisted.mail.mail": {
             "twisted": 1,
@@ -1154,6 +1171,7 @@
             "twisted.cred.portal": 1,
             "twisted.internet": 1,
             "twisted.mail": 1,
+            "twisted.mail.interfaces": 1,
             "twisted.mail.protocols": 1,
             "twisted.python": 1
         },
@@ -1177,6 +1195,8 @@
             "twisted": 1,
             "twisted.internet": 1,
             "twisted.mail": 1,
+            "twisted.mail._except": 1,
+            "twisted.mail.interfaces": 1,
             "twisted.mail.pop3client": 1,
             "twisted.protocols": 1,
             "twisted.python": 1
@@ -1184,6 +1204,8 @@
         "twisted.mail.pop3client": {
             "twisted": 1,
             "twisted.internet": 1,
+            "twisted.mail": 1,
+            "twisted.mail._except": 1,
             "twisted.protocols": 1,
             "twisted.python": 1
         },
@@ -1231,7 +1253,8 @@
             "twisted.internet": 1,
             "twisted.internet.interfaces": 1,
             "twisted.mail": 1,
-            "twisted.mail.imap4": 1,
+            "twisted.mail._cred": 1,
+            "twisted.mail._except": 1,
             "twisted.mail.interfaces": 1,
             "twisted.protocols": 1,
             "twisted.python": 1,
@@ -1832,8 +1855,7 @@
         "twisted.python._setup": {
             "twisted": 1,
             "twisted.python": 1,
-            "twisted.python.compat": 1,
-            "twisted.python.dist3": 1
+            "twisted.python.compat": 1
         },
         "twisted.python._shellcomp": {
             "twisted": 1,
@@ -3221,7 +3243,6 @@
         "setuptools.extern": 5,
         "setuptools.lib2to3_ex": 1,
         "setuptools.monkey": 1,
-        "setuptools.msvc": 1,
         "setuptools.package_index": 1,
         "setuptools.py26compat": 1,
         "setuptools.py27compat": 1,
@@ -3435,6 +3456,8 @@
         "twisted.logger._stdlib": 1,
         "twisted.logger._util": 1,
         "twisted.mail": 5,
+        "twisted.mail._cred": 1,
+        "twisted.mail._except": 1,
         "twisted.mail.alias": 1,
         "twisted.mail.bounce": 1,
         "twisted.mail.imap4": 1,
@@ -3543,6 +3566,7 @@
         "twisted.protocols.wire": 1,
         "twisted.python": 5,
         "twisted.python._appdirs": 1,
+        "twisted.python._dist3": 1,
         "twisted.python._inotify": 1,
         "twisted.python._oldstyle": 1,
         "twisted.python._pydoctor": 1,
@@ -3558,7 +3582,6 @@
         "twisted.python.constants": 1,
         "twisted.python.context": 1,
         "twisted.python.deprecate": 1,
-        "twisted.python.dist3": 1,
         "twisted.python.failure": 1,
         "twisted.python.fakepwd": 1,
         "twisted.python.filepath": 1,
