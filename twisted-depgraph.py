@@ -50,12 +50,12 @@ class mymf(modulefinder.ModuleFinder):
     def import_module(self, partnam, fqname, parent):
         r = modulefinder.ModuleFinder.import_module(
             self, partnam, fqname, parent)
-        if (
-                r is not None
-                and self._last_caller is not None
-                and self._last_caller.__name__ != '__main__'
-                and 'twisted' in r.__name__):
-            self._depgraph[self._last_caller.__name__].add(r.__name__)
+        last_caller = self._last_caller
+        if r is not None and 'twisted' in r.__name__:
+            if last_caller is None or last_caller.__name__ == '__main__':
+                self._depgraph[fqname]
+            else:
+                self._depgraph[last_caller.__name__].add(fqname)
         return r
 
     def load_module(self, fqname, fp, pathname, (suffix, mode, type)):
@@ -78,14 +78,6 @@ json_dump = functools.partial(
     json.dump, indent=4, separators=(',', ': '), sort_keys=True)
 
 
-def remove_dunder(name):
-    l, sep, r = name.rpartition('.__init__')
-    if sep and not r:
-        return l
-    else:
-        return name
-
-
 def main(target):
     mf = mymf(sys.path[:], 0, [])
 
@@ -96,13 +88,16 @@ def main(target):
         for filename in filenames:
             if not filename.endswith('.py'):
                 continue
-            if filename in {'__init__.py', 'setup.py'}:
+            if filename in ('setup.py',):
                 continue
             if '-' in filename:
                 # a script like update-documentation.py
                 continue
-            moduleNames.append(
-                reflect.filenameToModuleName(os.path.join(path, filename)))
+            if filename != '__init__.py':
+                filepath = os.path.join(path, filename)
+            else:
+                filepath = path
+            moduleNames.append(reflect.filenameToModuleName(filepath))
 
     with tempfile.NamedTemporaryFile() as tmpfile:
         for moduleName in moduleNames:
@@ -117,7 +112,7 @@ def main(target):
     port_status = {}
     for module in mf._depgraph.iterkeys():
         if module not in _dist3.notPortedModules:
-            port_status[remove_dunder(module)] = 'ported'
+            port_status[module] = 'ported'
     with open('twisted-ported.json', 'wb') as outfile:
         json_dump(port_status, outfile)
         outfile.write('\n')
