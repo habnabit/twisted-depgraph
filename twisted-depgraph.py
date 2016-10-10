@@ -28,7 +28,7 @@ import modulefinder
 import sys
 import tempfile
 
-from twisted.python import _dist3, reflect
+from twisted.python import _setup, reflect
 
 
 class mymf(modulefinder.ModuleFinder):
@@ -111,7 +111,7 @@ def main(target):
 
     port_status = {}
     for module in mf._depgraph.iterkeys():
-        if module not in _dist3.notPortedModules:
+        if module not in _setup.notPortedModules:
             port_status[module] = 'ported'
     with open('twisted-ported.json', 'wb') as outfile:
         json_dump(port_status, outfile)
