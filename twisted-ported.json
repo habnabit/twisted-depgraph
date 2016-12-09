@@ -94,6 +94,7 @@
     "twisted.internet._baseprocess": "ported",
     "twisted.internet._dumbwin32proc": "ported",
     "twisted.internet._glibbase": "ported",
+    "twisted.internet._idna": "ported",
     "twisted.internet._newtls": "ported",
     "twisted.internet._pollingfile": "ported",
     "twisted.internet._posixserialport": "ported",

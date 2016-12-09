@@ -609,6 +609,7 @@
             "twisted.internet.interfaces": 1,
             "twisted.python": 1
         },
+        "twisted.internet._idna": {},
         "twisted.internet._newtls": {
             "twisted": 1,
             "twisted.internet": 1,
@@ -656,6 +657,7 @@
         "twisted.internet._sslverify": {
             "twisted": 1,
             "twisted.internet": 1,
+            "twisted.internet._idna": 1,
             "twisted.internet.defer": 1,
             "twisted.internet.error": 1,
             "twisted.internet.interfaces": 1,
@@ -761,9 +763,10 @@
         "twisted.internet.endpoints": {
             "twisted": 1,
             "twisted.internet": 1,
-            "twisted.internet._sslverify": 1,
+            "twisted.internet._idna": 1,
             "twisted.internet.abstract": 1,
             "twisted.internet.address": 1,
+            "twisted.internet.defer": 1,
             "twisted.internet.interfaces": 1,
             "twisted.internet.protocol": 1,
             "twisted.internet.ssl": 1,
@@ -3460,6 +3463,7 @@
         "twisted.internet._baseprocess": 1,
         "twisted.internet._dumbwin32proc": 1,
         "twisted.internet._glibbase": 1,
+        "twisted.internet._idna": 1,
         "twisted.internet._newtls": 1,
         "twisted.internet._pollingfile": 1,
         "twisted.internet._posixserialport": 1,
