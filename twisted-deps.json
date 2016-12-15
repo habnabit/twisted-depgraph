@@ -601,6 +601,7 @@
             "twisted.internet.interfaces": 1,
             "twisted.python": 1,
             "twisted.python.compat": 1,
+            "twisted.python.util": 1,
             "twisted.python.win32": 1
         },
         "twisted.internet._glibbase": {
