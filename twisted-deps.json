@@ -369,6 +369,8 @@
         "twisted.conch.ssh._kex": {
             "twisted": 1,
             "twisted.conch": 1,
+            "twisted.conch.ssh": 1,
+            "twisted.conch.ssh.keys": 1,
             "twisted.python": 1,
             "twisted.python.compat": 1
         },
