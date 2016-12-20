@@ -270,6 +270,7 @@
             "twisted.conch.recvline": 1,
             "twisted.internet": 1,
             "twisted.python": 1,
+            "twisted.python.compat": 1,
             "twisted.python.htmlizer": 1
         },
         "twisted.conch.manhole_ssh": {
