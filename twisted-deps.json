@@ -2295,6 +2295,7 @@
             "twisted.protocols": 1,
             "twisted.protocols.amp": 1,
             "twisted.python": 1,
+            "twisted.python.compat": 1,
             "twisted.python.failure": 1,
             "twisted.python.reflect": 1,
             "twisted.trial": 1,
@@ -2313,6 +2314,7 @@
         "twisted.trial._dist.workerreporter": {
             "twisted": 1,
             "twisted.python": 1,
+            "twisted.python.compat": 1,
             "twisted.python.failure": 1,
             "twisted.python.reflect": 1,
             "twisted.trial": 1,
@@ -2324,6 +2326,7 @@
             "twisted.internet": 1,
             "twisted.internet.protocol": 1,
             "twisted.python": 1,
+            "twisted.python.compat": 1,
             "twisted.python.log": 1,
             "twisted.trial": 1,
             "twisted.trial._dist": 1,
