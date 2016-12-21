@@ -1889,8 +1889,7 @@
             "twisted": 1,
             "twisted.python": 1,
             "twisted.python.compat": 1,
-            "twisted.python.reflect": 1,
-            "twisted.python.util": 1
+            "twisted.python.reflect": 1
         },
         "twisted.python._pydoctor": {
             "twisted": 1,
@@ -1929,7 +1928,11 @@
             "twisted.python.reflect": 1
         },
         "twisted.python.constants": {},
-        "twisted.python.context": {},
+        "twisted.python.context": {
+            "twisted": 1,
+            "twisted.python": 1,
+            "twisted.python._oldstyle": 1
+        },
         "twisted.python.deprecate": {
             "twisted": 1,
             "twisted.python": 1,
@@ -1938,6 +1941,7 @@
         "twisted.python.failure": {
             "twisted": 1,
             "twisted.python": 1,
+            "twisted.python._oldstyle": 1,
             "twisted.python.compat": 1,
             "twisted.python.log": 1
         },
@@ -1952,11 +1956,16 @@
             "twisted.python.win32": 1
         },
         "twisted.python.finalize": {},
-        "twisted.python.formmethod": {},
+        "twisted.python.formmethod": {
+            "twisted": 1,
+            "twisted.python": 1,
+            "twisted.python._oldstyle": 1
+        },
         "twisted.python.hook": {},
         "twisted.python.htmlizer": {
             "twisted": 1,
             "twisted.python": 1,
+            "twisted.python._oldstyle": 1,
             "twisted.python.compat": 1
         },
         "twisted.python.lockfile": {
@@ -1975,11 +1984,13 @@
             "twisted.python.compat": 1,
             "twisted.python.context": 1,
             "twisted.python.failure": 1,
-            "twisted.python.threadable": 1
+            "twisted.python.threadable": 1,
+            "twisted.python.util": 1
         },
         "twisted.python.logfile": {
             "twisted": 1,
-            "twisted.python": 1
+            "twisted.python": 1,
+            "twisted.python._oldstyle": 1
         },
         "twisted.python.modules": {
             "twisted": 1,
@@ -1999,23 +2010,27 @@
         },
         "twisted.python.rebuild": {
             "twisted": 1,
-            "twisted.python": 1
+            "twisted.python": 1,
+            "twisted.python._oldstyle": 1
         },
         "twisted.python.reflect": {
             "twisted": 1,
             "twisted.python": 1,
+            "twisted.python._oldstyle": 1,
             "twisted.python.compat": 1,
             "twisted.python.deprecate": 1
         },
         "twisted.python.release": {},
         "twisted.python.roots": {
             "twisted": 1,
-            "twisted.python": 1
+            "twisted.python": 1,
+            "twisted.python._oldstyle": 1
         },
         "twisted.python.runtime": {
             "twisted": 1,
             "twisted.python": 1,
             "twisted.python._inotify": 1,
+            "twisted.python._oldstyle": 1,
             "twisted.python.filepath": 1
         },
         "twisted.python.sendmsg": {
@@ -2027,7 +2042,8 @@
         "twisted.python.shortcut": {},
         "twisted.python.syslog": {
             "twisted": 1,
-            "twisted.python": 1
+            "twisted.python": 1,
+            "twisted.python._oldstyle": 1
         },
         "twisted.python.systemd": {},
         "twisted.python.text": {},
@@ -2036,6 +2052,7 @@
             "twisted": 1,
             "twisted._threads": 1,
             "twisted.python": 1,
+            "twisted.python._oldstyle": 1,
             "twisted.python.failure": 1
         },
         "twisted.python.url": {
@@ -2056,6 +2073,7 @@
         "twisted.python.util": {
             "twisted": 1,
             "twisted.python": 1,
+            "twisted.python._oldstyle": 1,
             "twisted.python.compat": 1,
             "twisted.python.deprecate": 1
         },
