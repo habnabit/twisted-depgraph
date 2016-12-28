@@ -256,6 +256,7 @@
             "twisted.conch": 1,
             "twisted.conch.insults": 1,
             "twisted.python": 1,
+            "twisted.python.compat": 1,
             "twisted.python.text": 1
         },
         "twisted.conch.interfaces": {},
@@ -3358,6 +3359,7 @@
         "setuptools.py26compat": 1,
         "setuptools.py27compat": 1,
         "setuptools.py31compat": 1,
+        "setuptools.py36compat": 1,
         "setuptools.sandbox": 1,
         "setuptools.ssl_support": 1,
         "setuptools.unicode_utils": 1,
