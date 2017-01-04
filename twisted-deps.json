@@ -65,9 +65,14 @@
         },
         "twisted.application.runner": {},
         "twisted.application.runner._exit": {},
+        "twisted.application.runner._pidfile": {
+            "twisted": 1,
+            "twisted.logger": 1
+        },
         "twisted.application.runner._runner": {
             "twisted": 1,
             "twisted.application.runner._exit": 1,
+            "twisted.application.runner._pidfile": 1,
             "twisted.internet": 1,
             "twisted.logger": 1
         },
@@ -3420,6 +3425,7 @@
         "twisted.application.reactors": 1,
         "twisted.application.runner": 5,
         "twisted.application.runner._exit": 1,
+        "twisted.application.runner._pidfile": 1,
         "twisted.application.runner._runner": 1,
         "twisted.application.service": 1,
         "twisted.application.strports": 1,

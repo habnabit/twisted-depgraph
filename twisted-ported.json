@@ -15,6 +15,7 @@
     "twisted.application.reactors": "ported",
     "twisted.application.runner": "ported",
     "twisted.application.runner._exit": "ported",
+    "twisted.application.runner._pidfile": "ported",
     "twisted.application.runner._runner": "ported",
     "twisted.application.service": "ported",
     "twisted.application.strports": "ported",
