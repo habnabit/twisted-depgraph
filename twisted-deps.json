@@ -43,6 +43,7 @@
             "twisted.internet": 1,
             "twisted.persisted": 1,
             "twisted.python": 1,
+            "twisted.python._oldstyle": 1,
             "twisted.python.logfile": 1,
             "twisted.python.reflect": 1,
             "twisted.python.usage": 1
@@ -83,6 +84,7 @@
             "twisted.persisted.sob": 1,
             "twisted.plugin": 1,
             "twisted.python": 1,
+            "twisted.python._oldstyle": 1,
             "twisted.python.reflect": 1
         },
         "twisted.application.strports": {
