@@ -1650,9 +1650,7 @@
         "twisted.plugins.twisted_reactors": {
             "twisted": 1,
             "twisted.application": 1,
-            "twisted.application.reactors": 1,
-            "twisted.python": 1,
-            "twisted.python.compat": 1
+            "twisted.application.reactors": 1
         },
         "twisted.plugins.twisted_runner": {
             "twisted": 1,
