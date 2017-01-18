@@ -98,6 +98,7 @@
         "twisted.application.twist._options": {
             "twisted": 1,
             "twisted.copyright": 1,
+            "twisted.internet": 1,
             "twisted.logger": 1,
             "twisted.plugin": 1,
             "twisted.python": 1,
