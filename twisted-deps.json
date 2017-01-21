@@ -1348,7 +1348,8 @@
             "twisted.internet": 1,
             "twisted.names": 1,
             "twisted.python": 1,
-            "twisted.python.compat": 1
+            "twisted.python.compat": 1,
+            "twisted.python.filepath": 1
         },
         "twisted.names.cache": {
             "twisted": 1,
