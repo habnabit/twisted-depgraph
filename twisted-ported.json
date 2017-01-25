@@ -1,4 +1,5 @@
 {
+    "automat._discover": "ported",
     "twisted": "ported",
     "twisted.__main__": "ported",
     "twisted._threads": "ported",
