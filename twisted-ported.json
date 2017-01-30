@@ -218,6 +218,7 @@
     "twisted.protocols.amp": "ported",
     "twisted.protocols.basic": "ported",
     "twisted.protocols.dict": "ported",
+    "twisted.protocols.finger": "ported",
     "twisted.protocols.ftp": "ported",
     "twisted.protocols.haproxy": "ported",
     "twisted.protocols.haproxy._exceptions": "ported",
