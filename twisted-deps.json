@@ -1203,7 +1203,9 @@
         "twisted.mail._except": {
             "twisted": 1,
             "twisted.mail": 1,
-            "twisted.mail.smtp": 1
+            "twisted.mail.smtp": 1,
+            "twisted.python": 1,
+            "twisted.python.compat": 1
         },
         "twisted.mail.alias": {
             "twisted": 1,
@@ -1286,7 +1288,8 @@
             "twisted.mail": 1,
             "twisted.mail.pop3": 1,
             "twisted.mail.relay": 1,
-            "twisted.python": 1
+            "twisted.python": 1,
+            "twisted.python.compat": 1
         },
         "twisted.mail.relay": {
             "twisted": 1,
@@ -1326,6 +1329,7 @@
             "twisted.mail.interfaces": 1,
             "twisted.protocols": 1,
             "twisted.python": 1,
+            "twisted.python.compat": 1,
             "twisted.python.runtime": 1
         },
         "twisted.mail.tap": {
@@ -3317,6 +3321,8 @@
         "pyasn1.codec.der.decoder": 1,
         "pyasn1.codec.der.encoder": 1,
         "pyasn1.compat": 5,
+        "pyasn1.compat.binary": 1,
+        "pyasn1.compat.integer": 1,
         "pyasn1.compat.octets": 1,
         "pyasn1.debug": 1,
         "pyasn1.error": 1,

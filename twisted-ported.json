@@ -170,6 +170,7 @@
     "twisted.mail._except": "ported",
     "twisted.mail.interfaces": "ported",
     "twisted.mail.scripts": "ported",
+    "twisted.mail.smtp": "ported",
     "twisted.names": "ported",
     "twisted.names._rfc1982": "ported",
     "twisted.names.authority": "ported",
