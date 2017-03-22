@@ -3067,6 +3067,7 @@
         "cffi.cffi_opcode": 1,
         "cffi.commontypes": 1,
         "cffi.cparser": 1,
+        "cffi.error": 1,
         "cffi.ffiplatform": 1,
         "cffi.lock": 1,
         "cffi.model": 1,
