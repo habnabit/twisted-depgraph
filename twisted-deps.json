@@ -2594,6 +2594,7 @@
         "twisted.web.microdom": {
             "twisted": 1,
             "twisted.python": 1,
+            "twisted.python.compat": 1,
             "twisted.python.util": 1,
             "twisted.web": 1,
             "twisted.web.sux": 1
