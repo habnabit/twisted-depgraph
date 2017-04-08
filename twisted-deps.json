@@ -2674,7 +2674,6 @@
             "twisted.internet": 1,
             "twisted.internet.ssl": 1,
             "twisted.python": 1,
-            "twisted.python.compat": 1,
             "twisted.spread": 1,
             "twisted.web": 1,
             "twisted.web.twcgi": 1,
@@ -2695,6 +2694,7 @@
         "twisted.web.twcgi": {
             "twisted": 1,
             "twisted.internet": 1,
+            "twisted.logger": 1,
             "twisted.python": 1,
             "twisted.spread": 1,
             "twisted.web": 1
