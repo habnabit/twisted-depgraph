@@ -108,7 +108,7 @@ d3.json('twisted-deps.json', function(error, depData) {
   var showStatuses = {
     'ported': false,
     'unported': true,
-    'almost-ported': true,
+    'ready-and-blocking-another': true,
     'ready': true,
   };
 
@@ -131,7 +131,7 @@ d3.json('twisted-deps.json', function(error, depData) {
 
   var statusFilter = d3.select('body').append('ul').classed('status-filter', true)
     .selectAll('.statusButton')
-    .data(['ported', 'unported', 'almost-ported', 'ready'])
+    .data(['ported', 'unported', 'ready-and-blocking-another', 'ready'])
     .enter()
       .append('li')
       .attr('class', f.ident)
@@ -411,7 +411,7 @@ d3.json('twisted-deps.json', function(error, depData) {
       }
     }
 
-    function getReady(node) {
+    graph.nodes.forEach(function(node) {
       if (node.status !== 'unported') {
         return;
       }
@@ -422,9 +422,17 @@ d3.json('twisted-deps.json', function(error, depData) {
       if (ready) {
         node.status = 'ready';
       }
-    }
+    });
 
-    graph.nodes.forEach(getReady);
+    graph.nodes.forEach(function(node) {
+      node.deps.forEach(function(subNodeName) {
+        var subNode = graph.pkgs[subNodeName];
+        if (subNode && subNode.status === 'ready') {
+          subNode.status = 'ready-and-blocking-another';
+        }
+      });
+    });
+
     nodes
       .attr('status', f.get('status'))
       .attr('ready', f.get('ready'));
