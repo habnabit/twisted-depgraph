@@ -2884,11 +2884,6 @@
             "twisted.python.compat": 1,
             "twisted.python.deprecate": 1
         },
-        "twisted.words.protocols.oscar": {
-            "twisted": 1,
-            "twisted.internet": 1,
-            "twisted.python": 1
-        },
         "twisted.words.service": {
             "twisted": 1,
             "twisted.cred": 1,
@@ -3907,7 +3902,6 @@
         "twisted.words.protocols.jabber.sasl_mechanisms": 1,
         "twisted.words.protocols.jabber.xmlstream": 1,
         "twisted.words.protocols.jabber.xmpp_stringprep": 1,
-        "twisted.words.protocols.oscar": 1,
         "twisted.words.service": 1,
         "twisted.words.tap": 1,
         "twisted.words.xish": 5,
