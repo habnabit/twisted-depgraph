@@ -2078,14 +2078,11 @@
             "twisted.python._oldstyle": 1,
             "twisted.python.failure": 1
         },
-        "twisted.python.url": {
-            "twisted.python._url": 1
-        },
+        "twisted.python.url": {},
         "twisted.python.urlpath": {
             "twisted": 1,
             "twisted.python": 1,
-            "twisted.python.compat": 1,
-            "twisted.python.url": 1
+            "twisted.python.compat": 1
         },
         "twisted.python.usage": {
             "twisted": 1,
@@ -3249,6 +3246,8 @@
         "hyperframe.exceptions": 1,
         "hyperframe.flags": 1,
         "hyperframe.frame": 1,
+        "hyperlink": 5,
+        "hyperlink._url": 1,
         "idna": 5,
         "idna.core": 1,
         "idna.idnadata": 1,
