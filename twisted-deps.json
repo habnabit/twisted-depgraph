@@ -3401,6 +3401,7 @@
         "service_identity": 5,
         "service_identity._common": 1,
         "service_identity._compat": 1,
+        "service_identity.cryptography": 1,
         "service_identity.exceptions": 1,
         "service_identity.pyopenssl": 1,
         "sets": 1,
