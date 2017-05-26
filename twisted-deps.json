@@ -664,12 +664,15 @@
         "twisted.internet._resolver": {
             "twisted": 1,
             "twisted.internet": 1,
+            "twisted.internet._idna": 1,
             "twisted.internet.address": 1,
             "twisted.internet.defer": 1,
             "twisted.internet.error": 1,
             "twisted.internet.interfaces": 1,
             "twisted.internet.threads": 1,
-            "twisted.logger": 1
+            "twisted.logger": 1,
+            "twisted.python": 1,
+            "twisted.python.compat": 1
         },
         "twisted.internet._signals": {},
         "twisted.internet._sslverify": {
