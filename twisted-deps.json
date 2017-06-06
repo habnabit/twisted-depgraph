@@ -1923,6 +1923,7 @@
         "twisted.python._release": {
             "twisted": 1,
             "twisted.python": 1,
+            "twisted.python.compat": 1,
             "twisted.python.filepath": 1,
             "twisted.python.monkey": 1
         },
