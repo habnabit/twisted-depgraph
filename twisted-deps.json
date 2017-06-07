@@ -2668,6 +2668,7 @@
             "twisted.internet": 1,
             "twisted.internet.protocol": 1,
             "twisted.python": 1,
+            "twisted.python.compat": 1,
             "twisted.python.reflect": 1
         },
         "twisted.web.tap": {
