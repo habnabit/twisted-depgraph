@@ -2015,7 +2015,8 @@
         "twisted.python.logfile": {
             "twisted": 1,
             "twisted.python": 1,
-            "twisted.python._oldstyle": 1
+            "twisted.python._oldstyle": 1,
+            "twisted.python.compat": 1
         },
         "twisted.python.modules": {
             "twisted": 1,
