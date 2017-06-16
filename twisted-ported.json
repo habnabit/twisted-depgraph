@@ -394,6 +394,7 @@
     "twisted.words.protocols.jabber.xmlstream": "ported",
     "twisted.words.protocols.jabber.xmpp_stringprep": "ported",
     "twisted.words.service": "ported",
+    "twisted.words.tap": "ported",
     "twisted.words.xish": "ported",
     "twisted.words.xish.domish": "ported",
     "twisted.words.xish.utility": "ported",
