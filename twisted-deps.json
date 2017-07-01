@@ -79,7 +79,6 @@
             "twisted": 1,
             "twisted.application.runner._exit": 1,
             "twisted.application.runner._pidfile": 1,
-            "twisted.internet": 1,
             "twisted.logger": 1
         },
         "twisted.application.service": {
