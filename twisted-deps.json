@@ -2472,11 +2472,14 @@
             "twisted.internet": 1,
             "twisted.internet._producer_helpers": 1,
             "twisted.internet.defer": 1,
+            "twisted.internet.error": 1,
             "twisted.internet.interfaces": 1,
             "twisted.internet.protocol": 1,
             "twisted.logger": 1,
             "twisted.protocols": 1,
-            "twisted.protocols.policies": 1
+            "twisted.protocols.policies": 1,
+            "twisted.python": 1,
+            "twisted.python.failure": 1
         },
         "twisted.web._newclient": {
             "twisted": 1,
