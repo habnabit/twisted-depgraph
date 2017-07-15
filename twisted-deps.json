@@ -3306,6 +3306,7 @@
         "pickle": 1,
         "pkg_resources": 5,
         "pkg_resources.extern": 5,
+        "pkg_resources.py31compat": 1,
         "pkgutil": 1,
         "platform": 1,
         "plistlib": 1,
