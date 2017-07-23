@@ -243,6 +243,7 @@
     "twisted.protocols.haproxy._v2parser": "ported",
     "twisted.protocols.haproxy._wrapper": "ported",
     "twisted.protocols.htb": "ported",
+    "twisted.protocols.ident": "ported",
     "twisted.protocols.loopback": "ported",
     "twisted.protocols.memcache": "ported",
     "twisted.protocols.mice": "ported",
