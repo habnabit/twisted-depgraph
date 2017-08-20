@@ -283,6 +283,7 @@
     "twisted.python.monkey": "ported",
     "twisted.python.procutils": "ported",
     "twisted.python.randbytes": "ported",
+    "twisted.python.rebuild": "ported",
     "twisted.python.reflect": "ported",
     "twisted.python.release": "ported",
     "twisted.python.roots": "ported",
