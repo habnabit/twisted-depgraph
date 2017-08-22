@@ -172,6 +172,7 @@
     "twisted.mail": "ported",
     "twisted.mail._cred": "ported",
     "twisted.mail._except": "ported",
+    "twisted.mail.imap4": "ported",
     "twisted.mail.interfaces": "ported",
     "twisted.mail.scripts": "ported",
     "twisted.mail.smtp": "ported",
