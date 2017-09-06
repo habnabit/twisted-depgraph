@@ -1614,7 +1614,9 @@
             "twisted.cred.credentials": 1,
             "twisted.cred.error": 1,
             "twisted.cred.strcred": 1,
-            "twisted.internet": 1
+            "twisted.internet": 1,
+            "twisted.python": 1,
+            "twisted.python.compat": 1
         },
         "twisted.plugins.twisted_conch": {
             "twisted": 1,
