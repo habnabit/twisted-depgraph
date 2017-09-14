@@ -2974,7 +2974,6 @@
         "OpenSSL.SSL": 1,
         "OpenSSL._util": 1,
         "OpenSSL.crypto": 1,
-        "OpenSSL.rand": 1,
         "OpenSSL.version": 1,
         "Queue": 1,
         "SOAPpy": 5,
