@@ -2111,12 +2111,7 @@
             "twisted.python.deprecate": 1
         },
         "twisted.python.versions": {},
-        "twisted.python.win32": {
-            "twisted": 1,
-            "twisted.python": 1,
-            "twisted.python.deprecate": 1,
-            "twisted.python.runtime": 1
-        },
+        "twisted.python.win32": {},
         "twisted.python.zippath": {
             "twisted": 1,
             "twisted.python": 1,
