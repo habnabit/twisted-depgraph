@@ -2683,7 +2683,6 @@
             "twisted": 1,
             "twisted.application": 1,
             "twisted.internet": 1,
-            "twisted.internet.ssl": 1,
             "twisted.python": 1,
             "twisted.spread": 1,
             "twisted.web": 1,
