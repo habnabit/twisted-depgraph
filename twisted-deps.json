@@ -45,6 +45,7 @@
             "twisted.application": 1,
             "twisted.application.reactors": 1,
             "twisted.internet": 1,
+            "twisted.internet.interfaces": 1,
             "twisted.persisted": 1,
             "twisted.python": 1,
             "twisted.python._oldstyle": 1,
@@ -109,7 +110,11 @@
         },
         "twisted.application.twist._twist": {
             "twisted": 1,
+            "twisted.application": 1,
+            "twisted.application.app": 1,
             "twisted.application.twist._options": 1,
+            "twisted.internet": 1,
+            "twisted.internet.interfaces": 1,
             "twisted.python": 1,
             "twisted.python.usage": 1
         },
@@ -3364,6 +3369,7 @@
         "pyasn1.type.error": 1,
         "pyasn1.type.namedtype": 1,
         "pyasn1.type.namedval": 1,
+        "pyasn1.type.opentype": 1,
         "pyasn1.type.tag": 1,
         "pyasn1.type.tagmap": 1,
         "pyasn1.type.univ": 1,
