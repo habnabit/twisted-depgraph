@@ -1943,6 +1943,7 @@
         "twisted.python._shellcomp": {
             "twisted": 1,
             "twisted.python": 1,
+            "twisted.python.compat": 1,
             "twisted.python.usage": 1
         },
         "twisted.python._textattributes": {
