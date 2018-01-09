@@ -459,8 +459,7 @@
             "twisted.conch.ssh.sexpy": 1,
             "twisted.python": 1,
             "twisted.python.compat": 1,
-            "twisted.python.constants": 1,
-            "twisted.python.deprecate": 1
+            "twisted.python.constants": 1
         },
         "twisted.conch.ssh.service": {
             "twisted": 1,
