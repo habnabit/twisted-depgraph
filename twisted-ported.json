@@ -178,6 +178,7 @@
     "twisted.mail.protocols": "ported",
     "twisted.mail.relay": "ported",
     "twisted.mail.scripts": "ported",
+    "twisted.mail.scripts.mailmail": "ported",
     "twisted.mail.smtp": "ported",
     "twisted.names": "ported",
     "twisted.names._rfc1982": "ported",

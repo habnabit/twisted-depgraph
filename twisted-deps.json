@@ -1325,7 +1325,10 @@
             "twisted": 1,
             "twisted.copyright": 1,
             "twisted.internet": 1,
-            "twisted.mail": 1
+            "twisted.logger": 1,
+            "twisted.mail": 1,
+            "twisted.python": 1,
+            "twisted.python.compat": 1
         },
         "twisted.mail.smtp": {
             "twisted": 1,
