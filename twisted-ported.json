@@ -271,7 +271,6 @@
     "twisted.python._textattributes": "ported",
     "twisted.python._tzhelper": "ported",
     "twisted.python._url": "ported",
-    "twisted.python.bytes": "ported",
     "twisted.python.compat": "ported",
     "twisted.python.components": "ported",
     "twisted.python.constants": "ported",

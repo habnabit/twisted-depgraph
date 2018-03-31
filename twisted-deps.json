@@ -227,7 +227,6 @@
             "twisted.internet.interfaces": 1,
             "twisted.internet.protocol": 1,
             "twisted.python": 1,
-            "twisted.python.bytes": 1,
             "twisted.python.compat": 1,
             "twisted.python.failure": 1,
             "twisted.python.filepath": 1
@@ -259,7 +258,6 @@
             "twisted": 1,
             "twisted.internet": 1,
             "twisted.python": 1,
-            "twisted.python.bytes": 1,
             "twisted.python.compat": 1
         },
         "twisted.conch.insults.text": {
@@ -366,7 +364,6 @@
             "twisted.conch.ssh": 1,
             "twisted.internet": 1,
             "twisted.python": 1,
-            "twisted.python.bytes": 1,
             "twisted.python.compat": 1
         },
         "twisted.conch.scripts.tkconch": {
@@ -424,7 +421,6 @@
             "twisted.conch.ssh": 1,
             "twisted.internet": 1,
             "twisted.python": 1,
-            "twisted.python.bytes": 1,
             "twisted.python.compat": 1
         },
         "twisted.conch.ssh.factory": {
@@ -445,7 +441,6 @@
             "twisted.conch.ssh.common": 1,
             "twisted.internet": 1,
             "twisted.python": 1,
-            "twisted.python.bytes": 1,
             "twisted.python.compat": 1
         },
         "twisted.conch.ssh.forwarding": {
@@ -479,7 +474,6 @@
             "twisted.conch.ssh.channel": 1,
             "twisted.internet": 1,
             "twisted.python": 1,
-            "twisted.python.bytes": 1,
             "twisted.python.compat": 1
         },
         "twisted.conch.ssh.sexpy": {
@@ -495,7 +489,6 @@
             "twisted.conch.ssh.common": 1,
             "twisted.internet": 1,
             "twisted.python": 1,
-            "twisted.python.bytes": 1,
             "twisted.python.compat": 1
         },
         "twisted.conch.ssh.userauth": {
@@ -1963,11 +1956,6 @@
         },
         "twisted.python._tzhelper": {},
         "twisted.python._url": {},
-        "twisted.python.bytes": {
-            "twisted": 1,
-            "twisted.python": 1,
-            "twisted.python.compat": 1
-        },
         "twisted.python.compat": {
             "twisted": 1,
             "twisted.python": 1,
@@ -3776,7 +3764,6 @@
         "twisted.python._textattributes": 1,
         "twisted.python._tzhelper": 1,
         "twisted.python._url": 1,
-        "twisted.python.bytes": 1,
         "twisted.python.compat": 1,
         "twisted.python.components": 1,
         "twisted.python.constants": 1,
