@@ -1019,6 +1019,7 @@
             "twisted.internet.error": 1,
             "twisted.internet.protocol": 1,
             "twisted.internet.task": 1,
+            "twisted.logger": 1,
             "twisted.python": 1,
             "twisted.python.compat": 1,
             "twisted.python.runtime": 1,
