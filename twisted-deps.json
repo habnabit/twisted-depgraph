@@ -717,8 +717,7 @@
             "twisted.python": 1,
             "twisted.python.compat": 1,
             "twisted.python.filepath": 1,
-            "twisted.python.runtime": 1,
-            "twisted.python.util": 1
+            "twisted.python.runtime": 1
         },
         "twisted.internet.asyncioreactor": {
             "twisted": 1,
