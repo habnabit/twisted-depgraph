@@ -3451,7 +3451,6 @@
         "setuptools.package_index": 1,
         "setuptools.pep425tags": 1,
         "setuptools.py27compat": 1,
-        "setuptools.py31compat": 1,
         "setuptools.py33compat": 1,
         "setuptools.py36compat": 1,
         "setuptools.sandbox": 1,
