@@ -2660,6 +2660,7 @@
         "twisted.web.server": {
             "twisted": 1,
             "twisted.internet": 1,
+            "twisted.internet.error": 1,
             "twisted.logger": 1,
             "twisted.python": 1,
             "twisted.python.compat": 1,
