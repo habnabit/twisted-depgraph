@@ -672,6 +672,7 @@
             "twisted": 1,
             "twisted.internet": 1,
             "twisted.internet._idna": 1,
+            "twisted.internet.abstract": 1,
             "twisted.internet.defer": 1,
             "twisted.internet.error": 1,
             "twisted.internet.interfaces": 1,
