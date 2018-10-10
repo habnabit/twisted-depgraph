@@ -681,6 +681,7 @@
             "twisted.python.compat": 1,
             "twisted.python.deprecate": 1,
             "twisted.python.failure": 1,
+            "twisted.python.randbytes": 1,
             "twisted.python.util": 1
         },
         "twisted.internet._threadedselect": {
