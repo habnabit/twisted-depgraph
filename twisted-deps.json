@@ -3416,6 +3416,7 @@
         "repr": 1,
         "resource": 3,
         "rfc822": 1,
+        "rlcompleter": 1,
         "select": 3,
         "serial": 5,
         "serial.serialcli": 1,
