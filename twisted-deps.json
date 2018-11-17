@@ -3436,6 +3436,7 @@
         "service_identity.pyopenssl": 1,
         "sets": 1,
         "setuptools": 5,
+        "setuptools._deprecation_warning": 1,
         "setuptools.archive_util": 1,
         "setuptools.command": 5,
         "setuptools.command.bdist_egg": 1,
